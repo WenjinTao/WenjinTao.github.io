@@ -1,4 +1,4 @@
-## Hi, there!
+# Hi, there!
 
 from Wenjin
 
@@ -19,4 +19,4 @@ Self-driving Car
 
 ### Contact
 
-Linkedin, Gmail,
+Linkedin, Gmail, Github
