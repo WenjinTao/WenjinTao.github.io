@@ -2,12 +2,10 @@
 
 from Wenjin
 
-
 ### About Me
 
 
-
-### Research
+### Interests
 
 3D Printing
 
