@@ -9,16 +9,22 @@ Hi, everyone! I'm Wenjin.
 
 ## Interests
 
-3D Printing/ VR&AR/ Machine Learning/ Self-driving Car/ AI
+- 3D Printing
+- VR&AR
+- Machine Learning 
+- Self-driving Car
+- AI
 
 ## Education
 
 2015-2018 (expected)
+
 - **PhD, Mechanical Engineering**; Missouri University of Science and Technology
 
 `Thesis title: Deep Learning Approaches to the AR Training`
 
 2010-2014
+
 - **Master, Mechanical Engineering**; Beijing Institute of Technology, Beijing, China
 
 `Thesis title: Optimization`
@@ -32,10 +38,8 @@ Beijing MeoryTech:
 **Technical Experience**
 
 
-My Cool Side Project
-
-
-Open Source
+Project
+- to be added
 
 
 Programming Languages
@@ -44,7 +48,6 @@ Programming Languages
 -   **C++** 
 
 -   **Matlab** 
-
 
 ## Skills
 
