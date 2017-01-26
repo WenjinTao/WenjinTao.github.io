@@ -1,8 +1,7 @@
 # Wenjin Tao
 
 
-![Wenjin](https://avatars1.githubusercontent.com/u/1664996?v=3&s=160)  | 
-----|----
+![Wenjin](https://avatars1.githubusercontent.com/u/1664996?v=3&s=160)
 Hi, everyone! This is Wenjin.
 
 ## Contacts
