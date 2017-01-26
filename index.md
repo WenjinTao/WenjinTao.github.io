@@ -1,4 +1,14 @@
 # Wenjin Tao
+============
+
+-------------------     ----------------------------
+1 MyAddress                        email@example.com
+MyTown 1000                          @twitter_handle
+MyCountry                           1800 my-phone-nr
+-------------------     ----------------------------
+### Contacts
+
+[LinkedIn](https://www.linkedin.com/in/wenjin-tao-65050256/), [GitHub](https://github.com/WenjinTao)
 
 ### About Me
 
@@ -7,35 +17,21 @@
 
 3D Printing/ VR&AR/ Machine Learning/ Self-driving Car/ AI
 
-### Contacts
-
-[LinkedIn](https://www.linkedin.com/in/wenjin-tao-65050256/), [GitHub](https://github.com/WenjinTao)
-
-Johnny Coder
-============
-
--------------------     ----------------------------
-1 MyAddress                        email@example.com
-MyTown 1000                          @twitter_handle
-MyCountry                           1800 my-phone-nr
--------------------     ----------------------------
-
-Education
+## Education
 ---------
 
-2010-2014 (expected)
-:   **PhD, Computer Science**; Awesome University (MyTown)
+2015-2018 (expected)
+:   **PhD, Mechanical Engineering**; Missouri University of Science and Technology
 
     *Thesis title: Deep Learning Approaches to the Self-Awesomeness
      Estimation Problem*
 
-2007-2010
-:   **BSc, Computer Science and Electrical Engineering**; University of
-    HomeTown (HomeTown)
+2010-2014
+:   **Master, Mechanical Engineering**; Beijing Institute of Technology, Beijing, China
 
     *Minor: Awesomeology*
 
-Experience
+## Experience
 ----------
 
 **Your Most Recent Work Experience:**
@@ -88,9 +84,6 @@ Programming Languages
 :   **obscure-but-impressive-lang:** We both know this one's pushing
     it.
 
-:   Basic knowledge of **C**, **x86 assembly**, **forth**, **Common Lisp**
-
-[ref]: https://github.com/githubuser/superlongprojectname
 
 Extra Section, Call it Whatever You Want
 ----------------------------------------
