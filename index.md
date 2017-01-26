@@ -21,7 +21,7 @@ Hi, everyone! I'm Wenjin.
 
 - **PhD, Mechanical Engineering**; Missouri University of Science and Technology
 
-`Thesis title: Deep Learning Approaches to the AR Training`
+`Thesis title: Deep Learning, AR, Training`
 
 2010-2014
 
