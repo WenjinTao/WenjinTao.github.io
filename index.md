@@ -1,19 +1,13 @@
 # Wenjin Tao
-============
 
--------------------     ----------------------------
-1 MyAddress                        email@example.com
-MyTown 1000                          @twitter_handle
-MyCountry                           1800 my-phone-nr
--------------------     ----------------------------
-### Contacts
+## Contacts
 
 [LinkedIn](https://www.linkedin.com/in/wenjin-tao-65050256/), [GitHub](https://github.com/WenjinTao)
 
-### About Me
+## About Me
+Hi, everyone! I'm Wenjin.
 
-
-### Interests
+## Interests
 
 3D Printing/ VR&AR/ Machine Learning/ Self-driving Car/ AI
 
