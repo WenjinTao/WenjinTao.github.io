@@ -8,7 +8,7 @@ Hi, everyone! This is Wenjin.
 
 ## Contacts
 
-> [LinkedIn](https://www.linkedin.com/in/wenjin-tao-65050256/), [GitHub](https://github.com/WenjinTao), [Google Scholar](https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en&authuser=2)
+> [LinkedIn](https://www.linkedin.com/in/wenjin-tao-65050256/), [GitHub](https://github.com/WenjinTao), [Google Scholar](https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en&authuser=2), [Instagram](https://www.instagram.com/wenjin.tao/)
 
 
 
