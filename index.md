@@ -60,3 +60,5 @@ Languages:
 
 - Chinese
 - English
+
+![](http://docs.creiden.com/circleflip/wp-content/uploads/2014/04/divider.jpg)
