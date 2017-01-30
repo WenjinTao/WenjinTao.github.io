@@ -1,6 +1,4 @@
 This page is still under construction...
-![](https://img.clipartfest.com/00fe98963922b1f08328c193fb5efa1d_paragraph-separator-pediatric-separator-lines-transparent-clipart_960-260.png)
-
 # Wenjin Tao
 
 
