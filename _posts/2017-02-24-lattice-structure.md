@@ -15,7 +15,17 @@ Additive Manufacturing (AM) technology provides new opportunities to automatical
 <img src="{{ site.url }}/post_img/lattice_structure/fig_1.PNG" alt="Categories of cellular solids" width="450">
 </center>
 
-<iframe src="{{ site.url }}/assets/lattice_structure_design_for_AM.pdf&embedded=true" style="width:718px; height:700px;" frameborder="0"></iframe>
+<embed src="{{ site.url }}/assets/lattice_structure_design_for_AM.pdf" width=718px height=700px type='application/pdf>
 
 For detail, you can [get the PDF]({{ site.url }}/assets/lattice_structure_design_for_AM.pdf) directly.
+
+@inproceedings{tao2016design,
+  title={Design of lattice structure for additive manufacturing},
+  author={Tao, Wenjin and Leu, Ming C},
+  booktitle={Flexible Automation (ISFA), International Symposium on},
+  pages={325--332},
+  year={2016},
+  organization={IEEE}
+}
+
 
