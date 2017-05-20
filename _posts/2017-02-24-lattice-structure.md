@@ -17,6 +17,10 @@ Additive Manufacturing (AM) technology provides new opportunities to automatical
 
 You can [get the PDF]({{ site.url }}/assets/lattice_structure_design_for_AM.pdf) directly.
 
+------
+
+**Cite, BibTex:**
+
 ```
 @inproceedings{tao2016design,
   title={Design of lattice structure for additive manufacturing},
