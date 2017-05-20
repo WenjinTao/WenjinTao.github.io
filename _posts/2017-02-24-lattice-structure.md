@@ -10,10 +10,4 @@ header-img: "img/post-bg-06.jpg"
 # Abstract
 
 Additive Manufacturing (AM) technology provides new opportunities to automatically and flexibly fabricate parts with complicated shapes and architectures that could not be produced by conventional manufacturing processes, thus enabling unprecedented design flexibilities and application opportunities. The lattice structure possesses many superior properties to solid material and conventional structures. It is able to integrate more than one function into a physical part, which makes it attractive to a wide range of applications. With AM technology the lattice structure can be fabricated by adding material layer-by-layer directly from a Computer-Aided Design (CAD) model, rather than the conventional processes with complicated procedures. AM lattice structures have been intensively studied for more than ten years with significant progress having been made. This paper reviews and discusses AM processes, design methods and considerations, mechanical behavior, and applications for lattice structures enabled by this emerging technology.
-
 ![Figure 1]({{ site.url }}/post_img/lattice_structure/fig_1.PNG)
-
-<a href="#">
-    <img src="{{ site.baseurl }}/post_img/lattice_structure/fig_1.PNG" alt="">
-</a>
-<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
