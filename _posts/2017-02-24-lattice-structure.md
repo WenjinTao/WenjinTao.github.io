@@ -1,17 +1,15 @@
 ---
 layout:     post
 title:      "Design of Lattice Structure for Additive Manufacturing"
-subtitle:   "Lattice Structure for AM"
+subtitle:   ""
 date:       2017-02-24 12:00:00
 author:     "Wenjin"
 header-img: "img/post-bg-06.jpg"
 ---
 
-# Introduction
+# Abstract
 
-Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.
-
-Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.
+Additive Manufacturing (AM) technology provides new opportunities to automatically and flexibly fabricate parts with complicated shapes and architectures that could not be produced by conventional manufacturing processes, thus enabling unprecedented design flexibilities and application opportunities. The lattice structure possesses many superior properties to solid material and conventional structures. It is able to integrate more than one function into a physical part, which makes it attractive to a wide range of applications. With AM technology the lattice structure can be fabricated by adding material layer-by-layer directly from a Computer-Aided Design (CAD) model, rather than the conventional processes with complicated procedures. AM lattice structures have been intensively studied for more than ten years with significant progress having been made. This paper reviews and discusses AM processes, design methods and considerations, mechanical behavior, and applications for lattice structures enabled by this emerging technology.
 
 <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
 
