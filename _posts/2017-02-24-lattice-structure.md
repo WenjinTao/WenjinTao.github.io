@@ -21,8 +21,8 @@ You can [get the paper]({{ site.url }}/assets/lattice_structure_design_for_AM.pd
 
 **Cite, BibTex:**
 
-
->@inproceedings{tao2016design,
+```
+@inproceedings{tao2016design,
   title={Design of lattice structure for additive manufacturing},
   author={Tao, Wenjin and Leu, Ming C},
   booktitle={Flexible Automation (ISFA), International Symposium on},
@@ -30,5 +30,5 @@ You can [get the paper]({{ site.url }}/assets/lattice_structure_design_for_AM.pd
   year={2016},
   organization={IEEE}
 }
-
+```
 
