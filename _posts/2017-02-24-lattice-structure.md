@@ -15,3 +15,7 @@ Additive Manufacturing (AM) technology provides new opportunities to automatical
 <img src="{{ site.url }}/post_img/lattice_structure/fig_1.PNG" alt="Categories of cellular solids" width="450">
 </center>
 
+<iframe src="{{ site.url }}/assets/lattice_structure_design_for_AM.pdf&embedded=true" style="width:718px; height:700px;" frameborder="0"></iframe>
+
+For detail, you can [get the PDF]({{ site.url }}/assets/lattice_structure_design_for_AM.pdf) directly.
+
