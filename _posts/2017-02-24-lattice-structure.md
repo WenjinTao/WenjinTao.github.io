@@ -19,7 +19,7 @@ You can [get the paper]({{ site.url }}/assets/lattice_structure_design_for_AM.pd
 
 ------
 
-**Cite, BibTex:**
+**Citation information, BibTex:**
 
 ```
 @inproceedings{tao2016design,
