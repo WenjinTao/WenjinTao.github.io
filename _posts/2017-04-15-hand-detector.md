@@ -2,7 +2,7 @@
 layout:     post
 title:      "A Simple Hand detector for Head Mounted Camera"
 subtitle:   ""
-date:       2014-04-15 12:00:00
+date:       2017-04-15 12:00:00
 author:     "Wenjin"
 header-img: ""
 ---
