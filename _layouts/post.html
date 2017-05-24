@@ -47,13 +47,13 @@ comments: true
             </div>
         </div>
 		
+		{% if page.comments %}
+			{% include disqus.html %}		
+		{% endif %}
 		
     </div>
 </article>
 
-{% include disqus.html %}
-{% if page.comments %}
-	{% include disqus.html %}		
-{% endif %}
+
 
 <hr>
