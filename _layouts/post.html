@@ -43,10 +43,11 @@ comments: true
                     {% endif %}
                 </ul>
 				
+				{% include disqus.html %}
 
             </div>
         </div>
-		{% include disqus.html %}
+		
 		{% if page.comments %}
 			{% include disqus.html %}		
 		{% endif %}
