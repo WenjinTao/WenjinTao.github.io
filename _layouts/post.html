@@ -1,6 +1,6 @@
 ---
 layout: default
-comments: true
+
 ---
 
 <!-- Post Header -->
@@ -43,14 +43,13 @@ comments: true
                     {% endif %}
                 </ul>
 				
+				<hr>
 				{% include disqus.html %}
 
             </div>
         </div>
 		
-		{% if page.comments %}
-			{% include disqus.html %}		
-		{% endif %}
+
 		
     </div>
 </article>
