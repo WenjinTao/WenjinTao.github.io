@@ -12,6 +12,7 @@ facebook_username:
 scholar: https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en
 instagram_username: wenjin.tao
 email_username:  wenjin.tao@gmail.com
+comments: true
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
