@@ -4,7 +4,7 @@ title:      "Design of Functional Lattice Structure with Density Variable Densit
 subtitle:   "Weighted Distance Field Based Method"
 date:       2016-11-19 12:00:00
 author:     "Wenjin"
-header-img: ""
+header-img: "img/post-bg-06.jpg"
 ---
 
 The purpose of the work described in the present paper is to establish an efficient approach to model 2D lattice structure with variable density distribution that can be fabricated by AM processes. This approach is flexible enough to be applied to any types of 2D lattice structures.
