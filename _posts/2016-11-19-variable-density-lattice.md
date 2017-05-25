@@ -15,6 +15,6 @@ To realize the flexibility of applying this expected method to any kind of latti
 * Local density of the lattice structure should be effectively represented and easily regulated.
 * Because 3D lattice design is the next step of this research, this expected method should have the potential to be easily extended to 3D space.
 
-<img src="{{ site.url }}/assets/Design_of_Functional_Lattice_Structure_with_Variable_Density_for_AM.PNG" width="640">
+<center><img src="{{ site.url }}/assets/Design_of_Functional_Lattice_Structure_with_Variable_Density_for_AM.PNG" width="640"></center>
 
 You can find the [project poster]({{ site.url }}/assets/Design_of_Functional_Lattice_Structure_with_Variable_Density_for_AM.pdf)  if you're interested in this.
