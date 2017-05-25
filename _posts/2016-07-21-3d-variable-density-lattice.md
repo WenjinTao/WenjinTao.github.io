@@ -7,10 +7,10 @@ author:     "Wenjin"
 header-img: ""
 ---
 
-DEM + Ray tracing
+Uniform density:
 
 <center><img src="{{site.url}}/post_img/3d_variable_density_lattice/lattice_with_uniform_density.PNG" alt="" width="640"></center>
 
-
+changing density:
 
 <center><img src="{{site.url}}/post_img/3d_variable_density_lattice/lattice_with_variable_density.PNG" alt="" width="640"></center>
