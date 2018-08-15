@@ -13,12 +13,12 @@ title : Wenjin Tao
 author :
   name : Wenjin Tao
   email : w.tao@mst.edu
-  github : me5763
+  github : WenjinTao
   twitter : tba
   feedburner : tba
 
 # NOTE: Replacing this next line with your own URL
-production_url : https://me5763.github.io
+production_url : https://wenjintao.github.io
 
 # Tell Github to use the kramdown markdown interpreter
 # (see https://help.github.com/articles/migrating-your-pages-site-from-maruku)
@@ -53,7 +53,7 @@ JB :
   #     This means always setting the protocol (http|https) or prefixing with "/"
   #
   # NOTE: Replace this next line with your own URL, likely with username.github.io
-  BASE_PATH : https://me5763.github.io/lab
+  BASE_PATH : https://wenjintao.github.io
 
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
