@@ -1,29 +1,28 @@
 ---
 layout: page
 title: Wenjin Tao
-tagline: <br>Ph.D., Research Assistant, Teaching Assistant, Missouri S&T
-description: Wenjin Tao
+tagline: <br>PhD Candidate, Research Assistant, Teaching Assistant
+description: Wenjin Tao xxxxx
 ---
 
 <h3><i class="fas fa-user"></i>Biography</h3>
 
-Wenjin is a Ph.D. student at the [*MST AI Lab*](#). His research interests include smart manufacturing, additive manufacturing and digital design. Profs  [Ming C. Leu](#) [Zhaozheng Yin](#) [Ruwen Qin](#) and [Zhihai He](#) 
+Wenjin Tao is currently pursuing his PhD degree in the [Innovative Additive Manufacturing Laboratory](http://web.mst.edu/~mstiam/) at [Missouri University of Science and Technology](https://www.mst.edu/), advised by  [Prof. Ming C. Leu](https://web.mst.edu/~mleu/) and co-advised by  [Prof. Zhaozheng Yin](http://web.mst.edu/~yinz/), [Prof. Ruwen Qin](http://web.mst.edu/~qinr/Qin_Ruwen_PhD/Home.html) and [Prof. Zhihai He](https://engineering.missouri.edu/faculty/zhihai-henry-he/).
 
-AI Wenjin is currently focusing on smart manufacturing system boosted by deep learning & artificial intelligence. He is an Udacity learner, DIY enthusiast and passionate about all kinds of new technology like flying car, self-driving car, etc.
+He is currently focusing on smart manufacturing system boosted by deep learning & artificial intelligence. His research interests include smart manufacturing, Cyber-Physical System (CPS), Additive Manufacturing (AM) and design optimization.
 
-AM lattice structures;
+Before he joined Missouri S&T, he received his Master and Bachelor degrees in Mechanical Engineering at [Beijing Inistitute of Technology](http://english.bit.edu.cn/). 
 
-Wenjin is currently focusing on smart manufacturing system boosted by deep learning & artificial intelligence. He is an Udacity learner, DIY enthusiast and passionate about all kinds of new technology like flying car, self-driving car, etc.
-
+He is a recipient of [2018 IISE DAIS Track Best Paper Award](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca). He has been a student member of [IEEE](https://www.ieee.org/) and [IISE](http://www.iise.org/Home/). Meanwhile, he is a lifelong learner, DIY enthusiast, and passionate about all kinds of new technology like flying car, self-driving car, etc.
 
 <section class="section-intro" id="intro">
   <div class="row">
     <div class="col span-1-of-2 col-interests">
       <h3><i class="fas fa-compass"></i>Interests</h3>
-      <ul>
-        <li>Artificial Intelligence</li>
+      <ul>        
         <li>Smart Manufacturing</li>
         <li>Additive Manufacturing</li>
+        <li>Artificial Intelligence</li>
       </ul>
     </div> 
     
@@ -31,8 +30,8 @@ Wenjin is currently focusing on smart manufacturing system boosted by deep learn
       <h3><i class="fas fa-user-graduate"></i>Education</h3>
       <ul>
         <li>PhD in Mechanical Engineering<br>Missouri University of Science and Technology</li>
-        <li>MEng in Mechanical Engineering<br>Beijing Institute of Technology</li>
-        <li>BSc in Mechanical Engineering<br>Beijing Institute of Technology</li>
+        <li>MS in Mechanical Engineering<br>Beijing Institute of Technology</li>
+        <li>BS in Mechanical Engineering<br>Beijing Institute of Technology</li>
       </ul>
     </div>
   </div>
@@ -46,48 +45,43 @@ Wenjin is currently focusing on smart manufacturing system boosted by deep learn
 
 #### Cyber-Physical Sensing, Modeling, and Control with Augmented Reality for Smart Manufacturing Workforce Training and Operations Management
 
-Smart manufacturing integrates information, technology, and human ingenuity to inspire the next revolution in the manufacturing industry. Manufacturing has been identified as a key strategic investment area by the U.S. government, private sector, and university leaders to spur innovation and keep America competitive. However, the lack of new methodologies and tools is challenging continuous innovation in the smart manufacturing industry. This award supports fundamental research to develop a cyber-physical sensing, modeling, and control infrastructure, coupled with augmented reality, to significantly improve the efficiency of future workforce training, performance of operations management, safety and comfort of workers for smart manufacturing. Results from this research are expected to transform the practice of worker-machine-task coordination and provide a powerful tool for operations management. This research involves several disciplines including sensing, data analytics, modeling, control, augmented reality, and workforce training and will provide unique interdisciplinary training opportunities for students and future manufacturing engineers. [More...](#)
+Smart manufacturing integrates information, technology, and human ingenuity to inspire the next revolution in the manufacturing industry. Manufacturing has been identified as a key strategic investment area by the U.S. government, private sector, and university leaders to spur innovation and keep America competitive. However, the lack of new methodologies and tools is challenging continuous innovation in the smart manufacturing industry. This award supports fundamental research to develop a cyber-physical sensing, modeling, and control infrastructure, coupled with augmented reality, to significantly improve the efficiency of future workforce training, performance of operations management, safety and comfort of workers for smart manufacturing. Results from this research are expected to transform the practice of worker-machine-task coordination and provide a powerful tool for operations management. This research involves several disciplines including sensing, data analytics, modeling, control, augmented reality, and workforce training and will provide unique interdisciplinary training opportunities for students and future manufacturing engineers.
+
+This research work is supported by the [National Science
+Foundation grant CMMI-1646162](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1646162) and also by the
+[Intelligent Systems Center at Missouri University of
+Science and Technology](https://isc.mst.edu/).
 
 <hr style="width: 50%">
 
-#### Additive Manufacturing
+#### Design for Additive Manufacturing
 
-sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf
-
-sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf [More...](#)
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 <hr style="width: 50%">
 
-#### Self-driving car
+#### Self-driving Car
 
-sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf
-
-sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf [More...](#)
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 <hr style="width: 50%">
 
-#### Flying car
+#### Flying Car
 
-dfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf
-
-sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf [More...](#)
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 <hr style="width: 50%">
 
 #### Robotics
 
-sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf
-
-sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf [More...](#)
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 
 <hr style="width: 50%">
 
 #### Artificial Intelligence
 
-: sdfa sdfalllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf
-sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf [More...](#)
-
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 
 <hr class="divide-line">
@@ -96,10 +90,23 @@ sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sd
 <h3><i class="fas fa-book"></i>Publications</h3>
 </section>
 <div markdown="1" class="pub-list">
+**Papers**
 1. Tao, W., Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **Worker Activity Recognition in Smart Manufacturing Using IMU and sEMG Signals with Convolutional Neural Networks**. Procedia Manufacturing, 26, pp.1159-1166. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/gdT5) [<span class="label project">Project</span>](#) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.promfg.2018.07.152)
 1. Tao, W., Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **American Sign Language Alphabet Recognition Using Leap Motion Controller** (IISE Annual 2018, Data Analytics & Information Systems Division Best Track Paper Award) [<span class="label preprint">Preprint</span>](http://amz.xcdsystem.com/C5AB9227-CA78-AE70-2946FDB80F96639A_abstract_File8390/FinalPaper_1720_0306092921.pdf) [<span class="label project">Project</span>](https://sites.google.com/mst.edu/asl-leap/home)
-1. Tao, W., Liu, Y., Sutton, A., Kolan K. and Leu, M.C., 2018. **Design of Lattice Structures with Graded Density Fabricated by Additive Manufacturing**. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/L9DR)  [<span class="label project">Project</span>](https://wvvw.easychair.org/publications/preprint_open/L9DR)
-1. 
+1. Tao, W., Liu, Y., Sutton, A., Kolan K. and Leu, M.C., 2018. **Design of Lattice Structures with Graded Density Fabricated by Additive Manufacturing**. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/L9DR)
+
+<hr style="width: 50%">
+**Books**
+
+1. NX 12 for Engineering Design, 2018
+1. Manufacturing Assembly Simulations in Virtual and Augmented Reality, 2018
+1. Virtual Bone Surgery, 2018
+
+<hr style="width: 50%">
+
+*[Google Scholar](#) for full list.*
+
+
 
 </div>
 
@@ -108,19 +115,53 @@ sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sdfa sdfa lllkj djfalksdf sd
 <section class="section-teaching" id="teaching">
 <h3><i class="fas fa-chalkboard-teacher"></i>Teaching</h3>
 </section>
-I am a teaching instructor for the following courses at University X:
-- 2018: [me5763](https://me5763.github.io)
-- 2017:
-- 2016:
+I am a teaching instructor for the following courses at Missouri University of Science and Technology
+- Fall 2018: [ME5763 Lab](https://me5763.github.io)
+- Fall 2017: ME5763 Lab
+- Fall 2016: ME5763 Lab
 
 
 <hr class="divide-line">
 
+<section class="section-reviews" id="reviews">
+<h3><i class="fas fa-search"></i>Reviews</h3>
+</section>
+I have reviewed articles for
+- [Artificial Intelligence](https://publons.com/journal/947/artificial-intelligence)
+- [IEEE Transactions on Intelligent Transportation Systems](https://publons.com/journal/1368/ieee-transactions-on-intelligent-transportation-sy)
+- [IISE Annual Conference 2018](https://publons.com/journal/78635/iise-annual-conference)
+- [The 46th North American Research Conference](http://www.sme.org/namrc46/)
+
+<hr class="divide-line">
+
+<section class="section-awards" id="awards">
+<h3><i class="fas fa-award"></i>Awards</h3>
+</section>
+I have received
+- NSF Travel Grant, 2018
+- Data Analytics & Information Systems Division Best Track Paper Award, IISE Annual 2018
+- NSF Travel Grant, 2016
+
+<hr class="divide-line">
+
+<section class="section-activities" id="activities">
+<h3><i class="fas fa-user-friends"></i>Service Activities</h3>
+</section>
+I have served for
+- Presenting for visitor [Dr. Wei Zhao](https://www.aus.edu/faculty/dr-wei-zhao) from the American University of Sharjah, UAE, Aug. 6, 2018
+- Presenting for visitors from [Brewer Science](https://www.brewerscience.com/), Aug. 7, 2018
+- Presenting for [Dr. Dazhong Wu](http://mae.ucf.edu/dazhong-wu/) from University of Central Florida, Jul. 20, 2018
+- Presenting and instructing driving simulator expericing for the [National Society of Black Engineers (NSBE) Pre-College Initiative (PCI) Weekend](https://inspire-utc.mst.edu/news/), Feb. 24, 2018
+- Presenting for [Missouri S&T Industry Day](https://news.mst.edu/2017/08/sept-25-is-industry-day-at-missouri-st/), Sep. 25, 2017
+- Mentoring student from the [REU program](https://nsf.gov/awardsearch/showAward?AWD_ID=1461102), Summer, 2015 
+
+<hr class="divide-line">
+
+
 <section class="section-posts" id="posts">
-<h3><i class="fas fa-edit"></i>Posts</h3>
+<h3><i class="fas fa-folder-open"></i>Miscellaneous</h3>
 
 </section>
 
-- [Overview](pages/overview.html)
-- [Basic](posts/2016-06-21-dem-ray-tracing.html)
+- [Here's one](posts/2016-06-21-dem-ray-tracing.html)
 

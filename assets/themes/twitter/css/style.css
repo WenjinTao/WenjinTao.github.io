@@ -94,10 +94,39 @@ body{
 .section-publications,
 .section-teaching,
 .section-posts,
-.section-contact {
+.section-contact,
+.section-reviews,
+.section-awards,
+.section-activities {
     padding-top: 40px;
     padding-bottom: 0px;
     outline: none;
+}
+
+.section-projects,
+.section-publications,
+.section-teaching,
+.section-posts,
+.section-contact,
+.section-reviews,
+.section-awards,
+.section-activities h3 {
+    text-align: center;
+}
+
+.section-projects h3:after,
+.section-publications h3:after,
+.section-teaching h3:after,
+.section-posts h3:after,
+.section-reviews h3:after,
+.section-awards h3:after,
+.section-activities h3:after  {
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #3498db;
+    content: "  ";
+    margin: 15px auto 25px auto;  
 }
 
 /* ------------------------------------------ */
@@ -152,25 +181,7 @@ h4:before {
     color: gray;    
 }
 
-.section-projects,
-.section-publications,
-.section-teaching,
-.section-posts,
-.section-contact h3 {
-    text-align: center;
-}
 
-.section-projects h3:after,
-.section-publications h3:after,
-.section-teaching h3:after,
-.section-posts h3:after {
-    display: block;
-    width: 100px;
-    height: 2px;
-    background-color: #3498db;
-    content: "  ";
-    margin: 15px auto 25px auto;  
-}
 .contact-name {
     font-size: 2rem;
 }
@@ -275,7 +286,11 @@ a {
 .fa-microscope,
 .fa-compass,
 .fa-user-graduate,
-.fa-user {
+.fa-user,
+.fa-search,
+.fa-award,
+.fa-user-friends,
+.fa-folder-open {
     padding-right: 10px;
     color: #3498db;
 }
