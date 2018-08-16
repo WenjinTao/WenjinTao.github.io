@@ -377,7 +377,8 @@ a {
     filter: alpha(opacity=100);
 }
 .row-img {
-    
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .row-img::after {
     content: "";
