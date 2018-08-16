@@ -2,6 +2,12 @@
     .navbar-nav {
         display: none;
     }
+    .row-footer {
+        clear: left;
+        float: left;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
 }
 
 

@@ -45,6 +45,18 @@ He is a recipient of [2018 IISE DAIS Track Best Paper Award](http://campaign.r20
 
 #### Cyber-Physical Sensing, Modeling, and Control with Augmented Reality for Smart Manufacturing Workforce Training and Operations Management
 
+<div class="row-img">
+  <div class="col-img col-img-3">
+    <img src="assets/img/smart-mfg-01.png" alt="1" style="width:100%">
+  </div>
+  <div class="col-img col-img-3">
+    <img src="http://via.placeholder.com/300" alt="2" style="width:100%">
+  </div>
+  <div class="col-img col-img-3">
+    <img src="http://via.placeholder.com/300" alt="3" style="width:100%">
+  </div>
+</div>
+
 Smart manufacturing integrates information, technology, and human ingenuity to inspire the next revolution in the manufacturing industry. Manufacturing has been identified as a key strategic investment area by the U.S. government, private sector, and university leaders to spur innovation and keep America competitive. However, the lack of new methodologies and tools is challenging continuous innovation in the smart manufacturing industry. This award supports fundamental research to develop a cyber-physical sensing, modeling, and control infrastructure, coupled with augmented reality, to significantly improve the efficiency of future workforce training, performance of operations management, safety and comfort of workers for smart manufacturing. Results from this research are expected to transform the practice of worker-machine-task coordination and provide a powerful tool for operations management. This research involves several disciplines including sensing, data analytics, modeling, control, augmented reality, and workforce training and will provide unique interdisciplinary training opportunities for students and future manufacturing engineers.
 
 This research work is supported by the [National Science
@@ -55,6 +67,21 @@ Science and Technology](https://isc.mst.edu/).
 <hr style="width: 50%">
 
 #### Design for Additive Manufacturing
+
+<div class="row-img">
+  <div class="col-img col-img-4">
+    <img src="http://via.placeholder.com/300" alt="1" style="width:100%">
+  </div>
+  <div class="col-img col-img-4">
+    <img src="http://via.placeholder.com/300" alt="2" style="width:100%">
+  </div>
+  <div class="col-img col-img-4">
+    <img src="http://via.placeholder.com/300" alt="3" style="width:100%">
+  </div>
+  <div class="col-img col-img-4">
+    <img src="http://via.placeholder.com/300" alt="3" style="width:100%">
+  </div>
+</div>
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
