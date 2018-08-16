@@ -104,7 +104,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 <hr style="width: 50%">
 
-*[Google Scholar](#) for full list.*
+*[Google Scholar](https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en) for a full list.*
 
 
 

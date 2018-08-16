@@ -258,9 +258,10 @@ a {
     float: left;
 }
 .copyright {
+    clear: both;
     width: 100%;
     color: gray;
-    margin-top: 10px;
+    margin: auto;
     text-align: center;
 }
 .icon-contact {
