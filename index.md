@@ -50,10 +50,10 @@ He is a recipient of [2018 IISE DAIS Track Best Paper Award](http://campaign.r20
     <img src="assets/img/smart-mfg-01.png" alt="1" style="width:100%">
   </div>
   <div class="col-img col-img-3">
-    <img src="http://via.placeholder.com/300" alt="2" style="width:100%">
+    <img src="https://via.placeholder.com/300" alt="2" style="width:100%">
   </div>
   <div class="col-img col-img-3">
-    <img src="http://via.placeholder.com/300" alt="3" style="width:100%">
+    <img src="https://via.placeholder.com/300" alt="3" style="width:100%">
   </div>
 </div>
 
