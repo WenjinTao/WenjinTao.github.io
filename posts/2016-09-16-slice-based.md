@@ -11,4 +11,8 @@ Lattice structures are promising in many fields, but design of them is still a h
 
 Have a look at the demo:
 
+<p>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Md4Phgk9uFQ" frameborder="0" allowfullscreen></iframe>
+
+</p>

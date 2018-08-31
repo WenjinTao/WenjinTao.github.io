@@ -9,8 +9,8 @@ header-img: ""
 
 Uniform density:
 
-<center><img src="{{site.url}}/post_img/3d_variable_density_lattice/lattice_with_uniform_density.PNG" alt="" width="640"></center>
+<img src="../assets/post_img/3d_variable_density_lattice/lattice_with_uniform_density.PNG" alt="" width="640">
 
 changing density:
 
-<center><img src="{{site.url}}/post_img/3d_variable_density_lattice/lattice_with_variable_density.PNG" alt="" width="640"></center>
+<img src="../assets/post_img/3d_variable_density_lattice/lattice_with_variable_density.PNG" alt="" width="640">

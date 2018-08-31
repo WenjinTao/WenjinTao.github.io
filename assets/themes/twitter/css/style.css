@@ -333,6 +333,9 @@ a {
 .project {
     background-color: #ff9800;
 }
+.under-review {
+    background-color: #4682B4;
+}
 .preprint:hover {
     background-color: #fff;
     color: #4caf50;

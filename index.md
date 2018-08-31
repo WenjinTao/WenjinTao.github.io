@@ -70,26 +70,26 @@ Science and Technology](https://isc.mst.edu/).
 
 <div class="row-img">
   <div class="col-img col-img-4">
-    <img src="http://via.placeholder.com/300" alt="1" style="width:100%">
+    <img src="assets/img/lattice_1.png" alt="1" style="width:100%">
   </div>
   <div class="col-img col-img-4">
-    <img src="http://via.placeholder.com/300" alt="2" style="width:100%">
+    <img src="assets/img/lattice_2.png" alt="2" style="width:100%">
   </div>
   <div class="col-img col-img-4">
-    <img src="http://via.placeholder.com/300" alt="3" style="width:100%">
+    <img src="assets/img/lattice_3.png" alt="3" style="width:100%">
   </div>
   <div class="col-img col-img-4">
-    <img src="http://via.placeholder.com/300" alt="3" style="width:100%">
+    <img src="assets/img/lattice_4.png" alt="3" style="width:100%">
   </div>
 </div>
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Additive Manufacturing (AM) technology provides new opportunities to automatically and flexibly fabricate parts with complicated shapes and architectures that could not be produced by conventional manufacturing processes, thus enabling unprecedented design flexibilities and application opportunities. The lattice structure possesses many superior properties to solid material and conventional structures. It is able to integrate more than one function into a physical part, which makes it attractive to a wide range of applications. With AM technology the lattice structure can be fabricated by adding material layer-by-layer directly from a Computer-Aided Design (CAD) model, rather than the conventional processes with complicated procedures. AM lattice structures have been intensively studied for more than ten years with significant progress having been made. This paper reviews and discusses AM processes, design methods and considerations, mechanical behavior, and applications for lattice structures enabled by this emerging technology.
 
 <hr style="width: 50%">
 
 #### Self-driving Car
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. [Github](https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity)
 
 <hr style="width: 50%">
 
@@ -119,15 +119,15 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <div markdown="1" class="pub-list">
 **Papers**
 1. Tao, W., Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **Worker Activity Recognition in Smart Manufacturing Using IMU and sEMG Signals with Convolutional Neural Networks**. Procedia Manufacturing, 26, pp.1159-1166. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/gdT5) [<span class="label project">Project</span>](#) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.promfg.2018.07.152)
-1. Tao, W., Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **American Sign Language Alphabet Recognition Using Leap Motion Controller** (IISE Annual 2018, Data Analytics & Information Systems Division Best Track Paper Award) [<span class="label preprint">Preprint</span>](http://amz.xcdsystem.com/C5AB9227-CA78-AE70-2946FDB80F96639A_abstract_File8390/FinalPaper_1720_0306092921.pdf) [<span class="label project">Project</span>](https://sites.google.com/mst.edu/asl-leap/home)
+1. Tao, W., Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **American Sign Language Alphabet Recognition Using Leap Motion Controller** ([IISE Annual 2018, Data Analytics & Information Systems Division Best Track Paper Award](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca)) [<span class="label preprint">Preprint</span>](http://amz.xcdsystem.com/C5AB9227-CA78-AE70-2946FDB80F96639A_abstract_File8390/FinalPaper_1720_0306092921.pdf) [<span class="label project">Project</span>](https://sites.google.com/mst.edu/asl-leap/home)
 1. Tao, W., Liu, Y., Sutton, A., Kolan K. and Leu, M.C., 2018. **Design of Lattice Structures with Graded Density Fabricated by Additive Manufacturing**. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/L9DR)
 
 <hr style="width: 50%">
 **Books**
 
-1. NX 12 for Engineering Design, 2018
-1. Manufacturing Assembly Simulations in Virtual and Augmented Reality, 2018
-1. Virtual Bone Surgery, 2018
+1. NX 12 for Engineering Design, 2018. [<span class="label preprint">eBook</span>](https://me5763.github.io/lab/assets/books/NX-12-for-Engineering-Design.pdf)
+1. Manufacturing Assembly Simulations in Virtual and Augmented Reality, 2018. <span class="label under-review">under review</span>
+1. Virtual Bone Surgery, 2018. <span class="label under-review">under review</span>
 
 <hr style="width: 50%">
 
@@ -143,9 +143,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <h3><i class="fas fa-chalkboard-teacher"></i>Teaching</h3>
 </section>
 I am a teaching instructor for the following courses at Missouri University of Science and Technology
-- Fall 2018: [ME5763 Lab](https://me5763.github.io)
-- Fall 2017: ME5763 Lab
-- Fall 2016: ME5763 Lab
+- Fall 2018: [ME 5763: Computer Aided Design: Theory and Practice](https://me5763.github.io)
+- Fall 2017: ME 5763: Principles And Practice Of Computer Aided Design
+- Fall 2016: ME 5763: Principles And Practice Of Computer Aided Design
 
 
 <hr class="divide-line">
@@ -190,5 +190,8 @@ I have served for
 
 </section>
 
-- [Here's one](posts/2016-06-21-dem-ray-tracing.html)
+- [Design of Functional Lattice Structure with Density Variable Density Distribution for Additive Manufacturing](posts/2016-11-19-variable-density-lattice.html)
+- [Slice-based 3D Lattice Structure Generation for Additive Manufacturing](posts/2016-09-16-slice-based.html)
+- [3D Lattice Structure with Variable Density Distribution](posts/2016-07-21-3d-variable-density-lattice.html)
+- [DEM & Ray Tracing Simulation of SLM Process](posts/2016-06-21-dem-ray-tracing.html)
 
