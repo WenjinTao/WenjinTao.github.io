@@ -25,7 +25,7 @@ He is a recipient of [2018 IISE DAIS Track Best Paper Award](http://campaign.r20
         <li>Artificial Intelligence</li>
       </ul>
     </div> 
-    
+
     <div class="col span-1-of-2 col-edu">
       <h3><i class="fas fa-user-graduate"></i>Education</h3>
       <ul>
@@ -47,13 +47,13 @@ He is a recipient of [2018 IISE DAIS Track Best Paper Award](http://campaign.r20
 
 <div class="row-img">
   <div class="col-img col-img-3">
-    <img src="assets/img/smart-mfg-01.png" alt="1" style="width:100%">
+    <img src="assets/img/smart-mfg-04.png" alt="1" style="width:100%">
   </div>
   <div class="col-img col-img-3">
-    <img src="https://via.placeholder.com/300" alt="2" style="width:100%">
+    <img src="assets/img/smart-mfg-05.png" alt="2" style="width:100%">
   </div>
   <div class="col-img col-img-3">
-    <img src="https://via.placeholder.com/300" alt="3" style="width:100%">
+    <img src="assets/img/smart-mfg-02.png" alt="3" style="width:100%">
   </div>
 </div>
 
