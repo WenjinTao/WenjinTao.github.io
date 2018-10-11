@@ -50,12 +50,13 @@ He is a recipient of [2018 IISE DAIS Track Best Paper Award](http://campaign.r20
     <img src="assets/img/smart-mfg-04.png" alt="1" style="width:100%">
   </div>
   <div class="col-img col-img-3">
-    <img src="assets/img/smart-mfg-05.png" alt="2" style="width:100%">
+    <img src="assets/img/smart-mfg-06.png" alt="2" style="width:100%">
   </div>
   <div class="col-img col-img-3">
     <img src="assets/img/smart-mfg-02.png" alt="3" style="width:100%">
   </div>
 </div>
+
 
 Smart manufacturing integrates information, technology, and human ingenuity to inspire the next revolution in the manufacturing industry. Manufacturing has been identified as a key strategic investment area by the U.S. government, private sector, and university leaders to spur innovation and keep America competitive. However, the lack of new methodologies and tools is challenging continuous innovation in the smart manufacturing industry. This award supports fundamental research to develop a cyber-physical sensing, modeling, and control infrastructure, coupled with augmented reality, to significantly improve the efficiency of future workforce training, performance of operations management, safety and comfort of workers for smart manufacturing. Results from this research are expected to transform the practice of worker-machine-task coordination and provide a powerful tool for operations management. This research involves several disciplines including sensing, data analytics, modeling, control, augmented reality, and workforce training and will provide unique interdisciplinary training opportunities for students and future manufacturing engineers.
 
