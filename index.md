@@ -113,15 +113,16 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 
 <hr class="divide-line">
-
 <section class="section-publications" id="publications">
 <h3><i class="fas fa-book"></i>Publications</h3>
 </section>
 <div markdown="1" class="pub-list">
 **Papers**
-1. Tao, W., Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **Worker Activity Recognition in Smart Manufacturing Using IMU and sEMG Signals with Convolutional Neural Networks**. Procedia Manufacturing, 26, pp.1159-1166. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/gdT5) [<span class="label project">Project</span>](#) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.promfg.2018.07.152)
-1. Tao, W., Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **American Sign Language Alphabet Recognition Using Leap Motion Controller** ([IISE Annual 2018, Data Analytics & Information Systems Division Best Track Paper Award](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca)) [<span class="label preprint">Preprint</span>](http://amz.xcdsystem.com/C5AB9227-CA78-AE70-2946FDB80F96639A_abstract_File8390/FinalPaper_1720_0306092921.pdf) [<span class="label project">Project</span>](https://sites.google.com/mst.edu/asl-leap/home)
-1. Tao, W., Liu, Y., Sutton, A., Kolan K. and Leu, M.C., 2018. **Design of Lattice Structures with Graded Density Fabricated by Additive Manufacturing**. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/L9DR)
+1. **Tao, W.**, Leu, M.C. and Yin, Z., 2018. **American Sign Language alphabet recognition using Convolutional Neural Networks with multiview augmentation and inference fusion**. Engineering Applications of Artificial Intelligence, 76, pp.202-213. [<span class="label preprint">Preprint</span>](https://www.researchgate.net/publication/328135251_American_Sign_Language_Alphabet_Recognition_Using_Convolutional_Neural_Networks_with_Multiview_Augmentation_and_Inference_Fusion) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.engappai.2018.09.006)
+1. **Tao, W.**, Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **Worker Activity Recognition in Smart Manufacturing Using IMU and sEMG Signals with Convolutional Neural Networks**. Procedia Manufacturing, 26, pp.1159-1166. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/gdT5) [<span class="label project">Project</span>](#) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.promfg.2018.07.152)
+1. **Tao, W.**, Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **American Sign Language Alphabet Recognition Using Leap Motion Controller** ([IISE Annual 2018, Data Analytics & Information Systems Division Best Track Paper Award](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca)) [<span class="label preprint">Preprint</span>](http://amz.xcdsystem.com/C5AB9227-CA78-AE70-2946FDB80F96639A_abstract_File8390/FinalPaper_1720_0306092921.pdf) [<span class="label project">Project</span>](https://sites.google.com/mst.edu/asl-leap/home)
+1. **Tao, W.**, Liu, Y., Sutton, A., Kolan K. and Leu, M.C., 2018. **Design of Lattice Structures with Graded Density Fabricated by Additive Manufacturing**. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/L9DR)
+
 
 <hr style="width: 50%">
 **Books**
@@ -178,7 +179,7 @@ I have received
 </section>
 I have served for
 - Presenting for visitors Profs. Jihong Yan and Chaozhong Guo from Harbin Institute of Technology, Oct. 5, 2018
-- Presenting for visitor [Prof. Kon-Well Wang]() from University of Michigan, Sep. 24, 2018
+- Presenting for visitor [Prof. Kon-Well Wang](https://me.engin.umich.edu/people/faculty/kon-well-wang) from University of Michigan, Sep. 24, 2018
 - Presenting for visitor [Prof. Wei Zhao](https://www.aus.edu/faculty/dr-wei-zhao) from the American University of Sharjah, UAE, Aug. 6, 2018
 - Presenting for visitors from [Brewer Science](https://www.brewerscience.com/), Aug. 7, 2018
 - Presenting for [Prof. Dazhong Wu](http://mae.ucf.edu/dazhong-wu/) from University of Central Florida, Jul. 20, 2018
