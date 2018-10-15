@@ -144,7 +144,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <h3><i class="fas fa-chalkboard-teacher"></i>Teaching</h3>
 </section>
 I am a teaching instructor for the following courses at Missouri University of Science and Technology
-- Fall 2018: [ME 5763: Computer Aided Design: Theory and Practice](https://me5763.github.io)
+- Fall 2018: [ME 5763: Computer Aided Design: Theory and Practice](https://me5763.github.io/lab)
 - Fall 2017: ME 5763: Principles And Practice Of Computer Aided Design
 - Fall 2016: ME 5763: Principles And Practice Of Computer Aided Design
 
@@ -156,6 +156,7 @@ I am a teaching instructor for the following courses at Missouri University of S
 </section>
 I have reviewed articles for
 - [Artificial Intelligence](https://publons.com/journal/947/artificial-intelligence)
+- [Engineering Applications of Artificial Intelligence](https://www.journals.elsevier.com/engineering-applications-of-artificial-intelligence)
 - [IEEE Transactions on Intelligent Transportation Systems](https://publons.com/journal/1368/ieee-transactions-on-intelligent-transportation-sy)
 - [IISE Annual Conference 2018](https://publons.com/journal/78635/iise-annual-conference)
 - [The 46th North American Research Conference](http://www.sme.org/namrc46/)
