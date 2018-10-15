@@ -177,9 +177,11 @@ I have received
 <h3><i class="fas fa-user-friends"></i>Service Activities</h3>
 </section>
 I have served for
-- Presenting for visitor [Dr. Wei Zhao](https://www.aus.edu/faculty/dr-wei-zhao) from the American University of Sharjah, UAE, Aug. 6, 2018
+- Presenting for visitors Profs. Jihong Yan and Chaozhong Guo from Harbin Institute of Technology, Oct. 5, 2018
+- Presenting for visitor [Prof. Kon-Well Wang]() from University of Michigan, Sep. 24, 2018
+- Presenting for visitor [Prof. Wei Zhao](https://www.aus.edu/faculty/dr-wei-zhao) from the American University of Sharjah, UAE, Aug. 6, 2018
 - Presenting for visitors from [Brewer Science](https://www.brewerscience.com/), Aug. 7, 2018
-- Presenting for [Dr. Dazhong Wu](http://mae.ucf.edu/dazhong-wu/) from University of Central Florida, Jul. 20, 2018
+- Presenting for [Prof. Dazhong Wu](http://mae.ucf.edu/dazhong-wu/) from University of Central Florida, Jul. 20, 2018
 - Presenting and instructing driving simulator expericing for the [National Society of Black Engineers (NSBE) Pre-College Initiative (PCI) Weekend](https://inspire-utc.mst.edu/news/), Feb. 24, 2018
 - Presenting for [Missouri S&T Industry Day](https://news.mst.edu/2017/08/sept-25-is-industry-day-at-missouri-st/), Sep. 25, 2017
 - Mentoring student from the [REU program](https://nsf.gov/awardsearch/showAward?AWD_ID=1461102), Summer, 2015 
