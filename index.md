@@ -169,7 +169,7 @@ I have reviewed articles for
 </section>
 I have received
 - NSF Travel Grant, 2018
-- Data Analytics & Information Systems Division Best Track Paper Award, IISE Annual 2018
+- [Data Analytics & Information Systems Division Best Track Paper Award, IISE Annual 2018](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca)
 - NSF Travel Grant, 2016
 
 <hr class="divide-line">
