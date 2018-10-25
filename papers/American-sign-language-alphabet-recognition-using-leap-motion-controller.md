@@ -25,7 +25,7 @@ Recognition of American Sign Language (ASL) alphabet not only could bring benefi
 
 ### Paper
 
-American Sign Language Alphabet Recognition Using Leap Motion Controller (IISE Annual 2018, Data Analytics & Information Systems Division Best Track Paper Award) [PDF]
+American Sign Language Alphabet Recognition Using Leap Motion Controller (IISE Annual 2018, Data Analytics & Information Systems Division Best Track Paper Award) [[PDF]](http://amz.xcdsystem.com/C5AB9227-CA78-AE70-2946FDB80F96639A_abstract_File8390/FinalPaper_1720_0306092921.pdf)
 
 
 
