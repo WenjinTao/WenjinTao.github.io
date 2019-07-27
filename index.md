@@ -127,7 +127,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <hr style="width: 50%">
 **Books**
 
-1. NX 12 for Engineering Design, 2018. [<span class="label preprint">eBook</span>](https://me5763.github.io/lab/assets/books/NX-12-for-Engineering-Design.pdf)
+1. NX 12 for Engineering Design, 2018. [<span class="label preprint">eBook</span>](assets/books/NX 12 for Engineering Design.pdf)
 1. Manufacturing Assembly Simulations in Virtual and Augmented Reality, 2018. <span class="label under-review">under review</span>
 1. Virtual Bone Surgery, 2018. <span class="label under-review">under review</span>
 
