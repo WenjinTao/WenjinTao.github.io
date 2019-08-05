@@ -40,10 +40,10 @@ He is a recipient of [2018 IISE DAIS Track Best Paper Award](http://campaign.r20
 </section>
 
 <hr class="divide-line">
-
 <section class="section-projects" id="projects">
 <h3><i class="fas fa-microscope"></i>Research Projects</h3>
 </section>
+
 
 #### Cyber-Physical Sensing, Modeling, and Control with Augmented Reality for Smart Manufacturing Workforce Training and Operations Management
 
@@ -169,31 +169,34 @@ Active Reviewer for
 *[Publons Profile](<https://publons.com/researcher/1349420/wenjin-tao/>)*
 
 <hr class="divide-line">
-
 <section class="section-awards" id="awards">
-<h3><i class="fas fa-award"></i>Awards</h3>
+<h3><i class="fas fa-award"></i>Honors & Awards</h3>
 </section>
-I have received
-- NSF Travel Grant, 2018
+
 - [Data Analytics & Information Systems Division Best Track Paper Award, IISE Annual 2018](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca)
-- NSF Travel Grant, 2016
-- Award in the Innovation Cup of Science Popularization, 2012
-- Outstanding Student Leader in the School of Mechanical Engineering at BIT, 2012
-- The Final Champion in 2011 Formula Student Competition China, 2011
-- Qualification Certificate of Automotive Specialized Technique by SAE of China, 2011
-- The Final Champion in 2010 Formula Student Competition China, 2010
-- Beijing Outstanding Graduate, 2010
-- The First Prize of FAST Scholarship, 2010
-- The DEC Scholarship, 2010
-- National Scholarship, 2009
-- The University Award for 6 times at BIT, 2006-2010
+- NSF Travel Grant, IISE Annual conference, 2018
+- NSF Travel Grant, ISFA conference, 2016
+
+<details>
+<summary>Before 2015</summary>
+    <li>Award in the Innovation Cup of Science Popularization, 2012</li>
+    <li>Outstanding Student Leader in the School of Mechanical Engineering at BIT, 2012</li>
+    <li>The Final Champion in 2011 Formula Student Competition China, 2011</li>
+    <li>Qualification Certificate of Automotive Specialized Technique by SAE of China, 2011</li>
+    <li>The Final Champion in 2010 Formula Student Competition China, 2010</li>
+    <li>Beijing Outstanding Graduate, 2010</li>
+    <li>The First Prize of FAST Scholarship, 2010</li>
+    <li>The DEC Scholarship, 2010</li>
+    <li>National Scholarship, 2009</li>
+    <li>The University Award for 6 times at BIT, 2006-2010</li>
+<details>
+
 
 <hr class="divide-line">
 
 <section class="section-activities" id="activities">
 <h3><i class="fas fa-user-friends"></i>Service Activities</h3>
 </section>
-I have served for
 - Presenting for visitors Profs. Jihong Yan and Chaozhong Guo from Harbin Institute of Technology, Oct. 5, 2018
 - Presenting for visitor [Prof. Kon-Well Wang](https://me.engin.umich.edu/people/faculty/kon-well-wang) from University of Michigan, Sep. 24, 2018
 - Presenting for visitor [Prof. Wei Zhao](https://www.aus.edu/faculty/dr-wei-zhao) from the American University of Sharjah, UAE, Aug. 6, 2018
