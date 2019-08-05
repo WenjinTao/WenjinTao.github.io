@@ -113,7 +113,6 @@ Additive Manufacturing (AM) technology provides new opportunities to automatical
 
 
 
-
 <hr class="divide-line">
 <section class="section-publications" id="publications">
 <h3><i class="fas fa-book"></i>Publications</h3>
@@ -124,6 +123,7 @@ Additive Manufacturing (AM) technology provides new opportunities to automatical
 1. **Tao, W.**, Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **Worker Activity Recognition in Smart Manufacturing Using IMU and sEMG Signals with Convolutional Neural Networks**. Procedia Manufacturing, 26, pp.1159-1166. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/gdT5) [<span class="label project">Project</span>](#) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.promfg.2018.07.152)
 1. **Tao, W.**, Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **American Sign Language Alphabet Recognition Using Leap Motion Controller** ([IISE Annual 2018, Data Analytics & Information Systems Division Best Track Paper Award](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca)) [<span class="label preprint">Preprint</span>](http://amz.xcdsystem.com/C5AB9227-CA78-AE70-2946FDB80F96639A_abstract_File8390/FinalPaper_1720_0306092921.pdf) [<span class="label project">Project</span>](papers/American-sign-language-alphabet-recognition-using-leap-motion-controller.html)
 1. **Tao, W.**, Liu, Y., Sutton, A., Kolan K. and Leu, M.C., 2018. **Design of Lattice Structures with Graded Density Fabricated by Additive Manufacturing**. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/L9DR)
+
 
 
 <hr style="width: 50%">
@@ -138,9 +138,6 @@ Additive Manufacturing (AM) technology provides new opportunities to automatical
 *[Google Scholar](https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en) for a full list.*
 
 
-
-</div>
-
 <hr class="divide-line">
 <section class="section-teaching" id="teaching">
 <h3><i class="fas fa-chalkboard-teacher"></i>Teaching & Mentoring Experience</h3>
@@ -151,8 +148,17 @@ I am a teaching instructor for the following courses at Missouri University of S
 - Fall 2017: ME 5763: Principles And Practice Of Computer Aided Design
 - Fall 2016: ME 5763: Principles And Practice Of Computer Aided Design
 
+<hr class="divide-line">
+
+
+<section class="section-talk" id="talk">
+<h3><i class="fas fa-chalkboard-teacher"></i>Invited Talk</h3>
+</section>
+
+- Human Behavior Understanding for Worker-Centered Intelligent Manufacturing. Xi'an University of Technology, Dec. 2018
 
 <hr class="divide-line">
+
 
 <section class="section-reviews" id="reviews">
 <h3><i class="fas fa-search"></i>Reviews</h3>
