@@ -127,11 +127,12 @@ Additive Manufacturing (AM) technology provides new opportunities to automatical
 
 
 <hr style="width: 50%">
-**Books**
+**Books & Book Chapters**
 
-1. NX 12 for Engineering Design, 2018. [<span class="label preprint">eBook</span>](assets/books/NX 12 for Engineering Design.pdf)
-1. Manufacturing Assembly Simulations in Virtual and Augmented Reality, 2018. [<span class="label preprint">Accepted Draft</span>](assets/books/Manufacturing Assembly Simulations in Virtual and Augmented Reality.pdf)
-1. Virtual Bone Surgery, 2018. <span class="label under-review">under review</span>
+
+1. NX 12 for Engineering Design. Leu, M. C., **Tao, W.***, Ghazanfari, A., & Kolan, K. (2017). Department of Mechanical and Aerospace Engineering, Missouri University of Science and Technology. [<span class="label preprint">eBook</span>](assets/books/NX 12 for Engineering Design.pdf)
+1. Manufacturing Assembly Simulations in Virtual and Augmented Reality. **Tao, W.**, Lai, Z. H., & Leu, M. C. (2018). Augmented, Virtual, and Mixed Reality Applications in Advanced Manufacturing. [<span class="label preprint">Accepted Draft</span>](assets/books/Manufacturing Assembly Simulations in Virtual and Augmented Reality.pdf)
+1. Virtual Bone Surgery. Leu, M. C., **Tao, W.**, Niu, Q., & Chi, X. (2018**).** In Virtual Prototyping & Bio Manufacturing in Medical Applications (2nd Edition). Springer, Boston, MA <span class="label under-review">under review</span>
 
 <hr style="width: 50%">
 *[Google Scholar](https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en) for a full list.*
