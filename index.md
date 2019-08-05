@@ -42,7 +42,7 @@ He is a recipient of [2018 IISE DAIS Track Best Paper Award](http://campaign.r20
 <hr class="divide-line">
 
 <section class="section-projects" id="projects">
-<h3><i class="fas fa-microscope"></i>Projects</h3>
+<h3><i class="fas fa-microscope"></i>Research Projects</h3>
 </section>
 
 #### Cyber-Physical Sensing, Modeling, and Control with Augmented Reality for Smart Manufacturing Workforce Training and Operations Management
