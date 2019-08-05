@@ -97,7 +97,8 @@ body{
 .section-contact,
 .section-reviews,
 .section-awards,
-.section-activities {
+.section-activities,
+.section-talk {
     padding-top: 40px;
     padding-bottom: 0px;
     outline: none;
@@ -110,7 +111,8 @@ body{
 .section-contact,
 .section-reviews,
 .section-awards,
-.section-activities h3 {
+.section-activities,
+.section-talk h3 {
     text-align: center;
 }
 
@@ -120,7 +122,8 @@ body{
 .section-posts h3:after,
 .section-reviews h3:after,
 .section-awards h3:after,
-.section-activities h3:after  {
+.section-activities h3:after
+.section-talk h3:after  {
     display: block;
     width: 100px;
     height: 2px;
