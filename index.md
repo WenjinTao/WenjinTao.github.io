@@ -20,18 +20,20 @@ He is a recipient of [2018 IISE DAIS Track Best Paper Award](http://campaign.r20
     <div class="col span-1-of-2 col-interests">
       <h3><i class="fas fa-compass"></i>Interests</h3>
       <ul>        
-        <li>Smart Manufacturing</li>
-        <li>Additive Manufacturing</li>
+        <li>Machine Learning and Deep Learning for Human-Centered Intelligent Manufacturing</li>
+        <li>Time-Series Signal/Image Recognition</li>
+	    <li>Time-Frequency/Spatial-Temporal Data Analysis</li>
         <li>Artificial Intelligence</li>
       </ul>
     </div> 
 
+
     <div class="col span-1-of-2 col-edu">
       <h3><i class="fas fa-user-graduate"></i>Education</h3>
       <ul>
-        <li>PhD in Mechanical Engineering<br>Missouri University of Science and Technology</li>
-        <li>MS in Mechanical Engineering<br>Beijing Institute of Technology</li>
-        <li>BS in Mechanical Engineering<br>Beijing Institute of Technology</li>
+        <li>Ph.D. in Mechanical Engineering<br>Missouri University of Science and Technology</li>
+        <li>M.S. in Mechanical Engineering<br>Beijing Institute of Technology</li>
+        <li>B.S. in Mechanical Engineering<br>Beijing Institute of Technology</li>
       </ul>
     </div>
   </div>
@@ -132,7 +134,6 @@ Additive Manufacturing (AM) technology provides new opportunities to automatical
 1. Virtual Bone Surgery, 2018. <span class="label under-review">under review</span>
 
 <hr style="width: 50%">
-
 *[Google Scholar](https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en) for a full list.*
 
 
@@ -140,10 +141,10 @@ Additive Manufacturing (AM) technology provides new opportunities to automatical
 </div>
 
 <hr class="divide-line">
-
 <section class="section-teaching" id="teaching">
-<h3><i class="fas fa-chalkboard-teacher"></i>Teaching</h3>
+<h3><i class="fas fa-chalkboard-teacher"></i>Teaching &amp Mentoring Experience</h3>
 </section>
+
 I am a teaching instructor for the following courses at Missouri University of Science and Technology
 - Fall 2018: [ME 5763: Computer Aided Design: Theory and Practice](https://me5763.github.io/lab)
 - Fall 2017: ME 5763: Principles And Practice Of Computer Aided Design
@@ -155,12 +156,15 @@ I am a teaching instructor for the following courses at Missouri University of S
 <section class="section-reviews" id="reviews">
 <h3><i class="fas fa-search"></i>Reviews</h3>
 </section>
-I have reviewed articles for
-- [Artificial Intelligence](https://publons.com/journal/947/artificial-intelligence)
-- [Engineering Applications of Artificial Intelligence](https://www.journals.elsevier.com/engineering-applications-of-artificial-intelligence)
-- [IEEE Transactions on Intelligent Transportation Systems](https://publons.com/journal/1368/ieee-transactions-on-intelligent-transportation-sy)
+Active Reviewer for
+- The journal of [Artificial Intelligence](https://publons.com/journal/947/artificial-intelligence)
+- The journal of [Engineering Applications of Artificial Intelligence](https://www.journals.elsevier.com/engineering-applications-of-artificial-intelligence)
+- The journal of [IEEE Transactions on Intelligent Transportation Systems](https://publons.com/journal/1368/ieee-transactions-on-intelligent-transportation-sy)
+- The journal of Advanced Manufacturing Technology
 - [IISE Annual Conference 2018](https://publons.com/journal/78635/iise-annual-conference)
 - [The 46th North American Research Conference](http://www.sme.org/namrc46/)
+
+*[Publons Profile](<https://publons.com/researcher/1349420/wenjin-tao/>)*
 
 <hr class="divide-line">
 
