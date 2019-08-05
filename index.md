@@ -189,7 +189,7 @@ Active Reviewer for
     <li>The DEC Scholarship, 2010</li>
     <li>National Scholarship, 2009</li>
     <li>The University Award for 6 times at BIT, 2006-2010</li>
-<details>
+</details>
 
 
 <hr class="divide-line">
