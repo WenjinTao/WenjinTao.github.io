@@ -142,7 +142,7 @@ Additive Manufacturing (AM) technology provides new opportunities to automatical
 
 <hr class="divide-line">
 <section class="section-teaching" id="teaching">
-<h3><i class="fas fa-chalkboard-teacher"></i>Teaching &amp Mentoring Experience</h3>
+<h3><i class="fas fa-chalkboard-teacher"></i>Teaching & Mentoring Experience</h3>
 </section>
 
 I am a teaching instructor for the following courses at Missouri University of Science and Technology
@@ -164,6 +164,8 @@ Active Reviewer for
 - [IISE Annual Conference 2018](https://publons.com/journal/78635/iise-annual-conference)
 - [The 46th North American Research Conference](http://www.sme.org/namrc46/)
 
+<hr style="width: 50%">
+
 *[Publons Profile](<https://publons.com/researcher/1349420/wenjin-tao/>)*
 
 <hr class="divide-line">
@@ -175,6 +177,16 @@ I have received
 - NSF Travel Grant, 2018
 - [Data Analytics & Information Systems Division Best Track Paper Award, IISE Annual 2018](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca)
 - NSF Travel Grant, 2016
+- Award in the Innovation Cup of Science Popularization, 2012
+- Outstanding Student Leader in the School of Mechanical Engineering at BIT, 2012
+- The Final Champion in 2011 Formula Student Competition China, 2011
+- Qualification Certificate of Automotive Specialized Technique by SAE of China, 2011
+- The Final Champion in 2010 Formula Student Competition China, 2010
+- Beijing Outstanding Graduate, 2010
+- The First Prize of FAST Scholarship, 2010
+- The DEC Scholarship, 2010
+- National Scholarship, 2009
+- The University Award for 6 times at BIT, 2006-2010
 
 <hr class="divide-line">
 
