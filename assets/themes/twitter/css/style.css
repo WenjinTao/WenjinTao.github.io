@@ -122,7 +122,7 @@ body{
 .section-posts h3:after,
 .section-reviews h3:after,
 .section-awards h3:after,
-.section-activities h3:after
+.section-activities h3:after,
 .section-talk h3:after  {
     display: block;
     width: 100px;
