@@ -43,8 +43,6 @@ He is a recipient of [2018 IISE DAIS Track Best Paper Award](http://campaign.r20
 <section class="section-projects" id="projects">
 <h3><i class="fas fa-microscope"></i>Research Projects</h3>
 </section>
-
-
 #### Cyber-Physical Sensing, Modeling, and Control with Augmented Reality for Smart Manufacturing Workforce Training and Operations Management
 
 <div class="row-img">
@@ -68,6 +66,7 @@ Foundation grant CMMI-1646162](https://www.nsf.gov/awardsearch/showAward?AWD_ID=
 Science and Technology](https://isc.mst.edu/).
 
 <hr style="width: 50%">
+
 #### Multi-View Recognition of Complex Hand Gesture
 
 <img src="./assets/img/project_asl_overview.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
@@ -102,9 +101,12 @@ The lattice structure possesses many superior properties to solid material and c
 
 AM lattice structures have been intensively studied for more than ten years with significant progress having been made. This [paper](<https://ieeexplore.ieee.org/document/7790182>) reviews and discusses AM processes, design methods and considerations, mechanical behavior, and applications for lattice structures enabled by this emerging technology.
 
-<hr style="width: 50%">
+<hr class="divide-line">
+<section class="section-projects" id="projects">
+<h3><i class="fas fa-microscope"></i>Research Projects</h3>
+</section>
 
-#### Self-driving Car
+#### Self-Driving Car
 
 [Github](https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity)
 
@@ -197,21 +199,16 @@ Active Reviewer for
 - [Data Analytics & Information Systems Division Best Track Paper Award, IISE Annual 2018](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca)
 - NSF Travel Grant, IISE Annual conference, 2018
 - NSF Travel Grant, ISFA conference, 2016
-
-<details>
-<summary>Before 2015</summary>
-    <li>Award in the Innovation Cup of Science Popularization, 2012</li>
-    <li>Outstanding Student Leader in the School of Mechanical Engineering at BIT, 2012</li>
-    <li>The Final Champion in 2011 Formula Student Competition China, 2011</li>
-    <li>Qualification Certificate of Automotive Specialized Technique by SAE of China, 2011</li>
-    <li>The Final Champion in 2010 Formula Student Competition China, 2010</li>
-    <li>Beijing Outstanding Graduate, 2010</li>
-    <li>The First Prize of FAST Scholarship, 2010</li>
-    <li>The DEC Scholarship, 2010</li>
-    <li>National Scholarship, 2009</li>
-    <li>The University Award for 6 times at BIT, 2006-2010</li>
-</details>
-
+- Award in the Innovation Cup of Science Popularization, 2012
+- Outstanding Student Leader in the School of Mechanical Engineering at BIT, 2012
+- The Final Champion in 2011 Formula Student Competition China, 2011
+- Qualification Certificate of Automotive Specialized Technique by SAE of China, 2011
+- The Final Champion in 2010 Formula Student Competition China, 2010
+- Beijing Outstanding Graduate, 2010
+- The First Prize of FAST Scholarship, 2010
+- The DEC Scholarship, 2010
+- National Scholarship, 2009
+- The University Award for 6 times at BIT, 2006-2010
 
 <hr class="divide-line">
 
@@ -232,7 +229,6 @@ Active Reviewer for
 
 <section class="section-posts" id="posts">
 <h3><i class="fas fa-folder-open"></i>Miscellaneous</h3>
-
 </section>
 
 - [Design of Functional Lattice Structure with Density Variable Density Distribution for Additive Manufacturing](posts/2016-11-19-variable-density-lattice.html)
