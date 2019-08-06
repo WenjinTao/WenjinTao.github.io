@@ -70,7 +70,7 @@ Science and Technology](https://isc.mst.edu/).
 <hr style="width: 50%">
 #### Multi-View Recognition of Complex Hand Gesture
 
-![Overview of our proposed approach of multi-view augmentation and inference](./assets/img/project_asl_overview.jpg)
+<img src="./assets/img/project_asl_overview.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
 
 - Considering the challenges of the ASL alphabet recognition task, we choose CNN as the basic model to build the classifier because of its powerful learning ability that has been shown
 - To fully exploit the 3D information provided by depth images, we develop a novel multi-view augmentation strategy. It generates more views from different perspectives, in order to augment the perspective variations that cannot be achieved using traditional image augmentation methods 
