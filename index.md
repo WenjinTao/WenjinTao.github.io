@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Wenjin Tao
-tagline: <br>PhD Candidate, Research Assistant, Teaching Assistant
+tagline: <br>Ph.D. Candidate, Research Assistant, Teaching Assistant
 description: Wenjin Tao xxxxx
 ---
 
@@ -13,7 +13,7 @@ He is currently focusing on smart manufacturing system boosted by deep learning 
 
 Before he joined Missouri S&T, he received his Master and Bachelor degrees in Mechanical Engineering at [Beijing Inistitute of Technology](http://english.bit.edu.cn/). 
 
-He is a recipient of [2018 IISE DAIS Track Best Paper Award](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca). He has been a student member of [IEEE](https://www.ieee.org/) and [IISE](http://www.iise.org/Home/). Meanwhile, he is a lifelong learner, DIY enthusiast, and passionate about all kinds of new technology like flying car, self-driving car, etc.
+He is a recipient of [2018 IISE DAIS Track Best Paper Award](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca). He has been a student member of [IEEE](https://www.ieee.org/), [IISE](http://www.iise.org/Home/) and [SIAM](<https://www.siam.org/>). Meanwhile, he is a lifelong learner, DIY enthusiast, and passionate about all kinds of new technology like flying car, self-driving car, etc.
 
 <section class="section-intro" id="intro">
   <div class="row">
@@ -66,6 +66,17 @@ This research work is supported by the [National Science
 Foundation grant CMMI-1646162](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1646162) and also by the
 [Intelligent Systems Center at Missouri University of
 Science and Technology](https://isc.mst.edu/).
+
+<hr style="width: 50%">
+#### Multi-View Recognition of Complex Hand Gesture
+
+![Overview of our proposed approach of multi-view augmentation and inference](./assets/img/project_asl_overview.jpg)
+
+- Considering the challenges of the ASL alphabet recognition task, we choose CNN as the basic model to build the classifier because of its powerful learning ability that has been shown
+- To fully exploit the 3D information provided by depth images, we develop a novel multi-view augmentation strategy. It generates more views from different perspectives, in order to augment the perspective variations that cannot be achieved using traditional image augmentation methods 
+- To solve the interclass similarity issues caused by perspective variations and partial occlusions, we first make predictions for all individual views and then fuse information from them for the final prediction
+- Design and develop a real-time demo of American Sign Language (ASL) alphabet recognition [[demo](https://taowenjin.com/papers/American-sign-language-alphabet-recognition-using-leap-motion-controller.html)] 
+- Establish and Publish a dataset of ASL alphabet [[dataset](https://github.com/WenjinTao/ASLA-Leap)]
 
 <hr style="width: 50%">
 
