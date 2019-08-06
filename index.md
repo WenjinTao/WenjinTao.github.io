@@ -2,7 +2,7 @@
 layout: page
 title: Wenjin Tao
 tagline: <br>Ph.D. Candidate, Research Assistant, Teaching Assistant
-description: Wenjin Tao xxxxx
+description: Wenjin Tao
 ---
 
 <h3><i class="fas fa-user"></i>Biography</h3>
@@ -80,7 +80,7 @@ Science and Technology](https://isc.mst.edu/).
 
 <hr style="width: 50%">
 
-#### Design for Additive Manufacturing
+#### Design of Lattice Structure for Additive Manufacturing
 
 <div class="row-img">
   <div class="col-img col-img-4">
@@ -96,8 +96,11 @@ Science and Technology](https://isc.mst.edu/).
     <img src="assets/img/lattice_4.png" alt="3" style="width:100%">
   </div>
 </div>
+Additive Manufacturing (AM) technology provides new opportunities to automatically and flexibly fabricate parts with complicated shapes and architectures that could not be produced by conventional manufacturing processes, thus enabling unprecedented design flexibilities and application opportunities. 
 
-Additive Manufacturing (AM) technology provides new opportunities to automatically and flexibly fabricate parts with complicated shapes and architectures that could not be produced by conventional manufacturing processes, thus enabling unprecedented design flexibilities and application opportunities. The lattice structure possesses many superior properties to solid material and conventional structures. It is able to integrate more than one function into a physical part, which makes it attractive to a wide range of applications. With AM technology the lattice structure can be fabricated by adding material layer-by-layer directly from a Computer-Aided Design (CAD) model, rather than the conventional processes with complicated procedures. AM lattice structures have been intensively studied for more than ten years with significant progress having been made. This paper reviews and discusses AM processes, design methods and considerations, mechanical behavior, and applications for lattice structures enabled by this emerging technology.
+The lattice structure possesses many superior properties to solid material and conventional structures. It is able to integrate more than one function into a physical part, which makes it attractive to a wide range of applications. With AM technology the lattice structure can be fabricated by adding material layer-by-layer directly from a Computer-Aided Design (CAD) model, rather than the conventional processes with complicated procedures. 
+
+AM lattice structures have been intensively studied for more than ten years with significant progress having been made. This [paper](<https://ieeexplore.ieee.org/document/7790182>) reviews and discusses AM processes, design methods and considerations, mechanical behavior, and applications for lattice structures enabled by this emerging technology.
 
 <hr style="width: 50%">
 
