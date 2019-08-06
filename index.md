@@ -103,7 +103,7 @@ AM lattice structures have been intensively studied for more than ten years with
 
 <hr class="divide-line">
 <section class="section-projects" id="projects">
-<h3><i class="fas fa-microscope"></i>Research Projects</h3>
+<h3><i class="fas fa-microscope"></i>Other Projects</h3>
 </section>
 
 #### Self-Driving Car
