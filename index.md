@@ -216,7 +216,7 @@ AM lattice structures have been intensively studied for more than ten years with
 </section>
 
 I am a teaching instructor for the following courses at Missouri University of Science and Technology
-- Fall 2018: ME 5763: Computer Aided Design: Theory and Practice / [Course Site](https://me5763.github.io/lab) / [YouTube Channel](<https://www.youtube.com/channel/UChYht2a_KxGdqqJBQ00m4lA/videos?view_as=subscriber>) / [Vimeo](<https://vimeo.com/channels/1412220>)
+- Fall 2018: ME 5763: Computer Aided Design: Theory and Practice / [Course Site](https://me5763.github.io/lab) / [Book]((assets/books/NX 12 for Engineering Design.pdf)) / [YouTube Channel](<https://www.youtube.com/channel/UChYht2a_KxGdqqJBQ00m4lA/videos?view_as=subscriber>) / [Vimeo](<https://vimeo.com/channels/1412220>)
 - Fall 2017: ME 5763: Principles And Practice Of Computer Aided Design
 - Fall 2016: ME 5763: Principles And Practice Of Computer Aided Design
 
