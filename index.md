@@ -105,10 +105,23 @@ AM lattice structures have been intensively studied for more than ten years with
 <section class="section-projects" id="projects">
 <h3><i class="fas fa-microscope"></i>Other Projects</h3>
 </section>
+#### Deep Learning
+
+- [Predict Bike Sharing Rides](<https://github.com/WenjinTao/Deep-Learning-Foundation-Nanodegree--Udacity/blob/master/P1-Predict_Bike_Sharing_Rides/DLND-your-first-network/dlnd-your-first-neural-network.ipynb>)
+- [Image Classification with Convolutional Neural Networks (CNN)]()
+- [Generate TV Scripts with RNN](<https://github.com/WenjinTao/Deep-Learning-Foundation-Nanodegree--Udacity/blob/master/P3-Generate_TV_Scripts/dlnd_tv_script_generation.ipynb>)
+- [Language Translation with LSTM](<https://github.com/WenjinTao/language_translation/blob/master/dlnd_language_translation_REVISED.ipynb>)
+- [Face Generation with Generative Adversarial Networks (GAN)](<https://github.com/WenjinTao/Deep-Learning-Foundation-Nanodegree--Udacity/blob/master/P5-Face_Generation/dlnd_face_generation.ipynb>)
 
 #### Self-Driving Car
 
-[Finding Lane Lines](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P1-Finding_Lane_Lines/P1-Finding_Lane_Lines.ipynb>) || [Traffic Sign Classifier](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P2-Traffic_Sign_Classifier/Traffic_Sign_Classifier-WenjinTao.ipynb>) || [Behavioral Cloning](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P3-Behavioral_Cloning>)/[demo1](<https://www.youtube.com/watch?v=f8TJ_bV4DKA>)/[demo2](<https://www.youtube.com/watch?v=VcyPwxqqN5E>) ||
+- [Finding Lane Lines](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P1-Finding_Lane_Lines/P1-Finding_Lane_Lines.ipynb>) 
+- [Traffic Sign Classifier](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P2-Traffic_Sign_Classifier/Traffic_Sign_Classifier-WenjinTao.ipynb>)
+- [Behavioral Cloning](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P3-Behavioral_Cloning>) / [demo1](<https://www.youtube.com/watch?v=f8TJ_bV4DKA>) / [demo2](<https://www.youtube.com/watch?v=VcyPwxqqN5E>)
+- [Advanced Lane Finding](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P4-Advanced_Lane_Finding>) / [demo](<https://www.youtube.com/watch?v=Dc_axsKVrTQ&feature=youtu.be>)
+- [Vehicle Detection](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P5-Vehicle_Detection>) / [demo1](<https://www.youtube.com/watch?v=RASZZ41Okfc&feature=youtu.be>) / [demo2](<https://www.youtube.com/watch?v=qlcGfB6M48Y&feature=youtu.be>)
+- [Extended Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P1-Extended_Kalman_Filters>)
+- [Unscented Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P2-Unscented_Kalman_Filters>)
 
 
 
@@ -129,7 +142,7 @@ AM lattice structures have been intensively studied for more than ten years with
 
 #### Artificial Intelligence
 
-[Image Classifier]([https://github.com/WenjinTao/aipnd-project/blob/master/Image%20Classifier%20Project.ipynb](https://github.com/WenjinTao/aipnd-project/blob/master/Image Classifier Project.ipynb)) |
+- [Image Classification with CNN in PyTorch]([https://github.com/WenjinTao/aipnd-project/blob/master/Image%20Classifier%20Project.ipynb](https://github.com/WenjinTao/aipnd-project/blob/master/Image Classifier Project.ipynb)) 
 
 <hr class="divide-line">
 <section class="section-publications" id="publications">
