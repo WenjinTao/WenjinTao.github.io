@@ -161,7 +161,7 @@ AM lattice structures have been intensively studied for more than ten years with
 
 #### Artificial Intelligence
 
-- [Image Classification with CNN in PyTorch]([https://github.com/WenjinTao/aipnd-project/blob/master/Image%20Classifier%20Project.ipynb](https://github.com/WenjinTao/aipnd-project/blob/master/Image Classifier Project.ipynb)) 
+- [Image Classification with CNN in PyTorch](https://github.com/WenjinTao/aipnd-project/blob/master/Image Classifier Project.ipynb)
 
 <hr class="divide-line">
 <section class="section-publications" id="publications">
