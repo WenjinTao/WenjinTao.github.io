@@ -137,8 +137,8 @@ AM lattice structures have been intensively studied for more than ten years with
 
 **Journal Papers**
 1. **Tao, W.**, Lai, Z. H., Leu, M. C., Yin, Z., & Qin, R. (2019). **A Self-Aware and Active-Guiding Training System for Worker-Centered Intelligent Manufacturing**. Manufacturing Letters. (Accepted)
-2. **Tao, W.**, Leu, M. C., & Yin, Z. (2019). Multi-Modal Recognition of Worker Activity for Human-Centered Intelligent Manufacturing. (*Submitted to the Journal of Manufacturing Systems*)
-3. **Tao, W.**, Moniruzzaman, M., Leu, M. C., Yin, Z., & Qin, R. (2019). Attention-Based Sensor Fusion for Human Activity Recognition Using IMU Signals. (*Submitted to the journal of Information Fusion*)
+2. **Tao, W.**, Leu, M. C., & Yin, Z. (2019). **Multi-Modal Recognition of Worker Activity for Human-Centered Intelligent Manufacturing**. (*Submitted to the Journal of Manufacturing Systems*)
+3. **Tao, W.**, Moniruzzaman, M., Leu, M. C., Yin, Z., & Qin, R. (2019). **Attention-Based Sensor Fusion for Human Activity Recognition Using IMU Signals**. (*Submitted to the journal of Information Fusion*)
 4. Lai, Z. H., **Tao, W.\***, Leu, M. C., & Yin, Z. (2019). **Smart Augmented Reality Instructional System for
    Mechanical Assembly Towards Worker-Centered Intelligent Manufacturing**. (*Submitted to the Journal of Manufacturing Systems*)
 5. **Tao, W.**, Leu, M.C. and Yin, Z., 2018. **American Sign Language alphabet recognition using Convolutional Neural Networks with multiview augmentation and inference fusion**. Engineering Applications of Artificial Intelligence, 76, pp.202-213. [<span class="label preprint">Preprint</span>](assets/papers/American Sign Language alphabet recognition using Convolutional Neural Networks with multiview augmentation and inference fusion.pdf) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.engappai.2018.09.006)
@@ -152,9 +152,14 @@ AM lattice structures have been intensively studied for more than ten years with
 
 **Peer-Reviewed Conference Papers**
 
-1. **Tao, W.**, Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **Worker Activity Recognition in Smart Manufacturing Using IMU and sEMG Signals with Convolutional Neural Networks**. Procedia Manufacturing, 26, pp.1159-1166. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/gdT5) [<span class="label project">Project</span>](#) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.promfg.2018.07.152)
-1. **Tao, W.**, Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **American Sign Language Alphabet Recognition Using Leap Motion Controller** ([IISE Annual 2018, Data Analytics & Information Systems Division Best Track Paper Award](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca)) [<span class="label preprint">Preprint</span>](http://amz.xcdsystem.com/C5AB9227-CA78-AE70-2946FDB80F96639A_abstract_File8390/FinalPaper_1720_0306092921.pdf) [<span class="label project">Project</span>](papers/American-sign-language-alphabet-recognition-using-leap-motion-controller.html)
-1. **Tao, W.**, Liu, Y., Sutton, A., Kolan K. and Leu, M.C., 2018. **Design of Lattice Structures with Graded Density Fabricated by Additive Manufacturing**. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/L9DR)
+1. Al-Amin, M., **Tao, W.**, Doell, D., Lingard, R., Yin, Z., Leu, M. C., & Qin, R. (2019, August). **Action Recognition in Manufacturing Assembly using Multimodal Sensor Fusion**. 25th International Conference on Production Research Manufacturing Innovation: Cyber Physical Manufacturing, August 9–14, 2019 Chicago, Illinois, USA.
+2. **Tao, W.**, Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **Worker Activity Recognition in Smart Manufacturing Using IMU and sEMG Signals with Convolutional Neural Networks**. Procedia Manufacturing, 26, pp.1159-1166. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/gdT5) [<span class="label project">Project</span>](#) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.promfg.2018.07.152)
+3. **Tao, W.**, Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **American Sign Language Alphabet Recognition Using Leap Motion Controller** ([IISE Annual 2018, Data Analytics & Information Systems Division Best Track Paper Award](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca)) [<span class="label preprint">Preprint</span>](http://amz.xcdsystem.com/C5AB9227-CA78-AE70-2946FDB80F96639A_abstract_File8390/FinalPaper_1720_0306092921.pdf) [<span class="label project">Project</span>](papers/American-sign-language-alphabet-recognition-using-leap-motion-controller.html)
+4. Wu, S., **Tao, W.\***, Leu, M. C., & Long, S. (2018). **Engine Sound Simulation and Generation in Driving Simulator**. In Proceedings of the 2018 Institute of Industrial and Systems Engineers Annual Conference (IISE 2018).
+5. Al-Amin, M., Qin, R., **Tao, W.**, & Leu, M. C. (2018, January). **Sensor Data Based Models for Workforce Management in Smart Manufacturing**. In Proceedings of the 2018 Institute of Industrial and Systems Engineers Annual Conference (IISE 2018).
+6. Hu, L., Nguyen, N.T., **Tao, W.\***, Leu, M.C., Liu, X.F., Shahriar, M.R. and Al Sunny, S.N., 2018. **Modeling of cloud-based digital twins for smart manufacturing with MT connect**. Procedia Manufacturing, 26, pp.1193-1203.
+7. **Tao, W.**, Liu, Y., Sutton, A., Kolan K. and Leu, M.C., 2018. **Design of Lattice Structures with Graded Density Fabricated by Additive Manufacturing**. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/L9DR)
+8. **Tao, W.**, & Leu, M. C. (2016, August). **Design of lattice structure for additive manufacturing**. In 2016 International Symposium on Flexible Automation (ISFA) (pp. 325-332). IEEE.
 
 
 
@@ -163,9 +168,9 @@ AM lattice structures have been intensively studied for more than ten years with
 **Books & Book Chapters**
 
 
-1. NX 12 for Engineering Design. Leu, M. C., **Tao, W.***, Ghazanfari, A., & Kolan, K. (2017). Department of Mechanical and Aerospace Engineering, Missouri University of Science and Technology. [<span class="label preprint">eBook</span>](assets/books/NX 12 for Engineering Design.pdf)
-1. Manufacturing Assembly Simulations in Virtual and Augmented Reality. **Tao, W.**, Lai, Z. H., & Leu, M. C. (2018). Augmented, Virtual, and Mixed Reality Applications in Advanced Manufacturing. [<span class="label preprint">Accepted Draft</span>](assets/books/Manufacturing Assembly Simulations in Virtual and Augmented Reality.pdf)
-1. Virtual Bone Surgery. Leu, M. C., **Tao, W.**, Niu, Q., & Chi, X. (2018**).** In Virtual Prototyping & Bio Manufacturing in Medical Applications (2nd Edition). Springer, Boston, MA <span class="label under-review">under review</span>
+1. **NX 12 for Engineering Design**. Leu, M. C., **Tao, W.***, Ghazanfari, A., & Kolan, K. (2017). Department of Mechanical and Aerospace Engineering, Missouri University of Science and Technology. [<span class="label preprint">eBook</span>](assets/books/NX 12 for Engineering Design.pdf)
+1. **Manufacturing Assembly Simulations in Virtual and Augmented Reality**. **Tao, W.**, Lai, Z. H., & Leu, M. C. (2018). Augmented, Virtual, and Mixed Reality Applications in Advanced Manufacturing. [<span class="label preprint">Accepted Draft</span>](assets/books/Manufacturing Assembly Simulations in Virtual and Augmented Reality.pdf)
+1. **Virtual Bone Surgery**. Leu, M. C., **Tao, W.**, Niu, Q., & Chi, X. (2018**).** In Virtual Prototyping & Bio Manufacturing in Medical Applications (2nd Edition). Springer, Boston, MA <span class="label under-review">under review</span>
 
 <hr style="width: 50%">
 *[Google Scholar](https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en) for a full list.*
