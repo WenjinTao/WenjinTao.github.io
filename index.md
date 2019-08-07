@@ -2,7 +2,7 @@
 layout: page
 title: Wenjin Tao
 tagline: <br>Ph.D. Candidate, Research Assistant, Teaching Assistant
-description: Wenjin Tao
+description: Wenjin Tao | Missouri S&T
 ---
 
 <h3><i class="fas fa-user"></i>Biography</h3>
