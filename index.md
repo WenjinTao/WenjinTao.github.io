@@ -81,7 +81,7 @@ Science and Technology](https://isc.mst.edu/).
 
 
 
-<a href="<https://par.nsf.gov/servlets/purl/10083240>"><img src="./assets/img/paper_asl/paper_asl_leap_motion.jpg" width="100%" alt="American Sign Language Alphabet Recognition Using Leap Motion Controller"></a>
+<a href="https://par.nsf.gov/servlets/purl/10083240"><img src="./assets/img/paper_asl/paper_asl_leap_motion.jpg" width="100%" alt="American Sign Language Alphabet Recognition Using Leap Motion Controller"></a>
 
 <hr style="width: 50%">
 
