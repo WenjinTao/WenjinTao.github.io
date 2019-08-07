@@ -107,6 +107,8 @@ The lattice structure possesses many superior properties to solid material and c
 
 AM lattice structures have been intensively studied for more than ten years with significant progress having been made. This [paper](<https://ieeexplore.ieee.org/document/7790182>) reviews and discusses AM processes, design methods and considerations, mechanical behavior, and applications for lattice structures enabled by this emerging technology.
 
+<a href="https://ieeexplore.ieee.org/document/7790182"><img src="./assets/img/project_lattice_paper.png" width="100%" alt="Design of Lattice Structure for Additive Manufacturing"></a>
+
 <hr class="divide-line">
 <section class="section-projects" id="projects">
 <h3><i class="fas fa-microscope"></i>Other Projects</h3>
