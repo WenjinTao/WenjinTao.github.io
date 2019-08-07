@@ -129,7 +129,7 @@ AM lattice structures have been intensively studied for more than ten years with
 - [Unscented Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P2-Unscented_Kalman_Filters>)
 - [Semantic Segmentation Using Fully Convolutional Networks (FCN)](<https://github.com/WenjinTao/CarND-Semantic-Segmentation>)
 
-<img src="https://github.com/WenjinTao/CarND-Semantic-Segmentation/blob/master/runs/1504594256.566587/um_000063.png?raw=true"  width="80%" align="center" alt="Semantic Segmentation">
+<img src="./assets/img/project_semantic_segmentation.png"  width="80%" align="center" alt="Semantic Segmentation">
 
 
 
