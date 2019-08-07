@@ -105,7 +105,9 @@ AM lattice structures have been intensively studied for more than ten years with
 <section class="section-projects" id="projects">
 <h3><i class="fas fa-microscope"></i>Other Projects</h3>
 </section>
+
 #### Deep Learning
+
 
 - [Predict Bike Sharing Rides](<https://github.com/WenjinTao/Deep-Learning-Foundation-Nanodegree--Udacity/blob/master/P1-Predict_Bike_Sharing_Rides/DLND-your-first-network/dlnd-your-first-neural-network.ipynb>)
 - [Image Classification with Convolutional Neural Networks (CNN)](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P2-Traffic_Sign_Classifier/Traffic_Sign_Classifier-WenjinTao.ipynb>)
@@ -125,11 +127,13 @@ AM lattice structures have been intensively studied for more than ten years with
 
 <img src="./assets/img/project_vehicle_detection.jpg"  width="80%" align="center" alt="Semantic Segmentation">
 
-- [Extended Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P1-Extended_Kalman_Filters>)
-- [Unscented Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P2-Unscented_Kalman_Filters>)
 - [Semantic Segmentation Using Fully Convolutional Networks (FCN)](<https://github.com/WenjinTao/CarND-Semantic-Segmentation>)
 
 <img src="./assets/img/project_semantic_segmentation.png"  width="80%" align="center" alt="Semantic Segmentation">
+
+- [Extended Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P1-Extended_Kalman_Filters>)
+- [Unscented Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P2-Unscented_Kalman_Filters>)
+- [Path Following with a PID Controller](https://github.com/WenjinTao/CarND-PID-Control-Project)
 
 
 
@@ -144,6 +148,10 @@ AM lattice structures have been intensively studied for more than ten years with
 #### Robotics
 
 - [Search and Sample Return](<https://github.com/WenjinTao/RoboND-Rover-Project>)
+- [Perception with RGBD Camera](<https://github.com/WenjinTao/RoboND-Perception-Project/blob/master/writeup_template.md>)
+
+<img src="./assets/img/project_perception_rgbd.png"  width="80%" align="center" alt="Semantic Segmentation">
+
 - [Robotic Arm: Pick & Place Using Forward & Inverse Kinematics](<https://github.com/WenjinTao/RoboND-Kinematics-Project/blob/master/project_writeup.md>)
 - [Identification and Tracking of Human Target Using Fully Convolutional Networks (FCN)](<https://github.com/WenjinTao/RoboND-DeepLearning-Project/blob/master/Write-up.md>)
 
