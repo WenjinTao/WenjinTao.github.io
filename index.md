@@ -108,7 +108,7 @@ AM lattice structures have been intensively studied for more than ten years with
 
 #### Self-Driving Car
 
-[Finding Lane Lines](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P1-Finding_Lane_Lines/P1-Finding_Lane_Lines.ipynb>) | [Traffic Sign Classifier](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P2-Traffic_Sign_Classifier/Traffic_Sign_Classifier-WenjinTao.ipynb>) | [Behavioral Cloning](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P3-Behavioral_Cloning>)/[demo1](<https://www.youtube.com/watch?v=f8TJ_bV4DKA>)/[demo2](<https://www.youtube.com/watch?v=VcyPwxqqN5E>) | 
+[Finding Lane Lines](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P1-Finding_Lane_Lines/P1-Finding_Lane_Lines.ipynb>) || [Traffic Sign Classifier](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P2-Traffic_Sign_Classifier/Traffic_Sign_Classifier-WenjinTao.ipynb>) || [Behavioral Cloning](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P3-Behavioral_Cloning>)/[demo1](<https://www.youtube.com/watch?v=f8TJ_bV4DKA>)/[demo2](<https://www.youtube.com/watch?v=VcyPwxqqN5E>) ||
 
 
 
