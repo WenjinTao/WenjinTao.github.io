@@ -77,26 +77,7 @@ Science and Technology](https://isc.mst.edu/).
 - Design and develop a real-time demo of American Sign Language (ASL) alphabet recognition [[demo](https://taowenjin.com/papers/American-sign-language-alphabet-recognition-using-leap-motion-controller.html)] 
 - Establish and Publish a dataset of ASL alphabet [[dataset](https://github.com/WenjinTao/ASLA-Leap)]
 
-<div class="row-img">
-  <div class="col-img col-img-6">
-    <img src="assets/img/paper_asl/01.jpg" alt="1" style="width:100%">
-  </div>
-  <div class="col-img col-img-6">
-    <img src="assets/img/paper_asl/01.jpg" alt="2" style="width:100%">
-  </div>
-  <div class="col-img col-img-6">
-    <img src="assets/img/paper_asl/01.jpg" alt="3" style="width:100%">
-  </div>
-  <div class="col-img col-img-6">
-    <img src="assets/img/paper_asl/01.jpg" alt="4" style="width:100%">
-  </div>
-  <div class="col-img col-img-6">
-    <img src="assets/img/paper_asl/01.jpg" alt="5" style="width:100%">
-  </div>
-  <div class="col-img col-img-6">
-    <img src="assets/img/paper_asl/01.jpg" alt="6" style="width:100%">
-  </div>
-</div>
+
 
 <hr style="width: 50%">
 
