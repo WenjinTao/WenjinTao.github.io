@@ -194,7 +194,15 @@ AM lattice structures have been intensively studied for more than ten years with
 1. **Virtual Bone Surgery**. Leu, M. C., **Tao, W.**, Niu, Q., & Chi, X. (2018**).** In Virtual Prototyping & Bio Manufacturing in Medical Applications (2nd Edition). Springer, Boston, MA <span class="label under-review">under review</span>
 
 <hr style="width: 50%">
+**Patents**
+1. A Novel Method for Analyzing the Wear of Rotary Seal with Micro-textured Contacting Surface. Wei, C., Zhao, Y., Hu, J., Yuan, S., & Tao, W. (2015). CN104679990A
+2. A Novel Optimization Method for Designing of Rotary Seal in Automotive Transmission. Wei, C., Hu, J., Tao, W., & Chen, G. (2014). CN103955581A
+3. A Novel Rotary Seal with Wavy Contacting Surface for Automotive Transmissions. Hu, J., Tao, W., Yuan, S., & Wei, C. (2012). CN102797854A
+4. A Self-adaptive Deformable Wing for Racing Cars. Xiang, C., Xu, B., Tao, W., & Lou, R. (2011). CN102248968B
+
+<hr style="width: 50%">
 *[Google Scholar](https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en) for a full list.*
+
 
 
 <hr class="divide-line">
