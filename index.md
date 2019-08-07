@@ -169,6 +169,8 @@ I think getting hands dirty is the best way to learn. Here lists some interestin
 - [Robotic Arm: Pick & Place Using Forward & Inverse Kinematics](https://github.com/WenjinTao/RoboND-Kinematics-Project/blob/master/project_writeup.md)
 - [Identification and Tracking of Human Target Using Fully Convolutional Networks (FCN)](https://github.com/WenjinTao/RoboND-DeepLearning-Project/blob/master/Write-up.md)
 
+<img src="./assets/img/project_person_segmentation_fcn.png"  width="80%" align="center" alt="">
+
 <img src="./assets/img/project_person_segmentation.png"  width="80%" align="center" alt="">
 
 <hr style="width: 50%">
