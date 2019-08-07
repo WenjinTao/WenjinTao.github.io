@@ -108,7 +108,7 @@ AM lattice structures have been intensively studied for more than ten years with
 #### Deep Learning
 
 - [Predict Bike Sharing Rides](<https://github.com/WenjinTao/Deep-Learning-Foundation-Nanodegree--Udacity/blob/master/P1-Predict_Bike_Sharing_Rides/DLND-your-first-network/dlnd-your-first-neural-network.ipynb>)
-- [Image Classification with Convolutional Neural Networks (CNN)]()
+- [Image Classification with Convolutional Neural Networks (CNN)](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P2-Traffic_Sign_Classifier/Traffic_Sign_Classifier-WenjinTao.ipynb>)
 - [Generate TV Scripts with RNN](<https://github.com/WenjinTao/Deep-Learning-Foundation-Nanodegree--Udacity/blob/master/P3-Generate_TV_Scripts/dlnd_tv_script_generation.ipynb>)
 - [Language Translation with LSTM](<https://github.com/WenjinTao/language_translation/blob/master/dlnd_language_translation_REVISED.ipynb>)
 - [Face Generation with Generative Adversarial Networks (GAN)](<https://github.com/WenjinTao/Deep-Learning-Foundation-Nanodegree--Udacity/blob/master/P5-Face_Generation/dlnd_face_generation.ipynb>)
