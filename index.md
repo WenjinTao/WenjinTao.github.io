@@ -153,7 +153,6 @@ AM lattice structures have been intensively studied for more than ten years with
 <img src="./assets/img/project_perception_rgbd.png"  width="80%" align="center" alt="Semantic Segmentation">
 
 - [Robotic Arm: Pick & Place Using Forward & Inverse Kinematics](<https://github.com/WenjinTao/RoboND-Kinematics-Project/blob/master/project_writeup.md>)
-
 - [Identification and Tracking of Human Target Using Fully Convolutional Networks (FCN)](<https://github.com/WenjinTao/RoboND-DeepLearning-Project/blob/master/Write-up.md>)
 
 <img src="./assets/img/project_person_segmentation.png"  width="80%" align="center" alt="Semantic Segmentation">
