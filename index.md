@@ -109,6 +109,8 @@ AM lattice structures have been intensively studied for more than ten years with
 
 <a href="https://ieeexplore.ieee.org/document/7790182"><img src="./assets/img/project_lattice_paper.png" width="100%" alt="Design of Lattice Structure for Additive Manufacturing"></a>
 
+<a href="https://www.jstage.jst.go.jp/article/isfa/2018/0/2018_122/_article/-char/ja/"><img src="./assets/img/project_lattice_paper_2.png" width="66%" alt="Design of Lattice Structure for Additive Manufacturing"></a>
+
 <hr class="divide-line">
 <section class="section-projects" id="projects">
 <h3><i class="fas fa-microscope"></i>Other Projects</h3>
