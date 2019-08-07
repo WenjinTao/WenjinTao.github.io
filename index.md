@@ -134,11 +134,24 @@ AM lattice structures have been intensively studied for more than ten years with
 <h3><i class="fas fa-book"></i>Publications</h3>
 </section>
 <div markdown="1" class="pub-list">
+
 **Journal Papers**
-1. Tao, W., Lai, Z. H., Leu, M. C., Yin, Z., & Qin, R. (2019). A Self-Aware and Active-Guiding Training System for Worker-Centered Intelligent Manufacturing. Manufacturing Letters. (Accepted)
-1. **Tao, W.**, Leu, M.C. and Yin, Z., 2018. **American Sign Language alphabet recognition using Convolutional Neural Networks with multiview augmentation and inference fusion**. Engineering Applications of Artificial Intelligence, 76, pp.202-213. [<span class="label preprint">Preprint</span>](assets/papers/American Sign Language alphabet recognition using Convolutional Neural Networks with multiview augmentation and inference fusion.pdf) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.engappai.2018.09.006)
+1. **Tao, W.**, Lai, Z. H., Leu, M. C., Yin, Z., & Qin, R. (2019). **A Self-Aware and Active-Guiding Training System for Worker-Centered Intelligent Manufacturing**. Manufacturing Letters. (Accepted)
+2. **Tao, W.**, Leu, M. C., & Yin, Z. (2019). Multi-Modal Recognition of Worker Activity for Human-Centered Intelligent Manufacturing. (*Submitted to the Journal of Manufacturing Systems*)
+3. **Tao, W.**, Moniruzzaman, M., Leu, M. C., Yin, Z., & Qin, R. (2019). Attention-Based Sensor Fusion for Human Activity Recognition Using IMU Signals. (*Submitted to the journal of Information Fusion*)
+4. Lai, Z. H., **Tao, W.\***, Leu, M. C., & Yin, Z. (2019). **Smart Augmented Reality Instructional System for
+   Mechanical Assembly Towards Worker-Centered Intelligent Manufacturing**. (*Submitted to the Journal of Manufacturing Systems*)
+5. **Tao, W.**, Leu, M.C. and Yin, Z., 2018. **American Sign Language alphabet recognition using Convolutional Neural Networks with multiview augmentation and inference fusion**. Engineering Applications of Artificial Intelligence, 76, pp.202-213. [<span class="label preprint">Preprint</span>](assets/papers/American Sign Language alphabet recognition using Convolutional Neural Networks with multiview augmentation and inference fusion.pdf) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.engappai.2018.09.006)
+6. Shen, J., Li, G., Yan, W., **Tao, W.**, Xu, G., Diao, D., & Green, P. (2018). **Nighttime driving safety
+   improvement via image enhancement for driver face detection**. IEEE Access, 6, 45625-45634.
+7. Wei, C., Chen, G., Luan, Z., **Tao, W.** (2016). **Optimization on the Hydrodynamic Groove Geometry of Rotary Seals for Automotive Transmissions**. Transactions of Beijing Institute of Technology 36 (1), 25-30.
+8. Qiao, J., **Tao, W.**, & Sun, B. (2012). **Design for the Braking System of a FSAE Racing Car** [J]. Chinese Journal of Automotive Engineering, 2. 
+9. Wei, W., **Tao, W.**, & Yan, Q. (2010). **Exploratory discussion on virtual laboratory teaching information platform system based on visual simulation technique**. Experimental Technology and Management, 27(3), 78-81.
+
+<hr style="width: 50%">
 
 **Peer-Reviewed Conference Papers**
+
 1. **Tao, W.**, Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **Worker Activity Recognition in Smart Manufacturing Using IMU and sEMG Signals with Convolutional Neural Networks**. Procedia Manufacturing, 26, pp.1159-1166. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/gdT5) [<span class="label project">Project</span>](#) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.promfg.2018.07.152)
 1. **Tao, W.**, Lai, Z.H., Leu, M.C. and Yin, Z., 2018. **American Sign Language Alphabet Recognition Using Leap Motion Controller** ([IISE Annual 2018, Data Analytics & Information Systems Division Best Track Paper Award](http://campaign.r20.constantcontact.com/render?m=1101700049774&ca=ed0c3be7-c33d-4f73-9cbe-2269222b73ca)) [<span class="label preprint">Preprint</span>](http://amz.xcdsystem.com/C5AB9227-CA78-AE70-2946FDB80F96639A_abstract_File8390/FinalPaper_1720_0306092921.pdf) [<span class="label project">Project</span>](papers/American-sign-language-alphabet-recognition-using-leap-motion-controller.html)
 1. **Tao, W.**, Liu, Y., Sutton, A., Kolan K. and Leu, M.C., 2018. **Design of Lattice Structures with Graded Density Fabricated by Additive Manufacturing**. [<span class="label preprint">Preprint</span>](https://wvvw.easychair.org/publications/preprint_open/L9DR)
