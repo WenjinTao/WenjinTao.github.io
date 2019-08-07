@@ -127,12 +127,12 @@ AM lattice structures have been intensively studied for more than ten years with
 
 <img src="./assets/img/project_vehicle_detection.jpg"  width="80%" align="center" alt="Semantic Segmentation">
 
-- [Semantic Segmentation Using Fully Convolutional Networks (FCN)](<https://github.com/WenjinTao/CarND-Semantic-Segmentation>)
+- [Semantic Segmentation Using Fully Convolutional Networks (FCN)](https://github.com/WenjinTao/CarND-Semantic-Segmentation)
 
 <img src="./assets/img/project_semantic_segmentation.png"  width="80%" align="center" alt="Semantic Segmentation">
 
-- [Extended Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P1-Extended_Kalman_Filters>)
-- [Unscented Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P2-Unscented_Kalman_Filters>)
+- [Extended Kalman Filter](https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P1-Extended_Kalman_Filters)
+- [Unscented Kalman Filter](https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P2-Unscented_Kalman_Filters)
 - [Path Following with a PID Controller](https://github.com/WenjinTao/CarND-PID-Control-Project)
 
 
@@ -147,13 +147,13 @@ AM lattice structures have been intensively studied for more than ten years with
 
 #### Robotics
 
-- [Search and Sample Return](<https://github.com/WenjinTao/RoboND-Rover-Project>)
-- [Perception with RGBD Camera](<https://github.com/WenjinTao/RoboND-Perception-Project/blob/master/writeup_template.md>)
+- [Search and Sample Return](https://github.com/WenjinTao/RoboND-Rover-Project)
+- [Perception with RGBD Camera](https://github.com/WenjinTao/RoboND-Perception-Project/blob/master/writeup_template.md)
 
 <img src="./assets/img/project_perception_rgbd.png"  width="80%" align="center" alt="">
 
-- [Robotic Arm: Pick & Place Using Forward & Inverse Kinematics](<https://github.com/WenjinTao/RoboND-Kinematics-Project/blob/master/project_writeup.md>)
-- [Identification and Tracking of Human Target Using Fully Convolutional Networks (FCN)](<https://github.com/WenjinTao/RoboND-DeepLearning-Project/blob/master/Write-up.md>)
+- [Robotic Arm: Pick & Place Using Forward & Inverse Kinematics](https://github.com/WenjinTao/RoboND-Kinematics-Project/blob/master/project_writeup.md)
+- [Identification and Tracking of Human Target Using Fully Convolutional Networks (FCN)](https://github.com/WenjinTao/RoboND-DeepLearning-Project/blob/master/Write-up.md)
 
 <img src="./assets/img/project_person_segmentation.png"  width="80%" align="center" alt="">
 
