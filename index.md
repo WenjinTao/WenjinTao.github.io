@@ -108,7 +108,9 @@ AM lattice structures have been intensively studied for more than ten years with
 
 #### Self-Driving Car
 
-[Github](https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity)
+[Finding Lane Lines](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P1-Finding_Lane_Lines/P1-Finding_Lane_Lines.ipynb>) | [Traffic Sign Classifier](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P2-Traffic_Sign_Classifier/Traffic_Sign_Classifier-WenjinTao.ipynb>) | [Behavioral Cloning](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P3-Behavioral_Cloning>)/[demo1](<https://www.youtube.com/watch?v=f8TJ_bV4DKA>)/[demo2](<https://www.youtube.com/watch?v=VcyPwxqqN5E>) | 
+
+
 
 <hr style="width: 50%">
 
@@ -127,7 +129,7 @@ AM lattice structures have been intensively studied for more than ten years with
 
 #### Artificial Intelligence
 
-
+[Image Classifier]([https://github.com/WenjinTao/aipnd-project/blob/master/Image%20Classifier%20Project.ipynb](https://github.com/WenjinTao/aipnd-project/blob/master/Image Classifier Project.ipynb)) |
 
 <hr class="divide-line">
 <section class="section-publications" id="publications">
@@ -144,7 +146,7 @@ AM lattice structures have been intensively studied for more than ten years with
 5. **Tao, W.**, Leu, M.C. and Yin, Z., 2018. **American Sign Language alphabet recognition using Convolutional Neural Networks with multiview augmentation and inference fusion**. Engineering Applications of Artificial Intelligence, 76, pp.202-213. [<span class="label preprint">Preprint</span>](assets/papers/American Sign Language alphabet recognition using Convolutional Neural Networks with multiview augmentation and inference fusion.pdf) [<span class="label cite">Cite</span>](https://doi.org/10.1016/j.engappai.2018.09.006)
 6. Shen, J., Li, G., Yan, W., **Tao, W.**, Xu, G., Diao, D., & Green, P. (2018). **Nighttime driving safety
    improvement via image enhancement for driver face detection**. IEEE Access, 6, 45625-45634.
-7. Wei, C., Chen, G., Luan, Z., **Tao, W.** (2016). **Optimization on the Hydrodynamic Groove Geometry of Rotary Seals for Automotive Transmissions**. Transactions of Beijing Institute of Technology 36 (1), 25-30.
+7. Wei, C., Chen, G., Luan, Z., **Tao, W.*** (2016). **Optimization on the Hydrodynamic Groove Geometry of Rotary Seals for Automotive Transmissions**. Transactions of Beijing Institute of Technology 36 (1), 25-30.
 8. Qiao, J., **Tao, W.**, & Sun, B. (2012). **Design for the Braking System of a FSAE Racing Car** [J]. Chinese Journal of Automotive Engineering, 2. 
 9. Wei, W., **Tao, W.**, & Yan, Q. (2010). **Exploratory discussion on virtual laboratory teaching information platform system based on visual simulation technique**. Experimental Technology and Management, 27(3), 78-81.
 
