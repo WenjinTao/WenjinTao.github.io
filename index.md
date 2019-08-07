@@ -113,6 +113,8 @@ AM lattice structures have been intensively studied for more than ten years with
 - [Language Translation with LSTM](<https://github.com/WenjinTao/language_translation/blob/master/dlnd_language_translation_REVISED.ipynb>)
 - [Face Generation with Generative Adversarial Networks (GAN)](<https://github.com/WenjinTao/Deep-Learning-Foundation-Nanodegree--Udacity/blob/master/P5-Face_Generation/dlnd_face_generation.ipynb>)
 
+<hr style="width: 50%">
+
 #### Self-Driving Car
 
 - [Finding Lane Lines](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P1-Finding_Lane_Lines/P1-Finding_Lane_Lines.ipynb>) 
@@ -122,6 +124,7 @@ AM lattice structures have been intensively studied for more than ten years with
 - [Vehicle Detection](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P5-Vehicle_Detection>) / [demo1](<https://www.youtube.com/watch?v=RASZZ41Okfc&feature=youtu.be>) / [demo2](<https://www.youtube.com/watch?v=qlcGfB6M48Y&feature=youtu.be>)
 - [Extended Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P1-Extended_Kalman_Filters>)
 - [Unscented Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P2-Unscented_Kalman_Filters>)
+- [Semantic Segmentation Using Fully Convolutional Networks (FCN)](<https://github.com/WenjinTao/CarND-Semantic-Segmentation>)
 
 
 
@@ -135,7 +138,9 @@ AM lattice structures have been intensively studied for more than ten years with
 
 #### Robotics
 
-
+- [Search and Sample Return](<https://github.com/WenjinTao/RoboND-Rover-Project>)
+- [Robotic Arm: Pick & Place Using Forward & Inverse Kinematics](<https://github.com/WenjinTao/RoboND-Kinematics-Project/blob/master/project_writeup.md>)
+- [Identification and Tracking of Human Target Using Fully Convolutional Networks (FCN)](<https://github.com/WenjinTao/RoboND-DeepLearning-Project/blob/master/Write-up.md>)
 
 
 <hr style="width: 50%">
@@ -143,6 +148,7 @@ AM lattice structures have been intensively studied for more than ten years with
 #### Artificial Intelligence
 
 - [Image Classification with CNN in PyTorch]([https://github.com/WenjinTao/aipnd-project/blob/master/Image%20Classifier%20Project.ipynb](https://github.com/WenjinTao/aipnd-project/blob/master/Image Classifier Project.ipynb)) 
+- [Sign Language Recognition with Probabilistic Models](<https://github.com/WenjinTao/AIND-Recognizer/blob/master/asl_recognizer.ipynb>)
 
 <hr class="divide-line">
 <section class="section-publications" id="publications">
