@@ -122,6 +122,9 @@ AM lattice structures have been intensively studied for more than ten years with
 - [Behavioral Cloning](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P3-Behavioral_Cloning>) / [demo1](<https://www.youtube.com/watch?v=f8TJ_bV4DKA>) / [demo2](<https://www.youtube.com/watch?v=VcyPwxqqN5E>)
 - [Advanced Lane Finding](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P4-Advanced_Lane_Finding>) / [demo](<https://www.youtube.com/watch?v=Dc_axsKVrTQ&feature=youtu.be>)
 - [Vehicle Detection](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P5-Vehicle_Detection>) / [demo1](<https://www.youtube.com/watch?v=RASZZ41Okfc&feature=youtu.be>) / [demo2](<https://www.youtube.com/watch?v=qlcGfB6M48Y&feature=youtu.be>)
+
+<img src="./assets/img/project_vehicle_detection.jpg"  width="80%" align="center" alt="Semantic Segmentation">
+
 - [Extended Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P1-Extended_Kalman_Filters>)
 - [Unscented Kalman Filter](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term2/P2-Unscented_Kalman_Filters>)
 - [Semantic Segmentation Using Fully Convolutional Networks (FCN)](<https://github.com/WenjinTao/CarND-Semantic-Segmentation>)
