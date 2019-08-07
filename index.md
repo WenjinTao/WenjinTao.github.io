@@ -105,6 +105,8 @@ AM lattice structures have been intensively studied for more than ten years with
 <section class="section-projects" id="projects">
 <h3><i class="fas fa-microscope"></i>Other Projects</h3>
 </section>
+I think getting hands dirty is the best way to learn. Here lists some interesting projects I've done.
+
 
 #### Deep Learning
 
