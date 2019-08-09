@@ -134,7 +134,13 @@ I think getting hands dirty is the best way to learn. Here lists some interestin
 #### Self-Driving Car
 
 - [Finding Lane Lines](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P1-Finding_Lane_Lines/P1-Finding_Lane_Lines.ipynb>) 
+
+<img src="./assets/img/project_find_lane_line.png"  width="80%" align="center" alt="Semantic Segmentation">
+
 - [Traffic Sign Classifier](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P2-Traffic_Sign_Classifier/Traffic_Sign_Classifier-WenjinTao.ipynb>)
+
+<img src="./assets/img/project_traffic_sign_recognition.png"  width="80%" align="center" alt="Semantic Segmentation">
+
 - [Behavioral Cloning](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P3-Behavioral_Cloning>) / [demo1](<https://www.youtube.com/watch?v=f8TJ_bV4DKA>) / [demo2](<https://www.youtube.com/watch?v=VcyPwxqqN5E>)
 - [Advanced Lane Finding](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P4-Advanced_Lane_Finding>) / [demo](<https://www.youtube.com/watch?v=Dc_axsKVrTQ&feature=youtu.be>)
 - [Vehicle Detection](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P5-Vehicle_Detection>) / [demo1](<https://www.youtube.com/watch?v=RASZZ41Okfc&feature=youtu.be>) / [demo2](<https://www.youtube.com/watch?v=qlcGfB6M48Y&feature=youtu.be>)
