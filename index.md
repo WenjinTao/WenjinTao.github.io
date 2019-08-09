@@ -142,6 +142,9 @@ I think getting hands dirty is the best way to learn. Here lists some interestin
 <img src="./assets/img/project_traffic_sign_recognition.png"  width="80%" align="center" alt="Semantic Segmentation">
 
 - [Behavioral Cloning](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P3-Behavioral_Cloning>) / [demo1](<https://www.youtube.com/watch?v=f8TJ_bV4DKA>) / [demo2](<https://www.youtube.com/watch?v=VcyPwxqqN5E>)
+
+<img src="./assets/img/project_behavior_clone.png"  width="80%" align="center" alt="Semantic Segmentation">
+
 - [Advanced Lane Finding](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/tree/master/Term1/P4-Advanced_Lane_Finding>) / [demo](<https://www.youtube.com/watch?v=Dc_axsKVrTQ&feature=youtu.be>)
 
 <img src="./assets/img/project_track_lane_line.gif"  width="80%" align="center" alt="Semantic Segmentation">
