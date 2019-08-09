@@ -174,11 +174,17 @@ I think getting hands dirty is the best way to learn. Here lists some interestin
 #### Robotics
 
 - [Search and Sample Return](https://github.com/WenjinTao/RoboND-Rover-Project)
+
+<img src="./assets/img/project_search_return.png"  width="80%" align="center" alt="">
+
 - [Perception with RGBD Camera](https://github.com/WenjinTao/RoboND-Perception-Project/blob/master/writeup_template.md)
 
 <img src="./assets/img/project_perception_rgbd.png"  width="80%" align="center" alt="">
 
 - [Robotic Arm: Pick & Place Using Forward & Inverse Kinematics](https://github.com/WenjinTao/RoboND-Kinematics-Project/blob/master/project_writeup.md)
+
+<img src="./assets/img/project_robotic_arm_pick_place.png"  width="80%" align="center" alt="">
+
 - [Identification and Tracking of Human Target Using Fully Convolutional Networks (FCN)](https://github.com/WenjinTao/RoboND-DeepLearning-Project/blob/master/Write-up.md)
 
 <img src="./assets/img/project_person_segmentation_fcn.png"  width="80%" align="center" alt="">
