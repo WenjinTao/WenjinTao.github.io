@@ -126,8 +126,14 @@ I think getting hands dirty is the best way to learn. Here lists some interestin
 - [Predict Bike Sharing Rides](<https://github.com/WenjinTao/Deep-Learning-Foundation-Nanodegree--Udacity/blob/master/P1-Predict_Bike_Sharing_Rides/DLND-your-first-network/dlnd-your-first-neural-network.ipynb>)
 - [Image Classification with Convolutional Neural Networks (CNN)](<https://github.com/WenjinTao/Self-Driving-Car-Nanodegree--Udacity/blob/master/Term1/P2-Traffic_Sign_Classifier/Traffic_Sign_Classifier-WenjinTao.ipynb>)
 - [Generate TV Scripts with RNN](<https://github.com/WenjinTao/Deep-Learning-Foundation-Nanodegree--Udacity/blob/master/P3-Generate_TV_Scripts/dlnd_tv_script_generation.ipynb>)
+
+<img src="./assets/img/project_script_generate.png"  width="80%" align="center" alt="">
+
+
 - [Language Translation with LSTM](<https://github.com/WenjinTao/language_translation/blob/master/dlnd_language_translation_REVISED.ipynb>)
 - [Face Generation with Generative Adversarial Networks (GAN)](<https://github.com/WenjinTao/Deep-Learning-Foundation-Nanodegree--Udacity/blob/master/P5-Face_Generation/dlnd_face_generation.ipynb>)
+
+<img src="./assets/img/project_gan.png"  width="80%" align="center" alt="">
 
 <hr style="width: 50%">
 
