@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Wenjin Tao
-tagline: <br>Ph.D. Candidate / Research Assistant / Teaching Assistant
+title: Dr. Wenjin Tao
+tagline: <br>Ph.D. / Research Assistant / Teaching Assistant
 description: Wenjin Tao | Missouri S&T
 ---
 
