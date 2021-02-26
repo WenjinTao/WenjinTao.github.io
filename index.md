@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Wenjin Tao
-tagline: <br>Ph.D. / Research Assistant / Teaching Assistant
+tagline: <br>Ph.D. in Mechanical Engineering
 description: Wenjin Tao | Missouri S&T
 ---
 
