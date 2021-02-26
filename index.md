@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Dr. Wenjin Tao
+title: Wenjin Tao
 tagline: <br>Ph.D. / Research Assistant / Teaching Assistant
 description: Wenjin Tao | Missouri S&T
 ---
 
 <h3><i class="fas fa-user"></i>Biography</h3>
 
-Wenjin Tao is currently pursuing his PhD degree in the [Innovative Additive Manufacturing Laboratory](http://web.mst.edu/~mstiam/) at [Missouri University of Science and Technology](https://www.mst.edu/), advised by  [Prof. Ming C. Leu](https://web.mst.edu/~mleu/) and co-advised by  [Prof. Zhaozheng Yin](http://web.mst.edu/~yinz/), [Prof. Ruwen Qin](http://web.mst.edu/~qinr/Qin_Ruwen_PhD/Home.html) and [Prof. Zhihai He](https://engineering.missouri.edu/faculty/zhihai-henry-he/).
+Wenjin Tao received his PhD degree in the [Innovative Additive Manufacturing Laboratory](http://web.mst.edu/~mstiam/) at [Missouri University of Science and Technology](https://www.mst.edu/), advised by  [Prof. Ming C. Leu](https://web.mst.edu/~mleu/) and co-advised by  [Prof. Zhaozheng Yin](http://web.mst.edu/~yinz/), [Prof. Ruwen Qin](http://web.mst.edu/~qinr/Qin_Ruwen_PhD/Home.html) and [Prof. Zhihai He](https://engineering.missouri.edu/faculty/zhihai-henry-he/).
 
 He is currently focusing on smart manufacturing system boosted by deep learning & artificial intelligence. His research interests include smart manufacturing, Cyber-Physical System (CPS), Additive Manufacturing (AM) and design optimization.
 
