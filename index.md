@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Wenjin Tao
-tagline: <br>Ph.D. in Mechanical Engineering
+tagline: <br>Ph.D. in Mechanical Engineering <br>Technical Product Lead at Foxconn Industrial AI
 description: Wenjin Tao | Missouri S&T
 ---
 
