@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Wenjin Tao
-tagline: Ph.D. in Mechanical Engineering <br>Technical Product Lead at Foxconn Industrial AI
+tagline: Ph.D. <br>Technical Product Lead at Foxconn Industrial AI
 description: Wenjin Tao | Foxconn iAI
 ---
 
