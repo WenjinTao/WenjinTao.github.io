@@ -2,14 +2,14 @@
 layout: page
 title: Wenjin Tao
 tagline: <br>Ph.D. in Mechanical Engineering <br>Technical Product Lead at Foxconn Industrial AI
-description: Wenjin Tao | Missouri S&T
+description: Wenjin Tao | Foxconn iAI
 ---
 
 <h3><i class="fas fa-user"></i>Biography</h3>
 
-Wenjin Tao received his PhD degree in the [Innovative Additive Manufacturing Laboratory](http://web.mst.edu/~mstiam/) at [Missouri University of Science and Technology](https://www.mst.edu/), advised by  [Prof. Ming C. Leu](https://web.mst.edu/~mleu/).
+Wenjin Tao is the Technical Product Lead at [Foxconn iAI](https://foxconniai.com/) leading a team on delivering AI solutions to solve previously unsolvable problems on the factory floor.
 
-He is currently focusing on smart manufacturing system boosted by deep learning & artificial intelligence. His research interests include smart manufacturing, Cyber-Physical System (CPS), Additive Manufacturing (AM) and design optimization.
+He received his PhD degree in the [Innovative Additive Manufacturing Laboratory](http://web.mst.edu/~mstiam/) at [Missouri University of Science and Technology](https://www.mst.edu/), advised by  [Prof. Ming C. Leu](https://web.mst.edu/~mleu/). During his PhD study, he was focusing on smart manufacturing system boosted by deep learning & artificial intelligence. His research interests include smart manufacturing, Cyber-Physical System (CPS), Additive Manufacturing (AM) and design optimization.
 
 Before he joined Missouri S&T, he received his Master and Bachelor degrees in Mechanical Engineering at [Beijing Inistitute of Technology](http://english.bit.edu.cn/). 
 
