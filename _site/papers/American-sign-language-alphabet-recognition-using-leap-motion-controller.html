@@ -1,0 +1,185 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>American Sign Language Alphabet Recognition Using Leap Motion Controller</title>
+    
+    <meta name="author" content="Wenjin Tao">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/kbroman.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/grid.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/queries.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://unpkg.com/ionicons@4.3.0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Caveat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- atom & rss feed -->
+    <link href="nil" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="nil" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+  
+  <body>
+  
+    <nav class="navbar navbar-fixed-top navbar-dark navbar-custom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Wenjin Tao</a>
+        </div>
+        <ul class="nav navbar-nav js--main-nav">
+          <li class="active"><a href="/#projects">Projects</a></li>
+          <li><a href="/#publications">Publications</a></li>
+          <li><a href="/#teaching">Teaching</a></li>
+          <li><a href="/#reviews">More</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+
+<div class="page-header">
+  <center>
+  <h2>American Sign Language Alphabet Recognition Using Leap Motion Controller </h2>
+  </center>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <p><strong><center>Wenjin Tao, Ze-Hao Lai, Ming C. Leu, Zhaozheng Yin</center></strong></p>
+
+<center>Missouri University of Science and Technology, Rolla, MO 65409, USA</center>
+
+<p><br /></p>
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5uTERr6H1R4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</center>
+
+<h3 id="abstract">Abstract</h3>
+
+<p>Recognition of American Sign Language (ASL) alphabet not only could bring benefits to the ASL users, but also could provide solutions for natural human-computer/robot interactions in many applications. In this paper, we propose a method for ASL alphabet recognition with use of a Leap Motion Controller (LMC).  The skeleton data from the native LMC API is transformed by a skeleton module into a vector of the angle features. Meanwhile, two raw infrared-radiation (IR) images are captured and each of them is fed into a vision module using a Convolutional Neural Network (CNN) for visual feature extraction, which results in two feature vectors. Those three feature vectors are then fed into a fusion neural network to output the predicted label. An ASL alphabet dataset is established, on which the proposed model is evaluated. The results show that our proposed method achieves the prediction accuracies of 80.1% and 99.7% in the leave-one-out and the half-half experiments, respectively.</p>
+
+<h3 id="paper">Paper</h3>
+
+<p>American Sign Language Alphabet Recognition Using Leap Motion Controller (IISE Annual 2018, Data Analytics &amp; Information Systems Division Best Track Paper Award) <a href="http://amz.xcdsystem.com/C5AB9227-CA78-AE70-2946FDB80F96639A_abstract_File8390/FinalPaper_1720_0306092921.pdf">[PDF]</a></p>
+
+<h3 id="dataset">Dataset</h3>
+
+<p>Please contact <a href="mailto:w.tao@mst.edu">w.tao@mst.edu</a> to get the dataset.</p>
+
+<p><img src="../assets/paper_img/asl-leap-dataset.png" width="100%" alt="Examples of the 24 signs of each of the five subjects" /></p>
+
+<center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/klosWqN2f_Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</center>
+
+
+  </div>
+</div>
+
+
+      </div>
+  
+    </div>
+    
+    <footer class="container-footer" id="contact">
+      <hr>
+      <div class="container-footer-inner">
+        <div class="contact-footer">
+          <div class="contact-name">Wenjin Tao</div>
+          <div class="contact-footer-row">
+            <i class="icon ion-md-mail icon-contact"></i>w.tao@mst.edu
+          </div>
+          <div class="contact-footer-row">
+            <i class="icon ion-md-call icon-contact"></i>+1 573-466-3528
+          </div>
+          <div class="contact-footer-row">
+            <div class="contact-icon">
+              <i class="icon ion-md-pin icon-contact"></i>
+            </div>
+            <div class="contact-info">
+              311 <a href="https://goo.gl/maps/4ASLFqY3Zx62" target="_blank">Engineering Research Lab</a><br>
+              Missouri University of S&#38T<br>
+              500 W. 16th Street<br> 
+              Rolla, MO 65409, USA
+            </div>
+          </div>          
+        </div>
+        <div class="row-footer">
+          <div class="col span-1-of-5">
+            <a href="#">
+              <i class="fab fa-linkedin icon-footer fa-3x"></i>
+            </a>
+          </div>        
+          <div class="col span-1-of-5">
+            <a href="https://github.com/WenjinTao">                            
+              <i class="fab fa-github-square icon-footer fa-3x"></i>  
+            </a>              
+          </div>
+          <div class="col span-1-of-5">
+            <a href="https://scholar.google.com/citations?user=jIQocKAAAAAJ&amp;hl=en">
+              <i class="ai ai-google-scholar-square icon-footer ai-3x"></i>
+            </a>
+          </div>
+
+          <div class="col span-1-of-5">
+            <a href="#">
+              <i class="fab fa-skype icon-footer fa-3x"></i>
+            </a>
+          </div>
+          <div class="col span-1-of-5">
+            <a href="#">
+              <i class="fab fa-weixin icon-footer fa-3x"></i>
+            </a>
+          </div>          
+        </div>
+      </div>
+        
+      <!--
+      <div class="copyright">
+        Copyright &copy; Wenjin 2025
+      </div>
+      -->
+        
+    </footer>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="/assets/themes/twitter/js/jquery.waypoints.min.js"></script>
+    <script src="/assets/themes/twitter/js/script.js"></script>
+    
+  </body>
+</html>
+
