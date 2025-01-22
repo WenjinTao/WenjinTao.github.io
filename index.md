@@ -49,17 +49,17 @@ He is a recipient of <a href="assets/awards/DAIS Newsletter June 2018.pdf" targe
 #### Field Robotics
 This game-changing robotic platform employs self-driving technology and zero-emission power solutions to reduce labor and fuel costs, increase margins, and minimise the carbon footprint. The platform supports a variety of specialized tool attachments that fits field tasks year-round, such as lawn mowing, weed control, snow removal, salt spreading, and more.
 
-<img src="./assets/img/robotics_01.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/robotics_01.jpg" width="100%" alt="img">
 
-<img src="./assets/img/robotics_03.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/robotics_03.jpg" width="100%" alt="img">
 
-<img src="./assets/img/robotics_08.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/robotics_08.jpg" width="100%" alt="img">
 
-<img src="./assets/img/robotics_09.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/robotics_09.jpg" width="100%" alt="img">
 
-<img src="./assets/img/robotics_05.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/robotics_05.jpg" width="100%" alt="img">
 
-<img src="./assets/img/robotics_07.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/robotics_07.jpg" width="100%" alt="img">
 
 <hr style="width: 50%">
 
@@ -67,18 +67,18 @@ This game-changing robotic platform employs self-driving technology and zero-emi
 
 This project is to develop a low-cost ventilator in response to this COVID-19 pandemic. The goal is to contribute to the society, show our capability, and build up the platform for future AI functions with potential business. The ventilator has the properties: low-cost, standard parts should be accessible without quoting, customized parts should be printable by a 3D printer, and easy to assemble.
 
-<img src="./assets/img/ventilator_01.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/ventilator_01.jpg" width="100%" alt="img">
 
-<img src="./assets/img/ventilator_03.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/ventilator_03.jpg" width="100%" alt="img">
 
-<img src="./assets/img/ventilator_04.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/ventilator_04.jpg" width="100%" alt="img">
 <hr style="width: 50%">
 
 #### Mask Defect Detection and Sorting System
 
 This is an automated quality control solution that uses computer vision and machine learning to inspect face masks in real-time. It detects various defects and automatically sorts masks into pass/fail categories, improving inspection efficiency while maintaining quality records for production tracking.
 
-<img src="./assets/img/mask_production_machine_vision_01.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/mask_production_machine_vision_01.jpg" width="100%" alt="img">
 
 <hr style="width: 50%">
 
@@ -86,19 +86,19 @@ This is an automated quality control solution that uses computer vision and mach
 
 This project utilizes deep learning algorithms to detect bent pins among thousands of pins in electronic components. The system automatically identifies and marks defective pin locations while triggering alerts for quality control. Additionally, it allows comprehensive quality traceability throughout the manufacturing process.
 
-<img src="./assets/img/machine_vision_01.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/machine_vision_01.jpg" width="100%" alt="img">
 
 <hr style="width: 50%">
 
 #### FOLO: Human Operation Instruction, Digitization and Optimization
 
-FOLO provides on-site smart work instructions for operator to follow. Engineers can create SOPs in a process builder by drag and drop. It records critical production data, and is able to connect external hardware.
+FOLO provides on-site smart work instructions for operators to follow. Engineers can create SOPs in a process builder by drag and drop. It records critical production data, and is able to connect external hardware.
 
-<img src="./assets/img/folo_01.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/folo_01.jpg" width="100%" alt="img">
 
-<img src="./assets/img/folo_03.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/folo_03.jpg" width="100%" alt="img">
 
-<img src="./assets/img/folo_02.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/folo_02.jpg" width="100%" alt="img">
 
 <hr style="width: 50%">
 
@@ -106,11 +106,11 @@ FOLO provides on-site smart work instructions for operator to follow. Engineers 
 
 Optimo implements an end-to-end industrial vision system that streams and stores IP camera feeds, enabling real-time monitoring, time-motion analysis, and AI model development. The modular platform includes a dashboard for visualization and analytics to optimize industrial operations.
 
-<img src="./assets/img/optimo_03.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/optimo_03.jpg" width="100%" alt="img">
 
-<img src="./assets/img/optimo_04.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/optimo_04.jpg" width="100%" alt="img">
 
-<img src="./assets/img/optimo_05.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/optimo_05.jpg" width="100%" alt="img">
 
 <hr style="width: 50%">
 
@@ -132,7 +132,7 @@ Optimo implements an end-to-end industrial vision system that streams and stores
 In a smart manufacturing system involving workers, recognition of the worker’s activity can be used for quantification and evaluation of the worker’s performance, as well as to provide onsite instructions with augmented reality. In this paper, we propose a method for activity recognition using Inertial Measurement Unit (IMU) and surface electromyography (sEMG) signals obtained from a Myo armband. 
 <!-- Smart manufacturing integrates information, technology, and human ingenuity to inspire the next revolution in the manufacturing industry. Manufacturing has been identified as a key strategic investment area by the U.S. government, private sector, and university leaders to spur innovation and keep America competitive. However, the lack of new methodologies and tools is challenging continuous innovation in the smart manufacturing industry. This award supports fundamental research to develop a cyber-physical sensing, modeling, and control infrastructure, coupled with augmented reality, to significantly improve the efficiency of future workforce training, performance of operations management, safety and comfort of workers for smart manufacturing. Results from this research are expected to transform the practice of worker-machine-task coordination and provide a powerful tool for operations management. This research involves several disciplines including sensing, data analytics, modeling, control, augmented reality, and workforce training and will provide unique interdisciplinary training opportunities for students and future manufacturing engineers. -->
 
-<img src="./assets/img/multimodal_03.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/multimodal_03.jpg" width="100%" alt="img">
 
 <a href="https://www.sciencedirect.com/science/article/pii/S235197891830828X?via%3Dihub"><img src="./assets/img/project_worker_activity.png" width="100%" alt=""></a>
 
@@ -145,7 +145,7 @@ Science and Technology](https://isc.mst.edu/).
 
 #### Multi-View Recognition of Complex Hand Gesture
 
-<img src="./assets/img/project_asl_overview.jpg" width="100%" alt="Overview of our proposed approach of multi-view augmentation and inference">
+<img src="./assets/img/project_asl_overview.jpg" width="100%" alt="img">
 
 - Considering the challenges of the ASL alphabet recognition task, we choose CNN as the basic model to build the classifier because of its powerful learning ability that has been shown
 - To fully exploit the 3D information provided by depth images, we develop a novel multi-view augmentation strategy. It generates more views from different perspectives, in order to augment the perspective variations that cannot be achieved using traditional image augmentation methods
