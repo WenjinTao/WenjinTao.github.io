@@ -1,21 +1,21 @@
 ---
 layout: page
 title: Wenjin Tao
-tagline: Ph.D. <br>Mechanical Engineering, Robotics, Industrial AI
-description: Wenjin Tao | Mechanical Engineering, Robotics, Industrial AI
+tagline: Ph.D. <br>Smart Manufacturing | AI-Driven Innovation | Industry 4.0 | Cyber-Physical Systems | Global Product Leadership
+description: Wenjin Tao | Smart Manufacturing | AI-Driven Innovation | Industry 4.0 | Cyber-Physical Systems | Global Product Leadership
 ---
 
 [LinkedIn](https://www.linkedin.com/in/wenjin-tao/) / [Google Scholar](https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en) / [GitHub](https://github.com/WenjinTao)
 
 <h3><i class="fas fa-user"></i>Biography</h3>
 
-Dr. Wenjin Tao is the Technical Product Lead/Mechanical Engineer at [Foxconn iAI](https://foxconniai.com/) leading efforts on exploring smart manufacturing technologies and delivering transformative solutions from 0-1 to solve previously unsolvable problems to meet business needs.
+Dr. Wenjin Tao is the Technical Product Lead at [Foxconn iAI](https://foxconn-iai.com/), spearheading initiatives in advanced Industry 4.0 and AI technologies. He leads the development and deployment of proof-of-concept solutions, drives global implementation strategies, and consistently delivers measurable improvements in operational efficiency.
 
-He received his PhD degree in the [Innovative Smart & Additive Manufacturing (ISAM) Laboratory](https://isc.mst.edu/research/researchlaboratories/isam-laboratory/) at [Missouri University of Science and Technology](https://www.mst.edu/), advised by [Prof. Ming C. Leu](https://scholar.google.com/citations?user=CdwvWIcAAAAJ&hl=en). During his PhD study, he was focusing on smart manufacturing system boosted by deep learning & artificial intelligence. His research interests include smart manufacturing, Cyber-Physical System (CPS), Additive Manufacturing (AM) and design optimization.
+He received his PhD degree in the [Innovative Smart & Additive Manufacturing (ISAM) Laboratory](https://isc.mst.edu/research/researchlaboratories/isam-laboratory/) at [Missouri University of Science and Technology](https://www.mst.edu/), advised by [Prof. Ming C. Leu](https://scholar.google.com/citations?user=CdwvWIcAAAAJ&hl=en). During his Ph.D. studies, his research focused on smart manufacturing systems enhanced by deep learning and artificial intelligence. His areas of interest include smart manufacturing, Cyber-Physical Systems (CPS), Additive Manufacturing (AM), and design optimization.
 
 Before he joined Missouri S&T, he received his Master and Bachelor degrees in Mechanical Engineering at [Beijing Inistitute of Technology](http://english.bit.edu.cn/).
 
-He is a recipient of <a href="assets/awards/DAIS Newsletter June 2018.pdf" target="_blank">2018 IISE DAIS Track Best Paper Award</a>. He has been a student member of [IEEE](https://www.ieee.org/), [IISE](http://www.iise.org/Home/) and [SIAM](https://www.siam.org/). Meanwhile, he is a lifelong learner, DIY enthusiast, and passionate about all kinds of new technology like flying car, self-driving car, etc.
+He is a recipient of <a href="assets/awards/DAIS Newsletter June 2018.pdf" target="_blank">2018 IISE DAIS Track Best Paper Award</a>. Beyond his professional interests, he is a lifelong learner and a hands-on DIY enthusiast, with a passion for emerging technologies—from flying cars to humanoid robots and beyond.
 
 <section class="section-intro" id="intro">
   <div class="row">
@@ -47,7 +47,7 @@ He is a recipient of <a href="assets/awards/DAIS Newsletter June 2018.pdf" targe
 <h3><i class="fas fa-microscope"></i>R&D Projects</h3>
 </section>
 #### Field Robotics
-This game-changing robotic platform employs self-driving technology and zero-emission power solutions to reduce labor and fuel costs, increase margins, and minimise the carbon footprint. The platform supports a variety of specialized tool attachments that fits field tasks year-round, such as lawn mowing, weed control, snow removal, salt spreading, and more.
+This innovative robotic platform is designed to make outdoor work easier, cleaner, and more cost-effective. Powered by self-driving technology and zero-emission energy, it helps reduce labor and fuel expenses while shrinking the carbon footprint. With support for a wide range of tool attachments—like lawn mowers, weed controllers, snow plows, and salt spreaders—it’s built to handle field tasks all year round.
 
 <img src="./assets/img/robotics_01.jpg" width="100%" alt="img">
 
@@ -65,7 +65,7 @@ This game-changing robotic platform employs self-driving technology and zero-emi
 
 #### Low-Cost Ventilator Prototype
 
-This project is to develop a low-cost ventilator in response to this COVID-19 pandemic. The goal is to contribute to the society, show our capability, and build up the platform for future AI functions with potential business. The ventilator has the properties: low-cost, standard parts should be accessible without quoting, customized parts should be printable by a 3D printer, and easy to assemble.
+This project was launched in response to the COVID-19 pandemic to design an affordable and easy-to-build ventilator. The goal was to support public health efforts, showcase our team’s capabilities, and lay the groundwork for future AI-powered features. The ventilator is built with cost-effective, widely available standard parts and includes custom components that can be 3D printed. It's designed to be simple to assemble, making it accessible for rapid deployment when needed.
 
 <img src="./assets/img/ventilator_01.jpg" width="100%" alt="img">
 
@@ -76,7 +76,7 @@ This project is to develop a low-cost ventilator in response to this COVID-19 pa
 
 #### Mask Defect Detection and Sorting System
 
-This is an automated quality control solution that uses computer vision and machine learning to inspect face masks in real-time. It detects various defects and automatically sorts masks into pass/fail categories, improving inspection efficiency while maintaining quality records for production tracking.
+This automated system uses computer vision and machine learning to check face masks for defects in real time. It quickly spots issues and sorts the masks into pass or fail categories, helping manufacturers speed up quality checks while keeping accurate records for production tracking.
 
 <img src="./assets/img/mask_production_machine_vision_01.jpg" width="100%" alt="img">
 
@@ -84,7 +84,7 @@ This is an automated quality control solution that uses computer vision and mach
 
 #### Pin Defect Detection System
 
-This project utilizes deep learning algorithms to detect bent pins among thousands of pins in electronic components. The system automatically identifies and marks defective pin locations while triggering alerts for quality control. Additionally, it allows comprehensive quality traceability throughout the manufacturing process.
+This system uses deep learning to quickly spot bent or damaged pins in electronic components—sometimes among thousands at a time. It automatically highlights problem areas and sends alerts to the quality control team, helping catch defects early. The system also keeps detailed records, making it easy to track quality throughout the manufacturing process.
 
 <img src="./assets/img/machine_vision_01.jpg" width="100%" alt="img">
 
