@@ -1,0 +1,16 @@
+/* Site-wide color and style variables */
+:root {
+  /* Color scheme - white/black/gray */
+  --primary-color: #333333;
+  --secondary-color: #1a1a1a;
+  --accent-color: #666666;
+  --light-bg: #f5f5f5;
+  --dark-text: #222222;
+  --light-text: #777777;
+  --border-radius: 5px;
+  --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  
+  /* Font families */
+  --heading-font: 'Open Sans', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
