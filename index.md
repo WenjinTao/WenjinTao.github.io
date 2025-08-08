@@ -22,7 +22,7 @@ title: "Home"
     <!-- <a href="/publications" class="contact-link" title="Publications">
       <i class="fas fa-book" style="font-size:1.7rem;vertical-align:middle;"></i>
     </a> -->
-    <a href="https://scholar.google.com/citations?user=your_scholar_id" class="contact-link" target="_blank" rel="noopener" title="Google Scholar">
+    <a href="https://scholar.google.com/citations?user=your_scholar_id&user=jIQocKAAAAAJ" class="contact-link" target="_blank" rel="noopener" title="Google Scholar">
       <i class="fas fa-graduation-cap" style="font-size:1.7rem;vertical-align:middle;"></i>
     </a>
     <a href="https://github.com/WenjinTao" class="contact-link" target="_blank" rel="noopener" title="GitHub">
