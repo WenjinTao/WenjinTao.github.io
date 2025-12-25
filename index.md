@@ -134,9 +134,9 @@ title: "Home"
 <section id="about-me">
   <h2>Bio</h2>
   
-  <p>Dr. Wenjin Tao is the Technical Product Lead at Foxconn Industrial AI (iAI), where he spearheads the development of intelligent manufacturing solutions that seamlessly integrate artificial intelligence with industrial automation. At the forefront of Industry 4.0, he leads global initiatives in product innovation, proof-of-concept deployments, and factory digitalization. His work spans robotics, computer vision, time-series signal processing, and cyber-physical systems, with a focus on making AI technologies practical, scalable, and impactful across real-world manufacturing environments.</p>
+  <p>I'm a Staff Product Manager at Bright Machines, building intelligent automation solutions that blend robotics, computer vision, and AI to improve factory outcomes. I partner with engineering and operations to shape product roadmaps, ship proof-of-concept deployments, and scale systems that make manufacturing more flexible, data-driven, and reliable. Previously, I led intelligent manufacturing products at Foxconn Industrial AI, driving Industry 4.0 initiatives across global factories.</p>
 
-  <p>Dr. Tao holds a Ph.D. in Mechanical Engineering from the Missouri University of Science and Technology, where he conducted research under the guidance of Prof. Ming C. Leu. His academic work centered on worker-centered intelligent manufacturing, combining deep learning with multimodal sensor fusion (IMU, sEMG, and computer vision) to enable real-time human activity recognition and process optimization. He has authored more than a dozen peer-reviewed papers and book contributions.</p>
+  <p>I hold a Ph.D. in Mechanical Engineering from Missouri University of Science and Technology, where I researched worker-centered intelligent manufacturing with Prof. Ming C. Leu. My work combined deep learning with multimodal sensor fusion (IMU, sEMG, and computer vision) for real-time human activity recognition and process optimization, resulting in more than a dozen peer-reviewed papers and book contributions.</p>
 
   
   <p class="section-link">
@@ -365,13 +365,11 @@ title: "Home"
   }
     /* No talk list styles needed */  /* Global image styles - grayscale for consistency */
   img:not(.project-thumbnail) {
-    filter: grayscale(100%);
-    opacity: 0.85;
-    transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
   }
   
   img:not(.project-thumbnail):hover {
-    filter: grayscale(30%);
     opacity: 1;
   }
   
@@ -427,14 +425,12 @@ title: "Home"
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease, filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    filter: grayscale(100%);
-    opacity: 0.85;
+    transition: transform 0.5s ease, opacity 0.4s ease-in-out;
+    opacity: 0.9;
   }
   
   .project-card:hover .project-thumbnail {
     transform: scale(1.08);
-    filter: grayscale(0%);
     opacity: 1;
   }
   .project-image::after {
