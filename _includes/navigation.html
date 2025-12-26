@@ -1,7 +1,12 @@
 <nav class="site-nav">
-  <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
-  <a href="/projects" {% if page.url == "/projects" or page.url == "/projects.html" %}class="active"{% endif %}>Projects</a>
-  <a href="/publications" {% if page.url == "/publications" or page.url == "/publications.html" %}class="active"{% endif %}>Publications</a>
-  <a href="/blog" {% if page.url == "/blog" or page.url contains "/blog/" %}class="active"{% endif %}>Blog</a>
-  <a href="/about" {% if page.url == "/about" or page.url == "/about.html" %}class="active"{% endif %}>About</a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+    ☰
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
+    <a href="/projects" {% if page.url == "/projects" or page.url == "/projects.html" %}class="active"{% endif %}>Projects</a>
+    <a href="/publications" {% if page.url == "/publications" or page.url == "/publications.html" %}class="active"{% endif %}>Publications</a>
+    <a href="/blog" {% if page.url == "/blog" or page.url contains "/blog/" %}class="active"{% endif %}>Blog</a>
+    <a href="/about" {% if page.url == "/about" or page.url == "/about.html" %}class="active"{% endif %}>About</a>
+  </div>
 </nav>

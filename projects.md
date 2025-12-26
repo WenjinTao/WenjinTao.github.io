@@ -603,16 +603,6 @@ title: "Projects"
       font-size: 2rem;
     }
     
-    .site-nav {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    .site-nav a {
-      margin: 0 0.5rem;
-      padding: 0.5rem 0.3rem;
-      font-size: 0.95rem;
-    }
   }
 </style>
 

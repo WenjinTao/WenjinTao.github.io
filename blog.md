@@ -13,7 +13,7 @@ title: "Blog"
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
         <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
         <!-- <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p> -->
-        <a href="{{ post.url }}" class="read-more">Read More →</a>
+        <a href="{{ post.url }}" class="read-more">Read More -></a>
       </div>
     {% endfor %}
   </div>
@@ -94,3 +94,4 @@ title: "Blog"
   background-color: var(--secondary-color);
 }
 </style>
+

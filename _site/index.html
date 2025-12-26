@@ -49,11 +49,16 @@
     
     <!-- Main content -->
     <nav class="site-nav">
-  <a href="/" class="active">Home</a>
-  <a href="/projects">Projects</a>
-  <a href="/publications">Publications</a>
-  <a href="/blog">Blog</a>
-  <a href="/about">About</a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+    ☰
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="/" class="active">Home</a>
+    <a href="/projects">Projects</a>
+    <a href="/publications">Publications</a>
+    <a href="/blog">Blog</a>
+    <a href="/about">About</a>
+  </div>
 </nav>
 
 <div class="hero-section">
@@ -409,7 +414,7 @@
   }
   
   .section-link a::after {
-    content: " →";
+    content: " ->";
     transition: padding-left 0.2s ease;
   }
   

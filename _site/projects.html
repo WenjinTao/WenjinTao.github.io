@@ -49,11 +49,16 @@
     
     <!-- Main content -->
     <nav class="site-nav">
-  <a href="/">Home</a>
-  <a href="/projects" class="active">Projects</a>
-  <a href="/publications">Publications</a>
-  <a href="/blog">Blog</a>
-  <a href="/about">About</a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+    ☰
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="/">Home</a>
+    <a href="/projects" class="active">Projects</a>
+    <a href="/publications">Publications</a>
+    <a href="/blog">Blog</a>
+    <a href="/about">About</a>
+  </div>
 </nav>
 
 <!-- <div class="hero-section">
@@ -654,16 +659,6 @@
       font-size: 2rem;
     }
     
-    .site-nav {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    .site-nav a {
-      margin: 0 0.5rem;
-      padding: 0.5rem 0.3rem;
-      font-size: 0.95rem;
-    }
   }
 </style>
 

@@ -356,7 +356,7 @@ title: "Home"
   }
   
   .section-link a::after {
-    content: " →";
+    content: " ->";
     transition: padding-left 0.2s ease;
   }
   
@@ -450,3 +450,4 @@ title: "Home"
     opacity: 0.4;
   }
 </style>
+
