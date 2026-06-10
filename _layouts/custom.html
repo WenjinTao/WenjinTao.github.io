@@ -3,43 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% assign page_title = page.title | default: site.title %}
+  {% assign page_description = page.description | default: site.description %}
+  {% assign page_image = page.og_image | default: site.social_image %}
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  
-  <!-- Meta tags -->
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  
+
+  <meta name="description" content="{{ page_description }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <meta property="og:image" content="{{ page_image | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ page_image | absolute_url }}">
+
   <!-- Favicon -->
   <link rel="icon" href="/assets/img/favicon/favicon.ico">
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  
-  <!-- Custom CSS -->
-  <style>
-    /* Base styles */
-    body {
-      font-family: 'Open Sans', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    /* You can add additional custom CSS here */
-  </style>
-    <!-- Site-wide CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Site-wide CSS -->
   <link rel="stylesheet" href="/assets/css/main.css">
-  
+
   <!-- Include additional CSS -->
   {% if page.custom_css %}
     {% for css_file in page.custom_css %}
@@ -47,21 +39,34 @@
     {% endfor %}
   {% endif %}
 </head>
-<body>
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
   <div class="container">
-    <!-- Header can be added here -->
-    
-    <!-- Main content -->
     {{ content }}
-    
-    <!-- Footer can be added here -->
-    <footer>
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copy">
+          Building product strategy and factory-grade AI at the intersection of robotics,
+          computer vision, and manufacturing.
+        </p>
+        <div class="site-footer-links">
+          <a href="https://www.linkedin.com/in/wenjin-tao/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/WenjinTao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+        </div>
+      </div>
+      <p class="site-footer-meta">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
     </footer>
   </div>
-    <!-- Site-wide JS -->
+
+  <!-- Site-wide JS -->
   <script src="/assets/js/main.js"></script>
-  
+
   <!-- Additional page-specific scripts -->
   {% if page.custom_js %}
     {% for js_file in page.custom_js %}

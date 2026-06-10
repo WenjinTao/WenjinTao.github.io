@@ -12,12 +12,15 @@ exclude:
     "LICENSE.md",
   ]
 highlighter: rouge
-gems: ["jemoji"]
+plugins: ["jemoji"]
 
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
 title: Wenjin Tao
+description: Product leader bridging robotics, AI, and manufacturing to ship industrial automation systems.
+url: https://taowenjin.com
+social_image: /assets/img/wt-square.png
 author:
   name: Wenjin Tao
   email: wenjin.tao@gmail.com
@@ -26,7 +29,7 @@ author:
   feedburner: tba
 
 # NOTE: Replacing this next line with your own URL
-production_url: https://wenjintao.github.io
+production_url: https://taowenjin.com
 
 # Tell Github to use the kramdown markdown interpreter
 # (see https://help.github.com/articles/migrating-your-pages-site-from-maruku)

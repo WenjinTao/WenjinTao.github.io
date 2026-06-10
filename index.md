@@ -1,453 +1,125 @@
 ---
 layout: custom
 title: "Home"
+description: "Wenjin Tao works on factory software, robotics, and applied AI."
+body_class: home-page
+custom_css:
+  - /assets/css/pages/home.css
 ---
 
 {% include navigation.html %}
 
-<div class="hero-section">
-  <h1>Tao, Wenjin</h1>
-  <p class="subtitle">Staff Product Manager @ Bright Machines</p>
-  <!-- <p class="subtitle">Technical Product Lead @ Foxconn Industrial AI</p> -->
-  <!-- <p class="tagline">AI for Manufacturing | Industry 4.0 | CPS Systems</p> -->
-  <!-- <p class="tagline">Bridging AI and Manufacturing to Build the Future Factory</p> -->
-  <p class="tagline">Bridging Automation, Robotics, and AI to Build the Next Generation of Manufacturing</p>
-
-  <!-- <p>I translate cutting-edge AI into robust, scalable solutions for global factory operations.</p> -->
-
-  <div class="hero-links">
-    <a href="https://www.linkedin.com/in/wenjin-tao/" class="contact-link" target="_blank" rel="noopener" title="LinkedIn">
-      <i class="fab fa-linkedin" style="font-size:1.7rem;vertical-align:middle;"></i>
+<section class="home-hero surface-card">
+  <p class="section-kicker">Factory Software, Robotics, and Applied AI</p>
+  <h1>Hi, I'm Wenjin Tao.</h1>
+  <p class="home-hero-subtitle">I work on factory software, robotics, and applied AI.</p>
+  <p class="home-hero-summary">
+    This site is mostly a place to collect a few projects, papers, and notes from work that
+    sits between product strategy, systems integration, and intelligent manufacturing.
+  </p>
+  <div class="home-social-links">
+    <a href="https://www.linkedin.com/in/wenjin-tao/" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin"></i> LinkedIn
     </a>
-    <!-- <a href="/publications" class="contact-link" title="Publications">
-      <i class="fas fa-book" style="font-size:1.7rem;vertical-align:middle;"></i>
-    </a> -->
-    <a href="https://scholar.google.com/citations?user=your_scholar_id&user=jIQocKAAAAAJ" class="contact-link" target="_blank" rel="noopener" title="Google Scholar">
-      <i class="fas fa-graduation-cap" style="font-size:1.7rem;vertical-align:middle;"></i>
+    <a href="https://github.com/WenjinTao" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github"></i> GitHub
     </a>
-    <a href="https://github.com/WenjinTao" class="contact-link" target="_blank" rel="noopener" title="GitHub">
-      <i class="fab fa-github" style="font-size:1.7rem;vertical-align:middle;"></i>
+    <a href="https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-graduation-cap"></i> Google Scholar
     </a>
   </div>
+</section>
 
-</div>
-
-<hr>
-
-<section id="featured-projects">
-  <h2>What I Build</h2>
-  
-  <div class="project-grid">    <div class="project-card">
-      <div class="project-image">
-        <img src="./assets/img/robotics_10.jpg" alt="Autonomous Robot Platform" class="project-thumbnail">
-        <div class="project-category">Robotics</div>
-      </div>
-      <div class="project-card-content">
+<section class="page-section">
+  <header class="section-header">
+    <p class="section-kicker">A Few Projects</p>
+    <h2>Some work I still find useful to point to</h2>
+  </header>
+  <div class="home-case-grid">
+    <a class="home-case-card-link" href="/projects#field-robotics">
+      <article class="home-case-card surface-card">
+        <div class="home-case-media">
+          <img src="/assets/img/robotics_10.jpg" alt="Field robotics platform">
+        </div>
         <h3>Field Robotics</h3>
-        <p>
-          A modular, zero-emission robot platform with self-driving capabilities and tool attachments such as lawn mowers, snow plows, and weed controllers. Designed for cost-effective, sustainable outdoor labor.
-        </p>
-      </div>
-    </div>    <div class="project-card">
-      <div class="project-image">
-        <img src="./assets/img/ventilator_05.jpg" alt="Open-Source Ventilator" class="project-thumbnail">
-        <div class="project-category">Healthcare</div>
-      </div>
-      <div class="project-card-content">
-        <h3>Low-Cost Ventilator Prototype</h3>
-        <p>
-          Designed to be built with off-the-shelf and 3D-printed parts, this ventilator supports emergency medical needs while demonstrating the team's rapid-response engineering and future AI integration potential.
-        </p>
-      </div>
-    </div>    <div class="project-card">
-      <div class="project-image">
-        <img src="./assets/img/mask_production_machine_vision_02.jpg" alt="AI Defect Detection System" class="project-thumbnail">
-        <div class="project-category">Computer Vision</div>
-      </div>
-      <div class="project-card-content">
-        <h3>Mask Defect Detection System</h3>
-        <p>
-          Uses image processing and machine learning to detect manufacturing defects in face masks and automatically sort them, improving quality assurance and traceability.
-        </p>
-      </div>
-    </div>
-      <div class="project-card">
-      <div class="project-image">
-        <img src="./assets/img/machine_vision_03.jpg" alt="Pin Defect Detection" class="project-thumbnail">
-        <div class="project-category">Machine Vision</div>
-      </div>
-      <div class="project-card-content">
-        <h3>Pin Defect Detection System</h3>
-        <p>
-          Automatically identifies bent or damaged pins in dense electronic components using AI, helping quality teams detect issues early and improve yield.
-        </p>
-      </div>
-    </div>    <div class="project-card">
-      <div class="project-image">
-        <img src="./assets/img/folo_04.jpg" alt="FOLO Work Instruction System" class="project-thumbnail">
-        <div class="project-category">Digital Workflow</div>
-      </div>
-      <div class="project-card-content">
-        <h3>FOLO: Smart Work Instruction System</h3>
-        <p>
-          Engineers build digital SOPs via drag-and-drop, while operators follow guided workflows. FOLO records production data and supports hardware integration.
-        </p>
-      </div>
-    </div>    <div class="project-card">
-      <div class="project-image">
-        <img src="./assets/img/optimo_06.jpg" alt="OPTIMO Analytics Platform" class="project-thumbnail">
-        <div class="project-category">AI Analytics</div>
-      </div>
-      <div class="project-card-content">
-        <h3>OPTIMO: AI-Driven Human Operation Analytics</h3>      <p>
-        Streams and analyzes IP camera feeds for time-motion analysis and AI training. Features dashboards for performance insights and industrial process optimization.
-      </p>
-    </div>
+        <p>A modular self-driving platform for outdoor work with swappable tools.</p>
+      </article>
+    </a>
+
+    <a class="home-case-card-link" href="/projects#industrial-vision-inspection">
+      <article class="home-case-card surface-card">
+        <div class="home-case-media">
+          <img src="/assets/img/machine_vision_03.jpg" alt="Industrial pin defect inspection">
+        </div>
+        <h3>Industrial Vision Inspection</h3>
+        <p>Inspection systems where data quality, hardware setup, and line integration all matter.</p>
+      </article>
+    </a>
+
+    <a class="home-case-card-link" href="/projects#folo-work-instructions">
+      <article class="home-case-card surface-card">
+        <div class="home-case-media">
+          <img src="/assets/img/folo_04.jpg" alt="Digital work instruction platform">
+        </div>
+        <h3>FOLO Work Instructions</h3>
+        <p>A digital SOP platform for engineers and operators, with traceable execution data.</p>
+      </article>
+    </a>
+
+    <a class="home-case-card-link" href="/projects#optimo-analytics">
+      <article class="home-case-card surface-card">
+        <div class="home-case-media">
+          <img src="/assets/img/optimo_06.jpg" alt="Human operation analytics platform">
+        </div>
+        <h3>OPTIMO Analytics</h3>
+        <p>Human-operation analytics built from video and factory data.</p>
+      </article>
+    </a>
   </div>
-  </div>
-  
-  <p class="section-link">
-    <a href="/projects">See All Projects</a>
+  <p class="section-lead home-case-archive">
+    <a href="/projects">More projects are here.</a>
   </p>
 </section>
 
-<hr>
-
-<section id="latest-posts">
-  <h2>Thoughts & Threads</h2>
-  
-  {% for post in site.posts limit:2 %}
-  <div class="post-preview">
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
-    <!-- <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p> -->
+{% if site.posts.size > 0 %}
+<section class="page-section">
+  <header class="section-header">
+    <p class="section-kicker">A Few Notes</p>
+    <h2>Some writing that came out of the work</h2>
+  </header>
+  <div class="home-writing-list surface-card">
+    {% for post in site.posts limit:2 %}
+    <a class="home-writing-link" href="{{ post.url }}">
+      <span class="home-writing-date">{{ post.date | date: "%b %d, %Y" }}</span>
+      <span class="home-writing-content">
+        <strong>{{ post.title }}</strong>
+        <span>{{ post.excerpt | strip_html | truncatewords: 24 }}</span>
+      </span>
+    </a>
+    {% endfor %}
   </div>
-  {% endfor %}
-  
-  <p class="section-link">
-    <a href="/blog">Read All Posts</a>
-  </p>
 </section>
+{% endif %}
 
-<hr>
-
-<section id="about-me">
-  <h2>Bio</h2>
-  
-  <p>I'm a Staff Product Manager at Bright Machines, building intelligent automation solutions that blend robotics, computer vision, and AI to improve factory outcomes. I partner with engineering and operations to shape product roadmaps, ship proof-of-concept deployments, and scale systems that make manufacturing more flexible, data-driven, and reliable. Previously, I led intelligent manufacturing products at Foxconn Industrial AI, driving Industry 4.0 initiatives across global factories.</p>
-
-  <p>I hold a Ph.D. in Mechanical Engineering from Missouri University of Science and Technology, where I researched worker-centered intelligent manufacturing with Prof. Ming C. Leu. My work combined deep learning with multimodal sensor fusion (IMU, sEMG, and computer vision) for real-time human activity recognition and process optimization, resulting in more than a dozen peer-reviewed papers and book contributions.</p>
-
-  
-  <p class="section-link">
-    <a href="/about">Learn More About Me</a>
-  </p>
-</section>
-
-<hr>
-
-<!-- <section id="contact">
-  <h2>Get In Touch</h2>
-  
-  <p>I'm open to collaboration, speaking invitations, and nerdy conversations.</p>
-  
-  <div class="contact-container">
-    <div class="contact-links">
-      <a href="mailto:your@email.com" class="contact-link"><i class="fas fa-envelope"></i> Email Me</a>
-      <a href="https://www.linkedin.com/in/yourprofile" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="/assets/Wenjin_Tao_Resume.pdf" class="contact-link"><i class="fas fa-file-pdf"></i> Resume PDF</a>
+<section class="page-section">
+  <header class="section-header">
+    <p class="section-kicker">Bio</p>
+    <h2>A bit more context</h2>
+  </header>
+  <div class="home-bio surface-card">
+    <p>
+      My background is a mix of research, product, and applied industrial systems. I earned a
+      PhD in Mechanical Engineering from Missouri University of Science and Technology, where I
+      worked on worker-centered intelligent manufacturing.
+    </p>
+    <p>
+      If any of this overlaps with your work, feel free to reach out. I am always happy to
+      compare notes on factory software, robotics systems, industrial vision, digital twins,
+      and applied AI under real constraints.
+    </p>
+    <div class="button-row home-bio-actions">
+      <a href="/about" class="button-link is-secondary">More Background</a>
+      <a href="/publications" class="button-link is-secondary">Publications</a>
     </div>
-    
-    <p class="contact-note">Based in Milwaukee, WI — available for remote collaboration and speaking opportunities.</p>
   </div>
-</section> -->
-
-<style>  /* Custom styles for the homepage */  :root {
-    --primary-color: #333333;
-    --secondary-color: #1a1a1a;
-    --accent-color: #666666;
-    --light-bg: #f5f5f5;
-    --dark-text: #222222;
-    --light-text: #777777;
-    --border-radius: 5px;
-    --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  }
-  
-  
-  /* Hero Section */  .hero-section {
-    margin-bottom: 3rem;
-    text-align: center;
-    padding: 2.5rem 1rem;
-    background: linear-gradient(to right, var(--light-bg), white);
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow);
-  }
-  
-  .hero-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--dark-text);
-  }
-  
-  .subtitle, .tagline {
-    font-size: 1.2rem;
-    margin: 0.6rem 0;
-  }
-  
-  .subtitle {
-    color: var(--secondary-color);
-    font-weight: 500;
-  }
-  
-  .tagline {
-    font-style: italic;
-    margin-bottom: 1.8rem;
-    color: var(--dark-text);
-  }
-  
-  .location {
-    margin-top: 1.8rem;
-    color: var(--light-text);
-    font-size: 1rem;
-  }
-  
-  .hero-links {
-    margin-top: 1.5rem;
-  }
-    .button {
-    display: inline-block;
-    margin: 0 0.7rem;
-    padding: 0.6rem 1.4rem;
-    background-color: var(--dark-text);
-    color: white !important;
-    border: none;
-    border-radius: var(--border-radius);
-    text-decoration: none !important;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .button:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Section Styling */
-  section {
-    margin: 3rem 0;
-    padding: 0.5rem;
-  }
-    section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: var(--dark-text);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.5rem;
-    display: inline-block;
-  }
-  /* Project Cards */
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.8rem;
-  }
-  
-  .project-card {
-    padding: 0;
-    background-color: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow);
-    transition: all 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.05);
-  }
-  
-  .project-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
-  }
-  
-  .project-card-content {
-    padding: 1.2rem 1.5rem 1.5rem;
-  }
-    .project-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--accent-color);
-  }
-    .project-card h3 {
-    margin-top: 0;
-    margin-bottom: 0.7rem;
-    color: var(--dark-text);
-    font-size: 1.3rem;
-  }
-  
-  .project-card p {
-    margin-bottom: 0;
-    color: var(--light-text);
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-  
-  .project-category {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    padding: 4px 10px;
-    font-size: 0.8rem;
-    border-radius: 30px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-  
-  /* Blog Post Preview */
-  .post-preview {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .post-preview:last-child {
-    border-bottom: none;
-  }
-  
-  .post-preview h3 {
-    margin-top: 0;
-    font-size: 1.3rem;
-  }
-    .post-preview h3 a {
-    color: var(--dark-text);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  .post-preview h3 a:hover {
-    color: var(--secondary-color);
-  }
-  
-  .date {
-    color: var(--light-text);
-    font-size: 0.9rem;
-    margin-bottom: 0.7rem;
-  }
-  
-  /* Section Links */
-  .section-link {
-    margin-top: 1.5rem;
-    text-align: right;
-  }
-    .section-link a {
-    color: var(--dark-text);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
-    padding-right: 0.5rem;
-  }
-  
-  .section-link a:hover {
-    color: var(--secondary-color);
-  }
-  
-  .section-link a::after {
-    content: " ->";
-    transition: padding-left 0.2s ease;
-  }
-  
-  .section-link a:hover::after {
-    padding-left: 0.3rem;
-  }
-    /* No talk list styles needed */  /* Global image styles - grayscale for consistency */
-  img:not(.project-thumbnail) {
-    opacity: 0.9;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  img:not(.project-thumbnail):hover {
-    opacity: 1;
-  }
-  
-  /* Contact Section */
-  .contact-container {
-    margin-top: 1.5rem;
-    background-color: var(--light-bg);
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-  }
-
-  .contact-links {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-  }
-    .contact-link {
-    display: inline-block;
-    margin-right: 1.5rem;
-    margin-bottom: 0.8rem;
-    text-decoration: none;
-    color: var(--dark-text);
-    font-weight: 500;
-    transition: all 0.2s ease;
-  }
-  
-  .contact-link:hover {
-    color: var(--secondary-color);
-    transform: translateY(-2px);
-  }
-  
-  .contact-note {
-    margin-top: 1.5rem;
-    font-style: italic;
-    color: var(--light-text);
-    border-top: 1px dashed #ddd;
-    padding-top: 1rem;
-  }
-  
-  /* Dividers */
-  hr {
-    border: none;
-    border-top: 1px solid #eee;
-    margin: 3rem 0;
-  }  .project-image {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--border-radius);
-    margin-bottom: 1rem;
-    height: 200px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  }  .project-thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease, opacity 0.4s ease-in-out;
-    opacity: 0.9;
-  }
-  
-  .project-card:hover .project-thumbnail {
-    transform: scale(1.08);
-    opacity: 1;
-  }
-  .project-image::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.5) 100%);
-    opacity: 0.6;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
-  }
-  
-  .project-card:hover .project-image::after {
-    opacity: 0.4;
-  }
-</style>
-
+</section>

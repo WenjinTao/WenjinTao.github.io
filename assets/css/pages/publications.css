@@ -1,0 +1,24 @@
+.publications-page .publication-listing {
+  max-width: 920px;
+}
+
+.publications-page .publication-listing h1,
+.publications-page .publication-listing h2 {
+  scroll-margin-top: 6rem;
+}
+
+.publications-page .publication-listing p,
+.publications-page .publication-listing li,
+.publications-page .publication-listing {
+  color: var(--dark-text);
+}
+
+.publications-page .publication-link {
+  color: var(--dark-text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.publications-page .publication-link:hover {
+  color: var(--accent-color);
+}

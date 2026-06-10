@@ -1,0 +1,43 @@
+.about-page .about-header-flex {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.about-page .about-avatar-container {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-page .about-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(32, 30, 28, 0.1);
+  border: 4px solid var(--light-bg);
+  background: #fff;
+}
+
+.about-page .about-intro-text {
+  flex: 1 1 300px;
+  min-width: 220px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .about-page .about-header-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .about-page .about-intro-text {
+    text-align: center;
+  }
+}

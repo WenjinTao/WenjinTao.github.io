@@ -1,16 +1,18 @@
 /* Site-wide color and style variables */
 :root {
-  /* Color scheme - white/black/gray */
-  --primary-color: #333333;
-  --secondary-color: #1a1a1a;
-  --accent-color: #666666;
-  --light-bg: #f5f5f5;
-  --dark-text: #222222;
-  --light-text: #777777;
-  --border-radius: 5px;
-  --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  
+  --primary-color: #2a231d;
+  --secondary-color: #171310;
+  --accent-color: #7a5e45;
+  --accent-strong: #5c4634;
+  --light-bg: #f3eee7;
+  --pill-bg: rgba(122, 94, 69, 0.12);
+  --dark-text: #1c1713;
+  --light-text: #665e57;
+  --border-radius: 14px;
+  --card-shadow: 0 20px 60px rgba(28, 23, 19, 0.08);
+
   /* Font families */
-  --heading-font: 'Open Sans', sans-serif;
-  --body-font: 'Open Sans', sans-serif;
+  --heading-font: 'IBM Plex Sans', sans-serif;
+  --body-font: 'IBM Plex Sans', sans-serif;
+  --mono-font: 'IBM Plex Mono', monospace;
 }
