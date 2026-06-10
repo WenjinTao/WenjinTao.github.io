@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-navy-900 text-gray-100 font-sans antialiased;
+    background-image:
+      linear-gradient(rgba(34, 211, 238, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  ::selection {
+    @apply bg-cyan-500/30 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cyan-500/20 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cyan-500/40;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300;
+  }
+
+  .glass-card-hover:hover {
+    @apply bg-white/10 border-cyan-400/30 shadow-lg shadow-cyan-500/10;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyan-400 via-teal-400 to-violet-400 bg-clip-text text-transparent;
+  }
+
+  .glow-line {
+    @apply h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-cyan-500/20 border border-cyan-400/40 rounded-lg text-cyan-400 font-medium transition-all duration-300 hover:bg-cyan-500/30 hover:border-cyan-400/60 hover:shadow-lg hover:shadow-cyan-500/20;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-lg text-gray-300 font-medium transition-all duration-300 hover:bg-white/10 hover:border-white/20;
+  }
+}
+
+/* Page top padding that clears the fixed navbar — collapses when embedded. */
+.page-top {
+  padding-top: 8rem;
+}
+
+/* Embedded / iframe context (e.g. the desktop preview windows): hide the
+   site chrome and let the host window's background show through. */
+.is-embedded .site-chrome {
+  display: none !important;
+}
+
+.is-embedded body {
+  background-color: transparent;
+  background-image: none;
+}
+
+.is-embedded .page-top {
+  padding-top: 2.5rem;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(34, 211, 238, 0.1); }
+  50% { box-shadow: 0 0 25px rgba(34, 211, 238, 0.2); }
+}
+
+@keyframes scan {
+  0%, 100% { transform: translateX(-85%); opacity: 0.45; }
+  50% { transform: translateX(185%); opacity: 1; }
+}
+
+@keyframes panel-open {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes panel-close {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+    filter: blur(8px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

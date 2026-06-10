@@ -1,76 +1,122 @@
-## Simple site: Easy websites with GitHub pages
+# taowenjin.com
 
-[Github Pages](https://pages.github.com) provide a simple way to make a
-website using Markdown and git.
+Personal portfolio website for Wenjin Tao - Staff Product Manager at Bright Machines, working at the intersection of AI, Robotics, and Manufacturing.
 
-This is a minimal tutorial to get started.
+## Tech Stack
 
-View the thing [here](https://kbroman.org/simple_site).
+- **Astro** - Static site generator
+- **React** - Interactive components
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **React Three Fiber** + **Drei** - 3D hero scene
+- **Framer Motion** - Animations
+- **MDX/Markdown** - Content collections for blog, projects, publications
 
-## Running locally
+## Local Development
 
-### Prerequisites
+```bash
+# Install dependencies
+npm install
 
-- Ruby (version 2.5.0 or higher)
-- RubyGems
-- Bundler
+# Start development server
+npm run dev
 
-#### Installing Prerequisites
+# Build for production
+npm run build
 
-1. **Install Ruby**:
+# Preview production build
+npm run preview
+```
 
-   - **Windows**: Download and install from [RubyInstaller](https://rubyinstaller.org/)
-   - **macOS**: Using Homebrew:
-     ```bash
-     brew install ruby
-     ```
-   - **Linux**:
-     ```bash
-     sudo apt-get install ruby-full
-     ```
+The dev server runs at `http://localhost:4321`.
 
-2. **Install RubyGems**:
+## Project Structure
 
-   - RubyGems comes installed with Ruby by default
-   - To update RubyGems:
-     ```bash
-     gem update --system
-     ```
+```
+src/
+  components/     # Reusable Astro and React components
+  content/        # Markdown content collections
+    blog/         # Blog posts
+    projects/     # Project pages
+    publications/ # Publication entries
+  layouts/        # Page layouts
+  pages/          # Route pages
+  styles/         # Global CSS
+public/           # Static assets
+```
 
-3. **Install Bundler**:
-   ```bash
-   gem install bundler
-   ```
+## Content Editing
 
-### Setup and Run
+### Add a Blog Post
 
-1. Clone this repository:
+Create a new `.md` file in `src/content/blog/`:
 
-   ```bash
-   git clone https://github.com/kbroman/simple_site.git
-   cd simple_site
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   bundle install
-   ```
-
-3. Start the local server:
-
-   ```bash
-   bundle exec jekyll serve
-   ```
-
-4. View the site at [http://localhost:4000](http://localhost:4000)
-
+```markdown
+---
+title: "Your Post Title"
+description: "A brief description"
+date: "2025-01-15"
+tags: ["Tag1", "Tag2"]
+featured: false
 ---
 
-To the extent possible under law,
-[Karl Broman](https://github.com/kbroman)
-has waived all copyright and related or neighboring rights to
-&ldquo;[simple site](https://github.com/kbroman/simple_site)&rdquo;.
-This work is published from the United States.
-<br/>
-[![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+Your content here...
+```
+
+### Add a Project
+
+Create a new `.md` file in `src/content/projects/`:
+
+```markdown
+---
+title: "Project Name"
+description: "Brief description"
+tags: ["Tag1", "Tag2"]
+icon: "&#129302;"
+featured: true
+---
+
+Project details here...
+```
+
+### Add a Publication
+
+Create a new `.md` file in `src/content/publications/`:
+
+```markdown
+---
+title: "Paper Title"
+authors: "Author Names"
+venue: "Journal/Conference Name"
+year: 2024
+link: "https://doi.org/..."
+---
+
+Optional abstract text here.
+```
+
+## Deployment
+
+This site is configured for **GitHub Pages** deployment via GitHub Actions.
+
+1. Push to the `main` branch
+2. GitHub Actions will automatically build and deploy
+3. Go to **Settings > Pages** in your GitHub repo and set source to **GitHub Actions**
+
+### Custom Domain
+
+To use `taowenjin.com`:
+
+1. Add a `CNAME` file in `public/` with your domain
+2. Configure DNS with your domain provider:
+   - Add an `A` record pointing to GitHub Pages IPs
+   - Or add a `CNAME` record pointing to `<username>.github.io`
+3. Enable "Enforce HTTPS" in GitHub Pages settings
+
+## Customization
+
+- **Colors**: Edit `tailwind.config.mjs` to change the color palette
+- **Social links**: Edit `src/components/Footer.astro` and `src/pages/contact.astro`
+- **Navigation**: Edit `src/components/Navbar.astro`
+- **Homepage particle text**: Edit `src/components/ParticleText.tsx` (WebGL) and the `<ParticleText text="..." />` call in `src/components/ChatInterface.tsx`
+- **Contact form**: Replace `PLACEHOLDER` in `src/pages/contact.astro` with your Formspree endpoint, and the Google Scholar `user=PLACEHOLDER` link with your real ID

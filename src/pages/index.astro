@@ -1,0 +1,74 @@
+---
+import { getCollection } from 'astro:content';
+import ChatInterface from '../components/ChatInterface';
+import '../styles/global.css';
+
+const projects = (await getCollection('projects'))
+  .sort((a, b) => Number(b.data.featured) - Number(a.data.featured))
+  .map((project) => ({
+    id: project.id,
+    title: project.data.title,
+    description: project.data.description,
+    tags: project.data.tags,
+    href: `/projects/${project.id}`,
+    featured: project.data.featured,
+  }));
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map((post) => ({
+    id: post.id,
+    title: post.data.title,
+    description: post.data.description,
+    date: post.data.date,
+    tags: post.data.tags,
+    href: `/blog/${post.id}`,
+    featured: post.data.featured,
+  }));
+
+const publications = (await getCollection('publications'))
+  .sort((a, b) => b.data.year - a.data.year)
+  .map((publication) => ({
+    id: publication.id,
+    title: publication.data.title,
+    authors: publication.data.authors,
+    venue: publication.data.venue,
+    year: publication.data.year,
+    abstract: publication.data.abstract,
+    href: publication.data.link ?? '/publications',
+  }));
+
+const title = 'Wenjin Tao | Interactive Portfolio';
+const description = "Chat with Wenjin Tao's portfolio across AI, robotics, digital twins, computer vision, and manufacturing.";
+const canonical = new URL('/', Astro.site).href;
+const ogImage = new URL('/avatar.png', Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Wenjin Tao" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+  </head>
+  <body class="min-h-screen">
+    <ChatInterface client:load projects={projects} posts={posts} publications={publications} />
+  </body>
+</html>

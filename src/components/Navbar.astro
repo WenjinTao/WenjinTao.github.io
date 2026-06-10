@@ -1,0 +1,77 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/publications', label: 'Publications' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="site-chrome fixed top-0 left-0 right-0 z-50 border-b border-cyan-300/15 bg-[#04101b]/80 backdrop-blur-xl shadow-[0_10px_40px_rgba(2,8,20,0.5)]">
+  <div class="section-container">
+    <div class="flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2.5 group">
+        <span class="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-cyan-300 to-blue-500 text-[#06101d] font-bold text-sm shadow-[0_0_14px_rgba(34,211,238,0.5)]">W</span>
+        <span class="font-mono text-xs uppercase tracking-[0.22em] text-cyan-100/80 group-hover:text-cyan-200 transition-colors">Wenjin Tao</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-1">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class:list={[
+              'rounded-lg px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] transition-all duration-200',
+              currentPath === link.href
+                ? 'text-cyan-200 bg-cyan-300/10 shadow-[0_0_16px_rgba(34,211,238,0.25)]'
+                : 'text-cyan-100/45 hover:text-cyan-100 hover:bg-white/5',
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 text-cyan-100/60 hover:text-cyan-200 transition-colors"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-cyan-300/15 bg-[#04101b]/95 backdrop-blur-xl">
+    <div class="px-4 py-3 space-y-1">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class:list={[
+            'block rounded-lg px-3 py-2 font-mono text-[11px] uppercase tracking-[0.18em] transition-colors duration-200',
+            currentPath === link.href
+              ? 'text-cyan-200 bg-cyan-300/10'
+              : 'text-cyan-100/45 hover:text-cyan-100 hover:bg-white/5',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

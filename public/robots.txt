@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://taowenjin.com/sitemap-index.xml

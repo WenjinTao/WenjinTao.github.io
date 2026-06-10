@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { getCollection } from 'astro:content';
+
+const publications = (await getCollection('publications')).sort((a, b) => b.data.year - a.data.year);
+---
+
+<Layout title="Publications | Wenjin Tao">
+  <section class="page-top pb-24">
+    <div class="section-container max-w-4xl">
+      <SectionHeading
+        title="Publications"
+        subtitle="Peer-reviewed research at the intersection of AI, computer vision, and human-centered manufacturing."
+      />
+
+      <div class="mb-10 flex justify-center">
+        <a
+          href="https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/[0.05] px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] text-cyan-100/80 transition hover:border-cyan-200/50 hover:text-cyan-100"
+        >
+          View Google Scholar profile &rarr;
+        </a>
+      </div>
+
+      <div class="space-y-6">
+        {publications.map(pub => (
+          <div class="glass-card p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-semibold text-white mb-2">{pub.data.title}</h3>
+                <p class="text-sm text-gray-400 mb-1">{pub.data.authors}</p>
+                <p class="text-sm text-cyan-400 font-mono">{pub.data.venue}, {pub.data.year}</p>
+              </div>
+              <span class="text-xs px-3 py-1 rounded-full bg-violet-500/10 text-violet-400 border border-violet-400/20 whitespace-nowrap">
+                {pub.data.year}
+              </span>
+            </div>
+            {pub.body && (
+              <p class="text-sm text-gray-500 mt-3 border-t border-white/5 pt-3">{pub.body.trim()}</p>
+            )}
+            {pub.data.link && (
+              <a href={pub.data.link} target="_blank" rel="noopener noreferrer" class="text-sm text-cyan-400 hover:underline mt-2 inline-block">
+                View Paper &rarr;
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+
+<Layout title="About | Wenjin Tao">
+  <section class="page-top pb-24">
+    <div class="section-container max-w-4xl">
+      <SectionHeading title="About" />
+
+      <div class="glass-card p-8 md:p-12">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="w-40 h-40 rounded-2xl bg-gradient-to-br from-cyan-400 to-violet-500 flex-shrink-0 flex items-center justify-center">
+            <span class="text-5xl font-bold text-white">WT</span>
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <h2 class="text-2xl font-bold text-white mb-1">Wenjin Tao</h2>
+              <p class="text-cyan-400 font-mono text-sm">Staff Product Manager @ Bright Machines</p>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed">
+              I'm a product leader working at the intersection of AI, robotics, digital twins, computer vision, and manufacturing. At Bright Machines, I drive the product strategy for intelligent automation systems that are transforming how factories operate.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed">
+              My background combines academic research in human-centered manufacturing with hands-on engineering experience. I've published 12+ peer-reviewed papers and built systems ranging from field robots to computer vision inspection pipelines to AI-driven operation analytics platforms.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed">
+              I believe the future of manufacturing lies in systems that augment human capabilities rather than replace them. My work focuses on building intelligent tools that make factory workers more effective, safer, and more empowered.
+            </p>
+
+            <div class="glow-line my-8"></div>
+
+            <h3 class="text-xl font-bold text-white mb-4">Areas of Expertise</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                'Product Strategy & Roadmapping',
+                'AI & Machine Learning',
+                'Computer Vision',
+                'Robotics & Automation',
+                'Digital Twins',
+                'Human-Centered Design',
+                'Manufacturing Systems',
+                'Cross-functional Leadership',
+              ].map(skill => (
+                <div class="flex items-center gap-3 text-gray-300">
+                  <div class="w-2 h-2 rounded-full bg-cyan-400 flex-shrink-0" />
+                  <span class="text-sm">{skill}</span>
+                </div>
+              ))}
+            </div>
+
+            <div class="glow-line my-8"></div>
+
+            <h3 class="text-xl font-bold text-white mb-4">Education</h3>
+            <div class="space-y-4">
+              <div class="glass-card p-4">
+                <p class="text-white font-medium">Ph.D. in Industrial Engineering</p>
+                <p class="text-sm text-gray-400">Placeholder University</p>
+                <p class="text-xs text-gray-500">Research focus: Human-Centered Manufacturing, AI, Computer Vision</p>
+              </div>
+              <div class="glass-card p-4">
+                <p class="text-white font-medium">M.S. in Mechanical Engineering</p>
+                <p class="text-sm text-gray-400">Placeholder University</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
