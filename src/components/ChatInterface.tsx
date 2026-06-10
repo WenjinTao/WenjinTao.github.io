@@ -528,9 +528,9 @@ export default function ChatInterface(_props: Props) {
 
       {isOpen && (
         <div className="fixed inset-0 z-[46]" onClick={closePanel}>
-        <div className="absolute bottom-[9px] right-7 flex justify-end" onClick={(event) => event.stopPropagation()}>
+        <div className="absolute bottom-[9px] right-3 flex justify-end sm:right-7" onClick={(event) => event.stopPropagation()}>
           <div
-            className={`flex h-[min(720px,calc(100vh-3.5rem))] w-[calc(100vw-3.5rem)] max-w-[520px] origin-bottom-right flex-col overflow-hidden rounded-2xl border border-cyan-300/20 bg-[#06101d]/80 shadow-[0_0_60px_rgba(34,211,238,0.18)] backdrop-blur-2xl ${
+            className={`flex h-[min(720px,calc(100vh-3.5rem))] w-[calc(100vw-1.5rem)] max-w-[520px] origin-bottom-right flex-col overflow-hidden rounded-2xl border border-cyan-300/20 bg-[#06101d]/80 shadow-[0_0_60px_rgba(34,211,238,0.18)] backdrop-blur-2xl sm:w-[calc(100vw-3.5rem)] ${
               isClosing
                 ? 'animate-[panel-close_180ms_cubic-bezier(0.4,0,1,1)_both]'
                 : 'animate-[panel-open_220ms_cubic-bezier(0.2,0.8,0.2,1)_both]'
@@ -652,7 +652,7 @@ export default function ChatInterface(_props: Props) {
                   autoComplete="off"
                   autoCorrect="off"
                   spellCheck={false}
-                  className="w-full rounded-2xl border border-cyan-300/15 bg-white/[0.045] py-3 pl-4 pr-14 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-300/45 focus:bg-white/[0.065]"
+                  className="w-full rounded-2xl border border-cyan-300/15 bg-white/[0.045] py-3 pl-4 pr-14 text-base text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-300/45 focus:bg-white/[0.065] sm:text-sm"
                   placeholder="Ask about projects, industrial AI..."
                 />
                 {input.trim() && (
@@ -695,7 +695,7 @@ export default function ChatInterface(_props: Props) {
         </DraggableWindow>
       )}
 
-      <div className="fixed bottom-7 left-1/2 z-40 flex -translate-x-1/2 items-center gap-1 rounded-2xl border border-cyan-300/15 bg-[#04101b]/70 px-2 py-1.5 backdrop-blur-xl sm:left-7 sm:translate-x-0">
+      <div className="scrollbar-none fixed bottom-7 left-1/2 z-40 flex max-w-[calc(100vw-1rem)] -translate-x-1/2 items-center gap-1 overflow-x-auto rounded-2xl border border-cyan-300/15 bg-[#04101b]/70 px-2 py-1.5 backdrop-blur-xl sm:left-7 sm:max-w-none sm:translate-x-0">
         <button
           type="button"
           onClick={() => {
@@ -737,7 +737,9 @@ export default function ChatInterface(_props: Props) {
           type="button"
           onClick={handleChatButtonClick}
           aria-label={isOpen ? 'Close chat' : 'Open portfolio chat'}
-          className="fixed bottom-7 right-7 z-50 grid h-10 w-10 place-items-center rounded-full border border-cyan-300/35 bg-cyan-300/12 text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.18)] backdrop-blur-xl transition-all hover:border-cyan-200/70 hover:bg-cyan-300/22 hover:shadow-[0_0_26px_rgba(34,211,238,0.32)] focus:outline-none focus:ring-2 focus:ring-cyan-300/60"
+          className={`fixed bottom-20 right-5 z-50 h-10 w-10 place-items-center rounded-full border border-cyan-300/35 bg-cyan-300/12 text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.18)] backdrop-blur-xl transition-all hover:border-cyan-200/70 hover:bg-cyan-300/22 hover:shadow-[0_0_26px_rgba(34,211,238,0.32)] focus:outline-none focus:ring-2 focus:ring-cyan-300/60 sm:bottom-7 sm:right-7 ${
+            isOpen ? 'hidden sm:grid' : 'grid'
+          }`}
         >
           <span className="absolute inset-[-6px] rounded-full border border-cyan-300/15" />
           <ChatGlyph />
