@@ -165,8 +165,8 @@ function pick<T>(items: T[]): T {
 
 // Rotate a few phrasings for the most-repeated replies so the twin feels less canned.
 const GREETING_REPLIES = [
-  "Hey! I'm Wenjin's digital twin. I can walk you through his projects, research, how he builds and ships AI in manufacturing, or how to reach him — what are you curious about?",
-  "Hi there — Wenjin's digital twin here. Ask me about his projects, his research, how he builds and ships AI on the factory floor, or how to get in touch.",
+  "Hey! I'm Wenjin's assistant. I can walk you through his projects, research, how he builds and ships AI in manufacturing, or how to reach him — what are you curious about?",
+  "Hi there — I'm Wenjin's assistant. Ask me about his projects, his research, how he builds and ships AI on the factory floor, or how to get in touch.",
   "Hey, good to see you. I can show you Wenjin's projects and research, explain how he works, or point you to contact — where do you want to start?",
 ];
 
@@ -244,7 +244,7 @@ export default function ChatInterface(_props: Props) {
     {
       id: 1,
       role: 'assistant',
-      text: "Hi — I'm Wenjin's digital twin. Ask me anything.",
+      text: "Hi — I'm Wenjin's assistant. Ask me anything.",
     },
   ]);
   const nextId = useRef(2);
@@ -443,7 +443,7 @@ export default function ChatInterface(_props: Props) {
   function clearChat() {
     nextId.current = 2;
     setMessages([
-      { id: 1, role: 'assistant', text: "Hi — I'm Wenjin's digital twin. Ask me anything." },
+      { id: 1, role: 'assistant', text: "Hi — I'm Wenjin's assistant. Ask me anything." },
     ]);
     setInput('');
   }
@@ -539,7 +539,7 @@ export default function ChatInterface(_props: Props) {
             <div className="flex shrink-0 items-center justify-between border-b border-cyan-300/15 bg-[#04101b]/80 px-4 py-3">
               <div className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
-                <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-cyan-200/70">digital twin</span>
+                <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-cyan-200/70">ask</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <button
@@ -576,7 +576,7 @@ export default function ChatInterface(_props: Props) {
                           <span className="grid h-7 w-7 place-items-center rounded-lg border border-cyan-300/20 bg-cyan-300/[0.08] text-cyan-100 shadow-[0_0_16px_rgba(34,211,238,0.2)]">
                             <ChatGlyph className="h-4 w-4" />
                           </span>
-                          <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-cyan-200/70">Wenjin · twin</span>
+                          <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-cyan-200/70">assistant</span>
                         </div>
                       )}
                       <div
