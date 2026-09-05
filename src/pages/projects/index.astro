@@ -1,9 +1,36 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
-import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+
+import fieldRobotics1 from '../../assets/projects/field-robotics-1.jpg';
+import fieldRobotics2 from '../../assets/projects/field-robotics-2.jpg';
+import fieldRobotics3 from '../../assets/projects/field-robotics-3.jpg';
+import fieldRobotics4 from '../../assets/projects/field-robotics-4.jpg';
+import ventilator1 from '../../assets/projects/low-cost-ventilator-1.jpg';
+import ventilator2 from '../../assets/projects/low-cost-ventilator-2.jpg';
+import ventilator3 from '../../assets/projects/low-cost-ventilator-3.jpg';
+import maskDefect1 from '../../assets/projects/mask-defect-detection-1.jpg';
+import pinDefect1 from '../../assets/projects/pin-defect-detection-1.jpg';
+import folo1 from '../../assets/projects/folo-1.jpg';
+import folo2 from '../../assets/projects/folo-2.jpg';
+import folo3 from '../../assets/projects/folo-3.jpg';
+import optimo1 from '../../assets/projects/optimo-1.jpg';
+import optimo2 from '../../assets/projects/optimo-2.jpg';
+import optimo3 from '../../assets/projects/optimo-3.jpg';
+
+const projectImages: Record<string, { thumb: ImageMetadata; gallery: ImageMetadata[] }> = {
+  'field-robotics': { thumb: fieldRobotics1, gallery: [fieldRobotics2, fieldRobotics3, fieldRobotics4] },
+  'low-cost-ventilator': { thumb: ventilator1, gallery: [ventilator2, ventilator3] },
+  'mask-defect-detection': { thumb: maskDefect1, gallery: [] },
+  'pin-defect-detection': { thumb: pinDefect1, gallery: [] },
+  folo: { thumb: folo1, gallery: [folo2, folo3] },
+  optimo: { thumb: optimo1, gallery: [optimo2, optimo3] },
+};
 
 const projects = await getCollection('projects');
+const rendered = await Promise.all(projects.map(project => render(project)));
 ---
 
 <Layout title="Projects | Wenjin Tao">
@@ -16,21 +43,152 @@ const projects = await getCollection('projects');
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map(project => (
-          <div class="glass-card relative flex flex-col overflow-hidden p-6">
-            <h3 class="text-lg font-semibold text-white mb-2">
-              {project.data.title}
-            </h3>
-            <p class="text-sm text-gray-400 mb-4 flex-1">{project.data.description}</p>
-            <div class="flex flex-wrap gap-1.5">
-              {project.data.tags.map((tag: string) => (
-                <span class="rounded-full border border-cyan-300/15 bg-cyan-300/[0.05] px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-cyan-100/70">
-                  {tag}
-                </span>
-              ))}
+          <button
+            type="button"
+            data-project-trigger={project.id}
+            class="glass-card-hover group relative flex flex-col overflow-hidden text-left"
+          >
+            {projectImages[project.id] && (
+              <div class="project-media h-40 w-full">
+                <Image
+                  src={projectImages[project.id].thumb}
+                  alt={project.data.title}
+                  width={480}
+                  height={320}
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            )}
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors mb-2">
+                {project.data.title}
+              </h3>
+              <p class="text-sm text-gray-400 mb-4 flex-1">{project.data.description}</p>
+              <div class="flex flex-wrap gap-1.5">
+                {project.data.tags.map((tag: string) => (
+                  <span class="rounded-full border border-cyan-300/15 bg-cyan-300/[0.05] px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-cyan-100/70">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </button>
         ))}
       </div>
     </div>
   </section>
+
+  <div
+    id="project-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-sm"
+    aria-hidden="true"
+  >
+    <div
+      id="project-modal-panel"
+      role="dialog"
+      aria-modal="true"
+      class="relative my-8 w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-cyan-300/20 bg-[#06101d]/90 shadow-[0_0_60px_rgba(34,211,238,0.18)] backdrop-blur-2xl"
+    >
+      <button
+        type="button"
+        id="project-modal-close"
+        aria-label="Close"
+        class="absolute right-4 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300/20 bg-[#04101b]/70 text-gray-300 backdrop-blur-md transition-colors hover:border-cyan-300/40 hover:text-cyan-400"
+      >
+        &#10005;
+      </button>
+
+      {projects.map((project, i) => {
+        const { Content } = rendered[i];
+        const images = projectImages[project.id];
+        return (
+          <div data-project-panel={project.id} class="hidden">
+            {images && (
+              <div class="project-media h-56 w-full md:h-72">
+                <Image
+                  src={images.thumb}
+                  alt={project.data.title}
+                  width={800}
+                  height={500}
+                  class="h-full w-full object-cover"
+                />
+              </div>
+            )}
+            <div class="p-6 md:p-8">
+              <h2 class="text-2xl md:text-3xl font-bold text-white mb-3 pr-8">{project.data.title}</h2>
+              <p class="text-lg text-gray-400 mb-5">{project.data.description}</p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                {project.data.tags.map((tag: string) => (
+                  <span class="rounded-full border border-cyan-300/15 bg-cyan-300/[0.05] px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-cyan-100/70">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div class="glow-line mb-6"></div>
+              <div class="prose prose-invert max-w-none
+                prose-headings:font-semibold prose-headings:text-white prose-headings:tracking-tight
+                prose-h2:text-lg prose-h2:mt-8 prose-h2:mb-3 prose-h2:first:mt-0
+                prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2
+                prose-p:text-gray-300 prose-p:leading-relaxed
+                prose-ul:my-3 prose-li:my-1.5 prose-li:text-gray-300 prose-li:marker:text-cyan-400
+                prose-strong:text-white prose-strong:font-semibold
+                prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:underline">
+                <Content />
+              </div>
+              {images && images.gallery.length > 0 && (
+                <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {images.gallery.map(img => (
+                    <div class="project-media aspect-[4/3] rounded-lg border border-cyan-300/15">
+                      <Image src={img} alt={project.data.title} width={480} height={320} class="h-full w-full object-cover" />
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
 </Layout>
+
+<script>
+  const modal = document.getElementById('project-modal');
+  const panels = document.querySelectorAll<HTMLElement>('[data-project-panel]');
+
+  function openModal(id: string) {
+    if (!modal) return;
+    panels.forEach(panel => {
+      panel.classList.toggle('hidden', panel.dataset.projectPanel !== id);
+    });
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('overflow-hidden');
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('overflow-hidden');
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-project-trigger]').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const id = trigger.dataset.projectTrigger;
+      if (id) openModal(id);
+    });
+  });
+
+  document.getElementById('project-modal-close')?.addEventListener('click', closeModal);
+
+  modal?.addEventListener('click', event => {
+    if (event.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeModal();
+  });
+</script>

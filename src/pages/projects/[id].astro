@@ -32,11 +32,13 @@ const { Content } = await render(project);
 
       <div class="glow-line mb-8"></div>
 
-      <div class="prose prose-invert prose-cyan max-w-none
-        prose-headings:text-white prose-headings:font-bold
-        prose-p:text-gray-300
-        prose-li:text-gray-300
-        prose-strong:text-white
+      <div class="prose prose-invert max-w-none
+        prose-headings:font-semibold prose-headings:text-white prose-headings:tracking-tight
+        prose-h2:text-lg prose-h2:mt-8 prose-h2:mb-3 prose-h2:first:mt-0
+        prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2
+        prose-p:text-gray-300 prose-p:leading-relaxed
+        prose-ul:my-3 prose-li:my-1.5 prose-li:text-gray-300 prose-li:marker:text-cyan-400
+        prose-strong:text-white prose-strong:font-semibold
         prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:underline">
         <Content />
       </div>

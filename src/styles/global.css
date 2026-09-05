@@ -47,6 +47,30 @@
     @apply bg-white/10 border-cyan-400/30 shadow-lg shadow-cyan-500/10;
   }
 
+  .project-media {
+    @apply relative overflow-hidden bg-navy-900;
+  }
+
+  .project-media img {
+    filter: grayscale(30%) brightness(0.8) contrast(1.1) saturate(1.2);
+    transition: filter 0.4s ease;
+  }
+
+  .project-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(4, 16, 27, 0) 35%, rgba(4, 16, 27, 0.9) 100%),
+      linear-gradient(0deg, rgba(4, 16, 27, 0.25), rgba(4, 16, 27, 0.25)),
+      radial-gradient(circle at 25% 15%, rgba(34, 211, 238, 0.16), transparent 55%);
+    pointer-events: none;
+  }
+
+  .group:hover .project-media img {
+    filter: grayscale(10%) brightness(0.92) contrast(1.05) saturate(1.25);
+  }
+
   .gradient-text {
     @apply bg-gradient-to-r from-cyan-400 via-teal-400 to-violet-400 bg-clip-text text-transparent;
   }
