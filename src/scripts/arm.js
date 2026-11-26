@@ -386,10 +386,25 @@ const THREE = { ...T, RoundedBoxGeometry, RoomEnvironment };
             renderFrame(1400); /* re-render the still frame with reflections */
           } else {
             raf = requestAnimationFrame(frame);
-            document.addEventListener("visibilitychange", function () {
-              if (document.hidden) { if (raf) cancelAnimationFrame(raf); raf = null; }
-              else if (!raf) { lastNow = performance.now(); raf = requestAnimationFrame(frame); }
-            });
+            /* Run only while it can be seen: the tab is visible and the hero is on screen (the canvas is fixed
+               behind the whole page, so it used to keep drawing behind Labs / Now / Work). The canvas also fades
+               out over the first screen of scrolling. */
+            var heroOn = true;
+            function sync() {
+              var run = !document.hidden && heroOn;
+              if (!run && raf) { cancelAnimationFrame(raf); raf = null; }
+              else if (run && !raf) { lastNow = performance.now(); raf = requestAnimationFrame(frame); }
+            }
+            document.addEventListener("visibilitychange", sync);
+            var hero = document.querySelector(".frame");
+            if (hero && "IntersectionObserver" in window) {
+              new IntersectionObserver(function (es) { heroOn = es[0].isIntersecting; sync(); }, { threshold: 0 }).observe(hero);
+            }
+            var fade = function () {
+              canvas.style.opacity = String(Math.max(0, 1 - window.scrollY / (window.innerHeight * 0.9)));
+            };
+            window.addEventListener("scroll", fade, { passive: true });
+            fade();
           }
 
           var resizeTimer = null;

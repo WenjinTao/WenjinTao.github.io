@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leaf viewer</title>
+<style>
+/* Left: the 56 leaves grouped by species (thumb = top scan). Right: one leaf in a light studio, orbit it,
+   flip it, see mesh / collider / 1 cm grid. Card bottom-right: what the SimReady-style asset carries. */
+:root { --bg: #f3f0ea; --panel: #fbfaf7; --ink: #1d1b17; --muted: #6f685c; --line: #e2ddd3; --accent: #3f7a3a;
+        --ui: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; --mono: ui-monospace, SFMono-Regular, Menlo, monospace; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; font-family: var(--ui); color: var(--ink); background: var(--bg); }
+#app { display: grid; grid-template-columns: 300px 1fr; height: 100%; }
+#side { background: var(--panel); border-right: 1px solid var(--line); overflow-y: auto; padding: 14px 12px 24px; }
+#side h1 { font-size: 16px; margin: 2px 4px 2px; }
+#side .sub { font-size: 12px; color: var(--muted); margin: 0 4px 12px; line-height: 1.4; }
+.go { display: block; margin: 0 4px 12px; font-size: 13px; font-weight: 650; color: var(--accent); text-decoration: none; }
+#filter { width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; font: 13px var(--ui);
+          background: #fff; margin-bottom: 10px; }
+.sp { margin: 10px 4px 4px; font-size: 12.5px; font-weight: 650; }
+.sp i { font-weight: 400; color: var(--muted); }
+.row { display: flex; gap: 6px; flex-wrap: wrap; }
+.th { width: 84px; height: 84px; border: 1px solid var(--line); border-radius: 10px; background: #fff center/contain no-repeat;
+      cursor: pointer; padding: 0; }
+.th:hover { border-color: #b9b2a4; }
+.th.on { border: 2px solid var(--accent); box-shadow: 0 0 0 3px rgba(63, 122, 58, .15); }
+#view { position: relative; }
+#view canvas { display: block; touch-action: none; }
+#tools { position: absolute; right: 14px; top: 14px; display: flex; gap: 6px; flex-wrap: wrap;
+         justify-content: flex-end; max-width: 46%; }
+#tools button { border: 1px solid var(--line); background: rgba(255, 255, 255, .85); border-radius: 999px; padding: 7px 13px;
+                font: 600 12.5px var(--ui); color: var(--ink); cursor: pointer; backdrop-filter: blur(6px); }
+#tools button.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+#name { position: absolute; left: 18px; top: 14px; }
+#name .c { font-size: 22px; font-weight: 700; }
+#name .l { font-size: 14px; font-style: italic; color: var(--muted); }
+#name .side { margin-top: 6px; font-size: 12px; color: var(--muted); }
+#card { position: absolute; right: 14px; bottom: 14px; width: 330px; background: rgba(255, 255, 255, .9); border: 1px solid var(--line);
+        border-radius: 12px; padding: 12px 14px; font-size: 12.5px; backdrop-filter: blur(6px); }
+#card h3 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+#card table { width: 100%; table-layout: fixed; border-collapse: collapse; font-family: var(--mono); font-size: 11.5px; }
+#card td { padding: 2px 0; vertical-align: top; overflow-wrap: anywhere; }
+#card td:first-child { color: var(--muted); width: 112px; }
+#scans { display: flex; gap: 8px; margin-top: 8px; }
+#scans figure { margin: 0; flex: 1; text-align: center; font-size: 11px; color: var(--muted); }
+#scans img { width: 100%; height: 90px; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 6px; }
+#credit { position: absolute; left: 18px; bottom: 12px; font-size: 11px; color: var(--muted); }
+#credit a { color: inherit; }
+#hint { position: absolute; left: 18px; bottom: 30px; font-size: 11.5px; color: var(--muted); }
+@media (max-width: 760px) {
+  #app { grid-template-columns: 1fr; grid-template-rows: 1fr 168px; }
+  #side { grid-row: 2; border-right: 0; border-top: 1px solid var(--line); padding: 8px; }
+  #side h1, #side .sub, #filter, .sp { display: none; }
+  #list { display: flex; gap: 6px; overflow-x: auto; } .row { flex-wrap: nowrap; }
+  #card { width: auto; left: 10px; right: 10px; bottom: 10px; } #scans, #credit, #hint { display: none; }
+}
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="app">
+  <aside id="side">
+    <h1>Leaf assets</h1>
+    <p class="sub">56 leaves, 28 species. Built from Smithsonian herbarium scans: top + underside texture, curled mesh, mass, collider, species label.</p>
+    <a class="go" href="fall/index.html">&#9654; Watch all 56 fall</a>
+    <input id="filter" placeholder="Filter: maple, Quercus, elm…">
+    <div id="list"></div>
+  </aside>
+  <main id="view">
+    <div id="name"><div class="c"></div><div class="l"></div><div class="side"></div></div>
+    <div id="tools">
+      <button id="flip">Flip</button>
+      <button id="wire">Mesh</button>
+      <button id="hull">Collider</button>
+      <button id="grid" class="on">1 cm grid</button>
+      <button id="spin">Turntable</button>
+    </div>
+    <div id="card">
+      <h3>Asset</h3>
+      <table id="props"></table>
+      <div id="scans"><figure><img id="scanTop" alt=""><figcaption>top scan</figcaption></figure>
+        <figure><img id="scanUnder" alt=""><figcaption>underside (registered)</figcaption></figure></div>
+    </div>
+    <div id="hint">drag: orbit · wheel: zoom · F: flip · ↑ ↓: previous / next leaf</div>
+    <div id="credit">Scans: <a href="https://doi.org/10.5281/zenodo.5061353" target="_blank" rel="noopener">LeafSnap30</a> (CC BY 4.0), from Leafsnap, Kumar et al., ECCV 2012</div>
+  </main>
+</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { ConvexGeometry } from 'three/addons/geometries/ConvexGeometry.js';
+
+const $ = id => document.getElementById(id);
+const dec = (b64, T) => { const s = atob(b64), u = new Uint8Array(s.length);
+  for (let i = 0; i < s.length; i++) u[i] = s.charCodeAt(i); return new T(u.buffer); };
+
+// ---------- studio
+const view = $('view');
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 0.85;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+view.prepend(renderer.domElement);
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xf3f0ea);
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+scene.environmentIntensity = 0.55;
+const camera = new THREE.PerspectiveCamera(30, 1, 0.005, 20);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.minDistance = 0.06; controls.maxDistance = 2;
+
+const key = new THREE.DirectionalLight(0xfff3e2, 1.9);
+key.position.set(0.25, 0.6, 0.35);
+key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048);
+Object.assign(key.shadow.camera, { left: -0.3, right: 0.3, top: 0.3, bottom: -0.3, near: 0.05, far: 2 });
+key.shadow.bias = -0.0005; key.shadow.normalBias = 0.002; key.shadow.radius = 4;
+const rim = new THREE.DirectionalLight(0xe6efff, 0.9);
+rim.position.set(-0.4, 0.25, -0.5);
+scene.add(key, rim);
+
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(4, 4), new THREE.ShadowMaterial({ opacity: 0.16 }));
+ground.rotation.x = -Math.PI / 2;
+ground.receiveShadow = true;
+scene.add(ground);
+const grid = new THREE.GridHelper(0.5, 50, 0xc9c2b4, 0xe0dbd1);       // 1 cm cells
+grid.position.y = 0.0005;
+scene.add(grid);
+
+const LIFT = 0.04;                                                  // the leaf hovers 4 cm above the grid
+const holder = new THREE.Group();                                   // turntable (y) + flip (x)
+holder.position.y = LIFT;
+const flipper = new THREE.Group();
+holder.add(flipper);
+scene.add(holder);
+
+function resize() { const w = view.clientWidth, h = view.clientHeight;
+  renderer.setSize(w, h); camera.aspect = w / h; camera.updateProjectionMatrix(); }
+addEventListener('resize', resize); resize();
+
+// ---------- list
+const list = await (await fetch('viewer_data/index.json')).json();
+const byKey = new Map(list.map(L => [L.key, L]));
+const listEl = $('list');
+let lastSp = null, row = null;
+for (const L of list) {
+  if (L.latin !== lastSp) {
+    lastSp = L.latin;
+    const h = document.createElement('div'); h.className = 'sp'; h.dataset.q = (L.common + ' ' + L.latin).toLowerCase();
+    h.innerHTML = `${L.common} <i>${L.latin}</i>`;
+    row = document.createElement('div'); row.className = 'row'; row.dataset.q = h.dataset.q;
+    listEl.append(h, row);
+  }
+  const b = document.createElement('button'); b.className = 'th'; b.title = `${L.common} · ${L.src}`;
+  b.style.backgroundImage = `url(${L.thumb})`; b.dataset.key = L.key;
+  b.onclick = () => select(L.key);
+  row.append(b);
+}
+$('filter').oninput = e => { const q = e.target.value.trim().toLowerCase();
+  listEl.querySelectorAll('[data-q]').forEach(el => el.style.display = !q || el.dataset.q.includes(q) ? '' : 'none'); };
+
+// ---------- one leaf
+const tl = new THREE.TextureLoader();
+const cache = new Map();
+let cur = null, showTop = new URLSearchParams(location.search).get('side') !== 'under';   // ?side=under
+const state = { wire: false, hull: false, grid: true, spin: false };
+
+async function loadLeaf(k) {
+  if (cache.has(k)) return cache.get(k);
+  const D = await (await fetch(`viewer_data/${k}.json`)).json();
+  const g = new THREE.BufferGeometry();
+  const pos = dec(D.p, Float32Array);
+  g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  g.setAttribute('uv', new THREE.BufferAttribute(dec(D.uv, Float32Array), 2));
+  g.setIndex(new THREE.BufferAttribute(dec(D.i, Uint16Array), 1));
+  g.computeVertexNormals();
+  g.computeBoundingBox();
+  const tex = uri => { const t = tl.load(uri); t.colorSpace = THREE.SRGBColorSpace;
+    t.anisotropy = renderer.capabilities.getMaxAnisotropy(); return t; };
+  const mat = (map, side) => new THREE.MeshStandardMaterial({ map, side, alphaTest: 0.5, roughness: 0.7 });
+  const under = new THREE.Mesh(g, mat(tex(D.back), THREE.FrontSide));   // +y face = underside scan
+  const top = new THREE.Mesh(g, mat(tex(D.front), THREE.BackSide));     // -y face = top scan
+  under.castShadow = top.castShadow = true;
+  const wire = new THREE.LineSegments(new THREE.WireframeGeometry(g),
+    new THREE.LineBasicMaterial({ color: 0x2c5d8a, transparent: true, opacity: 0.45 }));
+  const pts = []; for (let i = 0; i < pos.length; i += 3) pts.push(new THREE.Vector3(pos[i], pos[i + 1], pos[i + 2]));
+  const hullG = new ConvexGeometry(pts);
+  const hull = new THREE.Group();
+  hull.add(new THREE.Mesh(hullG, new THREE.MeshBasicMaterial({ color: 0xd9822b, transparent: true, opacity: 0.18, depthWrite: false })),
+           new THREE.LineSegments(new THREE.EdgesGeometry(hullG, 20), new THREE.LineBasicMaterial({ color: 0xc06a14 })));
+  const grp = new THREE.Group(); grp.add(under, top, wire, hull);
+  const bb = g.boundingBox;
+  const hullTris = hullG.attributes.position.count / 3;
+  const out = { D, grp, wire, hull, size: bb.getSize(new THREE.Vector3()), hullTris };
+  cache.set(k, out);
+  return out;
+}
+
+function applyState() {
+  if (!cur) return;
+  cur.wire.visible = state.wire; cur.hull.visible = state.hull; grid.visible = state.grid;
+  for (const id of ['wire', 'hull', 'grid', 'spin']) $(id).classList.toggle('on', state[id]);
+  flipper.rotation.x = showTop ? Math.PI : 0;
+  $('name').querySelector('.side').textContent = showTop ? 'showing: top (upper surface)' : 'showing: underside';
+}
+
+let token = 0;
+async function select(k) {
+  const my = ++token;
+  const L = byKey.get(k);
+  document.querySelectorAll('.th').forEach(b => b.classList.toggle('on', b.dataset.key === k));
+  document.querySelector(`.th[data-key="${k}"]`)?.scrollIntoView({ block: 'nearest' });
+  const leaf = await loadLeaf(k);
+  if (my !== token) return;
+  if (cur) flipper.remove(cur.grp);
+  cur = leaf; flipper.add(cur.grp);
+  holder.rotation.y = 0;
+  history.replaceState(null, '', '#' + k);
+  $('name').querySelector('.c').textContent = L.common;
+  $('name').querySelector('.l').textContent = L.latin;
+  const s = leaf.size;
+  const rows = [
+    ['species', L.latin.toLowerCase().replace(' ', '_')],
+    ['semantics', 'class=leaf'],
+    ['size', `${(s.x * 100).toFixed(1)} × ${(s.z * 100).toFixed(1)} cm (blade ${L.size_cm} cm)`],
+    ['area', `${L.area_cm2} cm²`],
+    ['mass', `${L.mass_g} g  (90 g/m² × area)`],
+    ['rigid body', 'yes, PhysX'],
+    ['collider', `convex hull (${leaf.hullTris} tris)`],
+    ['render mesh', `${L.faces} quads × 2 faces, cutout alpha`],
+    ['underside', L.back_scan ? `own scan, IoU ${L.back_iou}` : `top scan reused (IoU ${L.back_iou})`],
+    ['usd', L.usd],
+  ];
+  $('props').innerHTML = rows.map(([a, b]) => `<tr><td>${a}</td><td>${b}</td></tr>`).join('');
+  $('scanTop').src = leaf.D.front; $('scanUnder').src = leaf.D.back;
+  // frame it: looking down at ~50 deg from the front-right
+  const r = Math.max(s.x, s.z);
+  controls.target.set(0, LIFT, 0);
+  camera.position.set(r * 1.0, LIFT + r * 1.9, r * 1.35);
+  controls.update();
+  applyState();
+}
+
+// ---------- tools
+$('flip').onclick = () => { showTop = !showTop; flipAnim = 1; applyState(); };
+for (const id of ['wire', 'hull', 'grid', 'spin']) $(id).onclick = () => { state[id] = !state[id]; applyState(); };
+addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  const keys = [...document.querySelectorAll('.th')].filter(b => b.offsetParent).map(b => b.dataset.key);
+  const i = keys.indexOf(cur?.D.key);
+  if (e.code === 'KeyF') $('flip').click();
+  else if (e.code === 'ArrowDown' || e.code === 'ArrowRight') { e.preventDefault(); select(keys[Math.min(i + 1, keys.length - 1)]); }
+  else if (e.code === 'ArrowUp' || e.code === 'ArrowLeft') { e.preventDefault(); select(keys[Math.max(i - 1, 0)]); }
+});
+
+// flip animation: rotate about x from the old side to the new one
+let flipAnim = 0;
+const clock = new THREE.Clock();
+renderer.setAnimationLoop(() => {
+  const dt = Math.min(clock.getDelta(), 0.05);
+  if (state.spin) holder.rotation.y += dt * 0.6;
+  if (flipAnim > 0) {
+    flipAnim = Math.max(0, flipAnim - dt / 0.6);
+    const e = flipAnim * flipAnim * (3 - 2 * flipAnim);
+    flipper.rotation.x = (showTop ? Math.PI : 0) + (showTop ? -1 : 1) * Math.PI * e;
+  }
+  controls.update();
+  renderer.render(scene, camera);
+});
+
+select(byKey.has(location.hash.slice(1)) ? location.hash.slice(1) : list.find(L => L.latin === 'Acer palmatum')?.key || list[0].key);
+</script>
+</body>
+</html>

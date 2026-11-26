@@ -36,6 +36,13 @@ const LABS = [
     tag: 'WebAssembly',
     text: 'Swipe to slice a banana. Every cut is an exact Boolean from my own C++ geometry kernel, running in your browser, with physics, browning and combos.',
   },
+  {
+    title: 'SimReady Leaves',
+    href: '/labs/simready-leaves/',
+    thumb: '/labs/thumbs/simready-leaves.jpg',
+    tag: 'Isaac Sim',
+    text: '56 leaves of 28 tree species, turned from herbarium scans into simulation-ready assets. Flip one to see its mesh, collider and mass, then watch all of them fall in an Isaac Sim replay.',
+  },
 ];
 
 const title = 'Wenjin Tao — Bits Tokens Atoms';
@@ -66,6 +73,11 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'Person', name: 'Wenjin Tao', url: canonical,
+      jobTitle: 'Staff Product Manager, Physical AI', image: new URL('/avatar.png', Astro.site).href,
+      sameAs: ['https://www.linkedin.com/in/wenjin-tao', 'https://github.com/WenjinTao'],
+    })} />
   </head>
   <body>
     <canvas id="field" aria-hidden="true"></canvas>
@@ -85,7 +97,12 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
         <div class="vision">
           <h1 class="rise d1">Bits <span class="tokens-word">Tokens</span> Atoms</h1>
 
-          <p class="identity rise d2"><strong>Wenjin Tao</strong> — Staff Product Manager, Physical AI · San Francisco Bay Area</p>
+          <p class="tagline rise d2">Simulation, AI and real hardware: I build experiments where they meet, and share them as I go.</p>
+          <p class="identity rise d3"><strong>Wenjin Tao</strong> — Staff Product Manager, Physical AI · San Francisco Bay Area</p>
+          <div class="cta rise d4">
+            <a class="btn primary" href="#labs">Play a lab <span aria-hidden="true">↓</span></a>
+            <a class="btn" href="#work">See my work <span aria-hidden="true">↓</span></a>
+          </div>
         </div>
       </main>
 
@@ -132,7 +149,7 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
           <li class="sim">
             <span class="sim-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l5 3V9l5 3V5h8v16z"/><path d="M7 21v-3M12 21v-3M17 21v-3"/></svg></span>
             <div>
-              <h3>Isaac Factory Series</h3>
+              <div class="sim-title"><h3>Isaac Factory Series</h3><span class="tag">Day 1–13</span></div>
               <p>Thirteen days of factory simulation in NVIDIA Isaac Sim — one build a day, logged as it happened. A small audience, on purpose: this is the record of the work itself.</p>
               <ol class="day-list">
                 <li><span class="d-date">10/21</span><span class="d-day">Day 1</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7518908158153515008/" target="_blank" rel="noopener">A factory from a single sentence<span class="ext" aria-hidden="true">↗</span></a></li>
@@ -140,6 +157,9 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
                 <li><span class="d-date">10/23</span><span class="d-day">Day 3</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7519610414528258048/" target="_blank" rel="noopener">Stepper motor bench test<span class="ext" aria-hidden="true">↗</span></a></li>
                 <li><span class="d-date">10/24</span><span class="d-day">Day 4</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7520009024487059456/" target="_blank" rel="noopener">CCTV camera<span class="ext" aria-hidden="true">↗</span></a></li>
                 <li><span class="d-date">10/25</span><span class="d-day">Day 5</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7520344880674684928/" target="_blank" rel="noopener">From virtual to physical<span class="ext" aria-hidden="true">↗</span></a></li>
+              </ol>
+              <details class="more-days"><summary>Show all 13 days</summary>
+              <ol class="day-list" start="6">
                 <li><span class="d-date">10/26</span><span class="d-day">Day 6</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7520726546442002432/" target="_blank" rel="noopener">Robot dog on fire patrol<span class="ext" aria-hidden="true">↗</span></a></li>
                 <li><span class="d-date">10/27</span><span class="d-day">Day 7</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7521072731732426752/" target="_blank" rel="noopener">Data center inspection<span class="ext" aria-hidden="true">↗</span></a></li>
                 <li><span class="d-date">10/29</span><span class="d-day">Day 8</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7521594910026670080/" target="_blank" rel="noopener">Morning-shift simulation<span class="ext" aria-hidden="true">↗</span></a></li>
@@ -148,26 +168,26 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
                 <li><span class="d-date">11/01</span><span class="d-day">Day 11</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7522831944833921025/" target="_blank" rel="noopener">Coil winder<span class="ext" aria-hidden="true">↗</span></a></li>
                 <li><span class="d-date">11/02</span><span class="d-day">Day 12</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7523233932818046976/" target="_blank" rel="noopener">Read on LinkedIn<span class="ext" aria-hidden="true">↗</span></a></li>
                 <li><span class="d-date">11/04</span><span class="d-day">Day 13</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7523928242194640896/" target="_blank" rel="noopener">CNC cell<span class="ext" aria-hidden="true">↗</span></a></li>
-              </ol>
+              </ol></details>
             </div>
-            <span class="tag">Day 1–13</span>
+            <img class="sim-shot" src="/home/now/isaac-factory.jpg" alt="" width="640" height="400" loading="lazy" />
           </li>
           <li class="sim">
             <span class="sim-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="7" rx="6" ry="2.4"/><path d="M4 7v7c0 1.3 2.7 2.4 6 2.4s6-1.1 6-2.4V7"/><path d="M19.3 4.6a5.8 5.8 0 0 1 0 6.8"/><path d="M21.6 2.9a9.2 9.2 0 0 1 0 10.2"/></svg></span>
             <div>
-              <h3>SoundReady</h3>
+              <div class="sim-title"><h3>SoundReady</h3><span class="tag">In Isaac Sim</span></div>
               <p>What if SimReady were also SoundReady? Six objects dropped in Isaac Sim — a socket as hi-hat, a 6&nbsp;g M8 nut, a plastic crate, a wood pallet, a 62&nbsp;kg steel drum as the 808 — play a drum kit. PhysX decides when each hit lands and how hard; the metadata decides whether it sounds right.</p>
               <ul class="post-links">
                 <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7526501726019960832/" target="_blank" rel="noopener">SoundReady — the SimReady drum kit <span class="ext" aria-hidden="true">↗</span></a></li>
                 <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7528675029815873536/" target="_blank" rel="noopener">SoundReady 2 — FEA wine glass <span class="ext" aria-hidden="true">↗</span></a></li>
               </ul>
             </div>
-            <span class="tag">In Isaac Sim</span>
+            <img class="sim-shot" src="/home/now/soundready.jpg" alt="" width="640" height="400" loading="lazy" />
           </li>
           <li class="sim">
             <span class="sim-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 17c4-8 8 3 12-3 2-3 4-4 6-4"/><path d="M6.6 10.4 5.2 7"/><path d="M10.9 9.6 10.1 6"/><path d="M15.1 10.8l.6-3.6"/><path d="M19.1 9.6l1.3-3.2"/></svg></span>
             <div>
-              <h3>Surface Checker — G1 / G2</h3>
+              <div class="sim-title"><h3>Surface Checker — G1 / G2</h3><span class="tag">In progress</span></div>
               <p>Surfaces written as code (build123d / OpenCascade), rendered from STEP in Isaac Sim, and checked with zebra stripes for continuity. The current set reaches G2 — one small spot where six patches meet falls short. G3 is the next test.</p>
               <ul class="post-links">
                 <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7523608072913661952/" target="_blank" rel="noopener">Issue 1 — AI on surface modeling <span class="ext" aria-hidden="true">↗</span></a></li>
@@ -175,26 +195,26 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
                 <li><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7526112794975453185/" target="_blank" rel="noopener">Lesson 3 — How surfaces meet <span class="ext" aria-hidden="true">↗</span></a></li>
               </ul>
             </div>
-            <span class="tag">In progress</span>
+            <img class="sim-shot" src="/home/now/surface-checker.jpg" alt="" width="640" height="400" loading="lazy" />
           </li>
           <li class="sim">
             <span class="sim-icon warm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h6v5H8z"/><path d="M11 9v2.5"/><path d="M3 15.5h18"/><circle cx="6.5" cy="18.5" r="1.6"/><circle cx="12" cy="18.5" r="1.6"/><circle cx="17.5" cy="18.5" r="1.6"/><path d="M15.5 7.5h4"/><path d="M18 5.6l1.9 1.9-1.9 1.9"/></svg></span>
             <div>
-              <h3>Conveyor Launch Field</h3>
+              <div class="sim-title"><h3>Conveyor Launch Field</h3><span class="tag warm">Level 1 built</span></div>
               <p>A SimReady physics game: launch parts down a conveyor and let mass, friction, and restitution decide where they land. Simulation data you can play with, not just read.</p>
             </div>
-            <span class="tag warm">Level 1 built</span>
+            <img class="sim-shot" src="/home/now/conveyor-launch-field.jpg" alt="" width="640" height="400" loading="lazy" />
           </li>
           <li class="sim">
             <span class="sim-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="19" r="1.8"/><circle cx="12" cy="9" r="1.8"/><circle cx="19" cy="14" r="1.8"/><path d="M6.5 17.5 10.5 10.5"/><path d="M13.5 10.3l4 2.4"/></svg></span>
             <div>
-              <h3>Therbligs</h3>
+              <div class="sim-title"><h3>Therbligs</h3><span class="tag">Concept</span></div>
               <p>An interactive demo of the 18 therbligs — the elementary motions every assembly task is made of. Rearranging atoms starts with rearranging motion: cut the wasted moves, and the line gets faster.</p>
               <ul class="post-links">
                 <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7526139573530361856/" target="_blank" rel="noopener">Therbligs — Day 1 <span class="ext" aria-hidden="true">↗</span></a></li>
               </ul>
             </div>
-            <span class="tag">Concept</span>
+            <img class="sim-shot" src="/home/now/therbligs.jpg" alt="" width="640" height="400" loading="lazy" />
           </li>
         </ul>
       </section>
@@ -203,7 +223,7 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
       <section class="section" id="work" aria-labelledby="work-title">
         <div class="section-head">
           <h2 id="work-title">Selected work</h2>
-          <span class="note" aria-hidden="true">Shipped in manufacturing</span>
+          <span class="note" aria-hidden="true">Industry &amp; research</span>
         </div>
         <ul class="labs work">
           {work.map((w) => (
