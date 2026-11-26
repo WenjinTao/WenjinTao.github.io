@@ -413,3 +413,23 @@
   .header-links .projects-link .arrow{ display:none; }
   .accent-toggle, .theme-toggle{ width:2.15rem; height:2.15rem; }
 }
+
+/* ---------- Earlier work: compact rows (thumbnail, title + one line, two tags) ---------- */
+.work-list{ list-style:none; margin:10px 0 0; padding:0; }
+.work-list li{ border-bottom:1px solid var(--line); }
+.work-list a{ display:grid; grid-template-columns:112px 1fr auto auto; align-items:center; gap:6px 22px;
+  padding:16px 0; text-decoration:none; color:inherit; min-height:0; }
+.w-thumb{ width:112px; height:70px; object-fit:cover; border-radius:8px; border:1px solid var(--line); display:block; }
+.w-title{ display:block; font-weight:700; font-size:1.02rem; letter-spacing:-.005em; transition:color .2s ease; }
+.w-desc{ display:block; margin-top:4px; color:var(--muted); font-size:.92rem; line-height:1.5; }
+.w-tags{ display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+.w-arrow{ color:var(--faint); font-size:1.1rem; transition:transform .2s ease, color .2s ease; }
+.work-list a:hover .w-title, .work-list a:hover .w-arrow{ color:var(--bits); }
+.work-list a:hover .w-arrow{ transform:translateX(3px); }
+@media (max-width:760px){
+  .work-list a{ grid-template-columns:84px 1fr; align-items:start; }
+  .w-thumb{ margin-top:4px; }
+  .w-thumb{ width:84px; height:56px; }
+  .w-tags, .w-arrow{ display:none; }
+  .w-desc{ font-size:.88rem; }
+}
