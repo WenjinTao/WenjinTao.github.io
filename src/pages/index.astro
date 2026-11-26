@@ -1,74 +1,198 @@
 ---
-import { getCollection } from 'astro:content';
-import ChatInterface from '../components/ChatInterface';
-import '../styles/global.css';
+// Homepage: "Bits Tokens Atoms" (from the downloaded design, rebuilt as an Astro page). The previous homepage is
+// /classic. The 3D arm (src/scripts/arm.js) loads after first paint, so the text shows at once.
+import '../styles/home.css';
 
-const projects = (await getCollection('projects'))
-  .sort((a, b) => Number(b.data.featured) - Number(a.data.featured))
-  .map((project) => ({
-    id: project.id,
-    title: project.data.title,
-    description: project.data.description,
-    tags: project.data.tags,
-    href: `/projects/${project.id}`,
-    featured: project.data.featured,
-  }));
+const LABS = [
+  {
+    title: 'Banana Boolean',
+    href: '/labs/banana-boolean/',
+    thumb: '/labs/thumbs/banana-boolean.jpg',
+    tag: 'WebAssembly',
+    text: 'Swipe to slice a banana. Every cut is an exact Boolean from my own C++ geometry kernel, running in your browser, with physics, browning and combos.',
+  },
+];
 
-const posts = (await getCollection('blog'))
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
-  .map((post) => ({
-    id: post.id,
-    title: post.data.title,
-    description: post.data.description,
-    date: post.data.date,
-    tags: post.data.tags,
-    href: `/blog/${post.id}`,
-    featured: post.data.featured,
-  }));
-
-const publications = (await getCollection('publications'))
-  .sort((a, b) => b.data.year - a.data.year)
-  .map((publication) => ({
-    id: publication.id,
-    title: publication.data.title,
-    authors: publication.data.authors,
-    venue: publication.data.venue,
-    year: publication.data.year,
-    abstract: publication.data.abstract,
-    href: publication.data.link ?? '/publications',
-  }));
-
-const title = 'Wenjin Tao';
-const description = "Chat with Wenjin Tao's portfolio across AI, robotics, digital twins, computer vision, and manufacturing.";
+const title = 'Wenjin Tao — Bits Tokens Atoms';
+const description = 'Wenjin Tao — Staff Product Manager, Physical AI. Bits Tokens Atoms: simulation, AI and the physical world, built in public.';
 const canonical = new URL('/', Astro.site).href;
-const ogImage = new URL('/avatar.png', Astro.site).href;
+const ogImage = new URL('/og-home.jpg', Astro.site).href;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonical} />
     <title>{title}</title>
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wenjin Tao" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:site_name" content="Wenjin Tao" />
-
-    <!-- Twitter -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
   </head>
-  <body class="min-h-screen">
-    <ChatInterface client:load projects={projects} posts={posts} publications={publications} />
+  <body>
+    <canvas id="field" aria-hidden="true"></canvas>
+    <div class="shade" aria-hidden="true"></div>
+
+    <div class="frame">
+      <header>
+        <a class="wordmark" href="#" aria-label="Wenjin Tao — home">WENJIN&nbsp;TAO<span class="dot">.</span></a>
+        <nav class="header-links" aria-label="Sections">
+          <a class="projects-link" href="#labs">LABS <span class="arrow" aria-hidden="true">↓</span></a>
+          <a class="projects-link" href="#projects">PROJECTS <span class="arrow" aria-hidden="true">↓</span></a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="vision">
+          <h1 class="rise d1">Bits <span class="tokens-word">Tokens</span> Atoms</h1>
+
+          <p class="identity rise d2"><strong>Wenjin Tao</strong> — Staff Product Manager, Physical AI · San Francisco Bay Area</p>
+        </div>
+      </main>
+
+      <footer>
+        <nav class="social" aria-label="Profiles">
+          <a href="https://www.linkedin.com/in/wenjin-tao" target="_blank" rel="noopener">LinkedIn <span class="ext" aria-hidden="true">↗</span></a>
+          <a href="https://github.com/WenjinTao" target="_blank" rel="noopener">GitHub <span class="ext" aria-hidden="true">↗</span></a>
+        </nav>
+      </footer>
+    </div>
+
+    <div class="page">
+      <!-- Labs: playable demos -->
+      <section class="section" id="labs" aria-labelledby="labs-title">
+        <div class="section-head">
+          <h2 id="labs-title">Labs</h2>
+          <span class="note" aria-hidden="true">Play in the browser</span>
+        </div>
+        <ul class="labs">
+          {LABS.map((lab) => (
+            <li>
+              <a class="lab" href={lab.href}>
+                <div class="shot">
+                  <img src={lab.thumb} alt="" width="960" height="540" loading="lazy" />
+                  <span class="tag">{lab.tag}</span>
+                </div>
+                <div class="body">
+                  <h3>{lab.title}</h3>
+                  <p>{lab.text}</p>
+                  <span class="play">PLAY <span class="arrow" aria-hidden="true">→</span></span>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <!-- Projects -->
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-head">
+          <h2 id="projects-title">Projects</h2>
+          <span class="note" aria-hidden="true">Selected work</span>
+        </div>
+        <ul class="sim-list">
+          <li class="sim">
+            <span class="sim-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l5 3V9l5 3V5h8v16z"/><path d="M7 21v-3M12 21v-3M17 21v-3"/></svg></span>
+            <div>
+              <h3>Isaac Factory Series</h3>
+              <p>Thirteen days of factory simulation in NVIDIA Isaac Sim — one build a day, logged as it happened. A small audience, on purpose: this is the record of the work itself.</p>
+              <ol class="day-list">
+                <li><span class="d-date">10/21</span><span class="d-day">Day 1</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7518908158153515008/" target="_blank" rel="noopener">A factory from a single sentence<span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><span class="d-date">10/22</span><span class="d-day">Day 2</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7519275760751329280/" target="_blank" rel="noopener">Electronics inside the printer<span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><span class="d-date">10/23</span><span class="d-day">Day 3</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7519610414528258048/" target="_blank" rel="noopener">Stepper motor bench test<span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><span class="d-date">10/24</span><span class="d-day">Day 4</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7520009024487059456/" target="_blank" rel="noopener">CCTV camera<span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><span class="d-date">10/25</span><span class="d-day">Day 5</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7520344880674684928/" target="_blank" rel="noopener">From virtual to physical<span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><span class="d-date">10/26</span><span class="d-day">Day 6</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7520726546442002432/" target="_blank" rel="noopener">Robot dog on fire patrol<span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><span class="d-date">10/27</span><span class="d-day">Day 7</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7521072731732426752/" target="_blank" rel="noopener">Data center inspection<span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><span class="d-date">10/29</span><span class="d-day">Day 8</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7521594910026670080/" target="_blank" rel="noopener">Morning-shift simulation<span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><span class="d-date">10/30</span><span class="d-day">Day 9</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7522085168421974016/" target="_blank" rel="noopener">SMT production line<span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><span class="d-date">10/31</span><span class="d-day">Day 10</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7522477321002385408/" target="_blank" rel="noopener">Stepper motor<span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><span class="d-date">11/01</span><span class="d-day">Day 11</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7522831944833921025/" target="_blank" rel="noopener">Coil winder<span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><span class="d-date">11/02</span><span class="d-day">Day 12</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7523233932818046976/" target="_blank" rel="noopener">Read on LinkedIn<span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><span class="d-date">11/04</span><span class="d-day">Day 13</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7523928242194640896/" target="_blank" rel="noopener">CNC cell<span class="ext" aria-hidden="true">↗</span></a></li>
+              </ol>
+            </div>
+            <span class="tag">Day 1–13</span>
+          </li>
+          <li class="sim">
+            <span class="sim-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="7" rx="6" ry="2.4"/><path d="M4 7v7c0 1.3 2.7 2.4 6 2.4s6-1.1 6-2.4V7"/><path d="M19.3 4.6a5.8 5.8 0 0 1 0 6.8"/><path d="M21.6 2.9a9.2 9.2 0 0 1 0 10.2"/></svg></span>
+            <div>
+              <h3>SoundReady</h3>
+              <p>What if SimReady were also SoundReady? Six objects dropped in Isaac Sim — a socket as hi-hat, a 6&nbsp;g M8 nut, a plastic crate, a wood pallet, a 62&nbsp;kg steel drum as the 808 — play a drum kit. PhysX decides when each hit lands and how hard; the metadata decides whether it sounds right.</p>
+              <ul class="post-links">
+                <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7526501726019960832/" target="_blank" rel="noopener">SoundReady — the SimReady drum kit <span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7528675029815873536/" target="_blank" rel="noopener">SoundReady 2 — FEA wine glass <span class="ext" aria-hidden="true">↗</span></a></li>
+              </ul>
+            </div>
+            <span class="tag">In Isaac Sim</span>
+          </li>
+          <li class="sim">
+            <span class="sim-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 17c4-8 8 3 12-3 2-3 4-4 6-4"/><path d="M6.6 10.4 5.2 7"/><path d="M10.9 9.6 10.1 6"/><path d="M15.1 10.8l.6-3.6"/><path d="M19.1 9.6l1.3-3.2"/></svg></span>
+            <div>
+              <h3>Surface Checker — G1 / G2</h3>
+              <p>Surfaces written as code (build123d / OpenCascade), rendered from STEP in Isaac Sim, and checked with zebra stripes for continuity. The current set reaches G2 — one small spot where six patches meet falls short. G3 is the next test.</p>
+              <ul class="post-links">
+                <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7523608072913661952/" target="_blank" rel="noopener">Issue 1 — AI on surface modeling <span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7524327657862324224/" target="_blank" rel="noopener">Lesson 1 <span class="ext" aria-hidden="true">↗</span></a></li>
+                <li><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7526112794975453185/" target="_blank" rel="noopener">Lesson 3 — How surfaces meet <span class="ext" aria-hidden="true">↗</span></a></li>
+              </ul>
+            </div>
+            <span class="tag">In progress</span>
+          </li>
+          <li class="sim">
+            <span class="sim-icon warm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h6v5H8z"/><path d="M11 9v2.5"/><path d="M3 15.5h18"/><circle cx="6.5" cy="18.5" r="1.6"/><circle cx="12" cy="18.5" r="1.6"/><circle cx="17.5" cy="18.5" r="1.6"/><path d="M15.5 7.5h4"/><path d="M18 5.6l1.9 1.9-1.9 1.9"/></svg></span>
+            <div>
+              <h3>Conveyor Launch Field</h3>
+              <p>A SimReady physics game: launch parts down a conveyor and let mass, friction, and restitution decide where they land. Simulation data you can play with, not just read.</p>
+            </div>
+            <span class="tag warm">Level 1 built</span>
+          </li>
+          <li class="sim">
+            <span class="sim-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="19" r="1.8"/><circle cx="12" cy="9" r="1.8"/><circle cx="19" cy="14" r="1.8"/><path d="M6.5 17.5 10.5 10.5"/><path d="M13.5 10.3l4 2.4"/></svg></span>
+            <div>
+              <h3>Therbligs</h3>
+              <p>An interactive demo of the 18 therbligs — the elementary motions every assembly task is made of. Rearranging atoms starts with rearranging motion: cut the wasted moves, and the line gets faster.</p>
+              <ul class="post-links">
+                <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7526139573530361856/" target="_blank" rel="noopener">Therbligs — Day 1 <span class="ext" aria-hidden="true">↗</span></a></li>
+              </ul>
+            </div>
+            <span class="tag">Concept</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Film -->
+      <section class="section" id="film" aria-labelledby="film-title">
+        <div class="section-head">
+          <h2 id="film-title">Film</h2>
+          <span class="note" aria-hidden="true">Unreleased</span>
+        </div>
+        <figure class="teaser">
+          <img src="/home/film-teaser.jpg" alt="" width="1600" height="900" loading="lazy" />
+          <figcaption class="teaser-caption">
+            <span class="teaser-title">Untitled Film</span>
+            <span class="teaser-status">In production · Not yet public</span>
+          </figcaption>
+        </figure>
+      </section>
+    </div>
+    <script>
+      // the 3D arm after first paint (three.js is a separate chunk)
+      const start = () => import('../scripts/arm.js');
+      if ('requestIdleCallback' in window) requestIdleCallback(start, { timeout: 1200 });
+      else setTimeout(start, 200);
+    </script>
   </body>
 </html>
