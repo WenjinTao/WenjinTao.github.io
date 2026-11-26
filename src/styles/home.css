@@ -391,3 +391,25 @@
 .theme-toggle svg{ width:18px; height:18px; }
 .theme-toggle .moon{ display:none; } :root[data-theme="dark"] .theme-toggle .sun{ display:none; }
 :root[data-theme="dark"] .theme-toggle .moon{ display:block; }
+
+/* ---------- accent colour options (teal is the default, in the theme tokens) ---------- */
+:root[data-accent="green"]{ --bits:#3d7a34; --bits-rgb:61,122,52; }
+:root[data-theme="dark"][data-accent="green"]{ --bits:#86d06f; --bits-rgb:134,208,111; }
+:root[data-accent="persimmon"]{ --bits:#c2541c; --bits-rgb:194,84,28; }
+:root[data-theme="dark"][data-accent="persimmon"]{ --bits:#ff8f57; --bits-rgb:255,143,87; }
+:root[data-accent="indigo"]{ --bits:#3446a6; --bits-rgb:52,70,166; }
+:root[data-theme="dark"][data-accent="indigo"]{ --bits:#8fa0ff; --bits-rgb:143,160,255; }
+.accent-toggle{ display:inline-flex; align-items:center; justify-content:center; width:2.4rem; height:2.4rem; min-height:0;
+  padding:0; border-radius:999px; border:1px solid var(--line); background:transparent; cursor:pointer; pointer-events:auto; }
+.accent-toggle:hover{ border-color:var(--bits); }
+.accent-toggle span{ width:14px; height:14px; border-radius:999px; background:var(--bits); box-shadow:0 0 0 3px rgba(var(--bits-rgb),.18); }
+
+/* phones: wordmark + LABS + WORK + colour + theme in 390 px */
+@media (max-width:560px){
+  header{ gap:8px; }
+  .wordmark{ letter-spacing:.2em; font-size:.76rem; }
+  .header-links{ gap:12px; }
+  .header-links .projects-link{ font-size:.74rem; letter-spacing:.12em; padding:10px 0; }
+  .header-links .projects-link .arrow{ display:none; }
+  .accent-toggle, .theme-toggle{ width:2.15rem; height:2.15rem; }
+}
