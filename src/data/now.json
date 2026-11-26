@@ -1,0 +1,148 @@
+[
+ {
+  "title": "Isaac Factory Series",
+  "tag": "Day 1–13",
+  "text": "Thirteen days of factory simulation in NVIDIA Isaac Sim — one build a day, logged as it happened. A small audience, on purpose: this is the record of the work itself.",
+  "shot": "/home/now/isaac-factory.jpg",
+  "days": [
+   {
+    "date": "10/21",
+    "day": "Day 1",
+    "title": "A factory from a single sentence",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7518908158153515008/"
+   },
+   {
+    "date": "10/22",
+    "day": "Day 2",
+    "title": "Electronics inside the printer",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7519275760751329280/"
+   },
+   {
+    "date": "10/23",
+    "day": "Day 3",
+    "title": "Stepper motor bench test",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7519610414528258048/"
+   },
+   {
+    "date": "10/24",
+    "day": "Day 4",
+    "title": "CCTV camera",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7520009024487059456/"
+   },
+   {
+    "date": "10/25",
+    "day": "Day 5",
+    "title": "From virtual to physical",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7520344880674684928/"
+   },
+   {
+    "date": "10/26",
+    "day": "Day 6",
+    "title": "Robot dog on fire patrol",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7520726546442002432/"
+   },
+   {
+    "date": "10/27",
+    "day": "Day 7",
+    "title": "Data center inspection",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7521072731732426752/"
+   },
+   {
+    "date": "10/29",
+    "day": "Day 8",
+    "title": "Morning-shift simulation",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7521594910026670080/"
+   },
+   {
+    "date": "10/30",
+    "day": "Day 9",
+    "title": "SMT production line",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7522085168421974016/"
+   },
+   {
+    "date": "10/31",
+    "day": "Day 10",
+    "title": "Stepper motor",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7522477321002385408/"
+   },
+   {
+    "date": "11/01",
+    "day": "Day 11",
+    "title": "Coil winder",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7522831944833921025/"
+   },
+   {
+    "date": "11/02",
+    "day": "Day 12",
+    "title": "Read on LinkedIn",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7523233932818046976/"
+   },
+   {
+    "date": "11/04",
+    "day": "Day 13",
+    "title": "CNC cell",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7523928242194640896/"
+   }
+  ],
+  "links": []
+ },
+ {
+  "title": "SoundReady",
+  "tag": "In Isaac Sim",
+  "text": "What if SimReady were also SoundReady? Six objects dropped in Isaac Sim — a socket as hi-hat, a 6 g M8 nut, a plastic crate, a wood pallet, a 62 kg steel drum as the 808 — play a drum kit. PhysX decides when each hit lands and how hard; the metadata decides whether it sounds right.",
+  "shot": "/home/now/soundready.jpg",
+  "days": [],
+  "links": [
+   {
+    "title": "SoundReady — the SimReady drum kit",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7526501726019960832/"
+   },
+   {
+    "title": "SoundReady 2 — FEA wine glass",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7528675029815873536/"
+   }
+  ]
+ },
+ {
+  "title": "Surface Checker — G1 / G2",
+  "tag": "In progress",
+  "text": "Surfaces written as code (build123d / OpenCascade), rendered from STEP in Isaac Sim, and checked with zebra stripes for continuity. The current set reaches G2 — one small spot where six patches meet falls short. G3 is the next test.",
+  "shot": "/home/now/surface-checker.jpg",
+  "days": [],
+  "links": [
+   {
+    "title": "Issue 1 — AI on surface modeling",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7523608072913661952/"
+   },
+   {
+    "title": "Lesson 1",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7524327657862324224/"
+   },
+   {
+    "title": "Lesson 3 — How surfaces meet",
+    "href": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7526112794975453185/"
+   }
+  ]
+ },
+ {
+  "title": "Conveyor Launch Field",
+  "tag": "Level 1 built",
+  "text": "A SimReady physics game: launch parts down a conveyor and let mass, friction, and restitution decide where they land. Simulation data you can play with, not just read.",
+  "shot": "/home/now/conveyor-launch-field.jpg",
+  "days": [],
+  "links": []
+ },
+ {
+  "title": "Therbligs",
+  "tag": "Concept",
+  "text": "An interactive demo of the 18 therbligs — the elementary motions every assembly task is made of. Rearranging atoms starts with rearranging motion: cut the wasted moves, and the line gets faster.",
+  "shot": "/home/now/therbligs.jpg",
+  "days": [],
+  "links": [
+   {
+    "title": "Therbligs — Day 1",
+    "href": "https://www.linkedin.com/feed/update/urn:li:activity:7526139573530361856/"
+   }
+  ]
+ }
+]

@@ -1,0 +1,25 @@
+/* Colour tokens: light (default) / dark, and the accent options. Used by the one-screen page (one.css). */
+:root, :root[data-theme="light"]{
+  /* light (default): warm paper, dark ink, a deeper teal so the accent reads on light */
+  --bg:#f5f2ea; --bg-rgb:245,242,234; --bg-2:#fffdf8;
+  --ink:#12161c; --muted:#45505b; --faint:#646f7a;
+  --bits:#0a8aa3; --bits-rgb:10,138,163; --on-bits:#ffffff;
+  --line:rgba(18,22,28,.14); --line-soft:rgba(18,22,28,.07); --card-shadow:0 1px 2px rgba(18,22,28,.06), 0 8px 24px rgba(18,22,28,.06);
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#07090d; --bg-rgb:7,9,13; --bg-2:#0b0f14;
+  --ink:#f4f7f9; --muted:#a7b4be; --faint:#8b99a5;
+  --bits:#3fd9f2; --bits-rgb:63,217,242; --on-bits:#041016;
+  --line:rgba(167,180,190,.22); --line-soft:rgba(167,180,190,.1); --card-shadow:none;
+  color-scheme:dark;
+}
+/* ---------- accent colour options (teal is the default, in the theme tokens) ---------- */
+:root[data-accent="green"]{ --bits:#3d7a34; --bits-rgb:61,122,52; }
+:root[data-theme="dark"][data-accent="green"]{ --bits:#86d06f; --bits-rgb:134,208,111; }
+:root[data-accent="persimmon"]{ --bits:#c2541c; --bits-rgb:194,84,28; }
+:root[data-theme="dark"][data-accent="persimmon"]{ --bits:#ff8f57; --bits-rgb:255,143,87; }
+:root[data-accent="indigo"]{ --bits:#3446a6; --bits-rgb:52,70,166; }
+:root[data-theme="dark"][data-accent="indigo"]{ --bits:#8fa0ff; --bits-rgb:143,160,255; }
