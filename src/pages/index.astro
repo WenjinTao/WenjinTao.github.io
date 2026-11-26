@@ -2,6 +2,31 @@
 // Homepage: "Bits Tokens Atoms" (from the downloaded design, rebuilt as an Astro page). The previous homepage is
 // /classic. The 3D arm (src/scripts/arm.js) loads after first paint, so the text shows at once.
 import '../styles/home.css';
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+// Selected work = the earlier projects (src/content/projects), photo = <id>-1.jpg in src/assets/projects.
+// Order: closest to "Physical AI" first; projects not listed here come after, by title.
+const WORK_ORDER = ['optimo', 'folo', 'pin-defect-detection', 'mask-defect-detection', 'field-robotics', 'low-cost-ventilator'];
+const photos = import.meta.glob<{ default: ImageMetadata }>('../assets/projects/*-1.jpg', { eager: true });
+const rank = (id: string) => (WORK_ORDER.includes(id) ? WORK_ORDER.indexOf(id) : 99);
+const work = (await getCollection('projects'))
+  .sort((a, b) => rank(a.id) - rank(b.id) || a.data.title.localeCompare(b.data.title))
+  .map((p) => ({
+    title: p.data.title,
+    description: p.data.description,
+    tags: p.data.tags.slice(0, 3),
+    href: `/projects/${p.id}`,
+    photo: photos[`../assets/projects/${p.id}-1.jpg`]?.default,
+  }));
+
+// Research: the three most recent publications on the homepage, the rest on /publications
+const pubs = (await getCollection('publications')).sort((a, b) => b.data.year - a.data.year);
+const research = pubs.slice(0, 3).map((p) => ({
+  title: p.data.title, venue: p.data.venue, year: p.data.year,
+  href: p.data.link ?? (p.data.doi ? `https://doi.org/${p.data.doi}` : '/publications'),
+}));
 
 const LABS = [
   {
@@ -51,7 +76,8 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
         <a class="wordmark" href="#" aria-label="Wenjin Tao — home">WENJIN&nbsp;TAO<span class="dot">.</span></a>
         <nav class="header-links" aria-label="Sections">
           <a class="projects-link" href="#labs">LABS <span class="arrow" aria-hidden="true">↓</span></a>
-          <a class="projects-link" href="#projects">PROJECTS <span class="arrow" aria-hidden="true">↓</span></a>
+          <a class="projects-link" href="#now">NOW <span class="arrow" aria-hidden="true">↓</span></a>
+          <a class="projects-link" href="#work">WORK <span class="arrow" aria-hidden="true">↓</span></a>
         </nav>
       </header>
 
@@ -96,11 +122,11 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
           ))}
         </ul>
       </section>
-      <!-- Projects -->
-      <section class="section" id="projects" aria-labelledby="projects-title">
+      <!-- Now: current build-in-public work -->
+      <section class="section" id="now" aria-labelledby="now-title">
         <div class="section-head">
-          <h2 id="projects-title">Projects</h2>
-          <span class="note" aria-hidden="true">Selected work</span>
+          <h2 id="now-title">Now</h2>
+          <span class="note" aria-hidden="true">Building in public</span>
         </div>
         <ul class="sim-list">
           <li class="sim">
@@ -173,6 +199,50 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
         </ul>
       </section>
 
+      <!-- Selected work: earlier projects -> their detail pages -->
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="section-head">
+          <h2 id="work-title">Selected work</h2>
+          <span class="note" aria-hidden="true">Shipped in manufacturing</span>
+        </div>
+        <ul class="labs work">
+          {work.map((w) => (
+            <li>
+              <a class="lab" href={w.href}>
+                <div class="shot">
+                  {w.photo && <Image src={w.photo} alt="" widths={[480, 800]} sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 92vw" loading="lazy" />}
+                </div>
+                <div class="body">
+                  <h3>{w.title}</h3>
+                  <p>{w.description}</p>
+                  <div class="tags">{w.tags.map((t) => <span class="tag warm">{t}</span>)}</div>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- Research: three recent publications -->
+      <section class="section" id="research" aria-labelledby="research-title">
+        <div class="section-head">
+          <h2 id="research-title">Research</h2>
+          <span class="note" aria-hidden="true">{pubs.length} publications</span>
+        </div>
+        <ul class="pubs">
+          {research.map((r) => (
+            <li>
+              <span class="pub-year">{r.year}</span>
+              <div>
+                <a class="pub-title" href={r.href} target={r.href.startsWith('http') ? '_blank' : undefined} rel="noopener">{r.title}<span class="ext" aria-hidden="true">↗</span></a>
+                <span class="pub-venue">{r.venue}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <a class="more-link" href="/publications">All {pubs.length} publications <span aria-hidden="true">→</span></a>
+      </section>
+
       <!-- Film -->
       <section class="section" id="film" aria-labelledby="film-title">
         <div class="section-head">
@@ -187,6 +257,16 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
           </figcaption>
         </figure>
       </section>
+
+      <footer class="site-foot">
+        <nav aria-label="More">
+          <a href="https://www.linkedin.com/in/wenjin-tao" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/WenjinTao" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="/blog">Blog</a>
+          <a href="/classic">Classic site</a>
+        </nav>
+        <span>© Wenjin Tao</span>
+      </footer>
     </div>
     <script>
       // the 3D arm after first paint (three.js is a separate chunk)

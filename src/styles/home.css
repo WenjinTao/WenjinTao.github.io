@@ -307,3 +307,31 @@
   .labs > li:only-child .lab h3{ font-size:1.5rem; }
   .labs > li:only-child .lab p{ flex:0; font-size:1rem; }
 }
+
+/* ---------- Selected work: earlier projects, photo cards (same card as Labs, 3 per row) ---------- */
+.labs.work{ grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); }
+.lab .shot img{ width:100%; height:100%; object-fit:cover; display:block; }
+.work .lab .shot{ aspect-ratio:3/2; }
+.work .lab h3{ font-size:1.08rem; }
+.work .lab p{ font-size:.92rem; }
+.lab .tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+
+/* ---------- Research ---------- */
+.pubs{ list-style:none; margin:10px 0 0; padding:0; }
+.pubs li{ display:grid; grid-template-columns:64px 1fr; gap:4px 18px; padding:18px 0; border-bottom:1px solid var(--line); }
+.pub-year{ font-family:var(--mono); font-size:.78rem; letter-spacing:.1em; color:var(--bits); padding-top:3px; }
+.pub-title{ display:block; min-height:0; color:var(--ink); text-decoration:none; font-size:1rem; line-height:1.5; transition:color .2s ease; }
+.pub-title:hover{ color:var(--bits); }
+.pub-title .ext{ font-size:.66rem; color:var(--faint); margin-left:6px; }
+.pub-venue{ display:block; margin-top:4px; color:var(--faint); font-size:.86rem; font-style:italic; }
+.more-link{ display:inline-flex; align-items:center; gap:8px; margin-top:22px; min-height:0;
+  font-family:var(--mono); font-size:.78rem; letter-spacing:.14em; color:var(--bits); text-decoration:none; text-transform:uppercase; }
+.more-link:hover{ color:var(--ink); }
+
+/* ---------- footer ---------- */
+.site-foot{ max-width:1180px; margin:0 auto; padding:28px clamp(20px,5vw,64px) 44px; border-top:1px solid var(--line);
+  display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;
+  font-family:var(--mono); font-size:.76rem; letter-spacing:.12em; color:var(--faint); }
+.site-foot nav{ display:flex; gap:8px 26px; flex-wrap:wrap; }
+.site-foot a{ color:var(--muted); text-decoration:none; min-height:0; padding:6px 0; }
+.site-foot a:hover{ color:var(--bits); }
