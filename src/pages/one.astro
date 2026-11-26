@@ -1,5 +1,5 @@
 ---
-// One-screen homepage (concept): the homepage's sections side by side in one screen: intro + Labs | Latest |
+// One-screen homepage (concept): the homepage's sections side by side in one screen: intro + Latest | Labs |
 // Research + Earlier work. A row opens a detail panel in place (no page change). Phones: three tabs that swipe.
 // (The first take, three columns Bits | Tokens | Atoms, is in git: f83ca32.)
 // Same content as the full homepage ("/"): labs, the build-in-public work (src/data/now.json), the earlier
@@ -34,8 +34,23 @@ const LABS: Item[] = [
   { id: 'leaves', title: 'SimReady Leaves', sub: 'Isaac Sim', thumb: '/labs/thumbs/simready-leaves.jpg', play: '/labs/simready-leaves/',
     text: '56 leaves of 28 tree species, turned from herbarium scans into simulation-ready assets. Flip one to see its mesh, collider and mass, then watch all of them fall in an Isaac Sim replay.' },
 ];
-const NOW_ITEMS: Item[] = [now('Isaac Factory', 'factory'), now('SoundReady', 'soundready'), now('Surface Checker', 'surface'),
-  now('Conveyor', 'conveyor'), now('Therbligs', 'therbligs')];
+// CAD 101: links for L3-L7 are not in post-log.md yet -> the profile's activity page until they are.
+const FEED = 'https://www.linkedin.com/in/wenjin-tao/recent-activity/all/';
+const post = (id: string) => `https://www.linkedin.com/feed/update/urn:li:activity:${id}/`;
+const CAD101: Item = { id: 'cad101', title: 'CAD 101', sub: 'Lessons 1–7', thumb: '/home/now/cad101.jpg',
+  text: 'Short visual lessons on how CAD works under the hood: freeform surfaces, G0–G3 continuity, topology optimization, TPMS lattices and Boolean operations, each a 30–40 s film made from real geometry.',
+  days: [
+    { date: '11/05', day: 'L1', title: 'From a point to a freeform surface', href: post('7524327657862324224') },
+    { date: '11/06', day: 'L2', title: 'How curves meet (G0–G3)', href: post('7524606828048154624') },
+    { date: '', day: 'L3', title: 'How surfaces meet', href: FEED },
+    { date: '', day: 'L4', title: 'How material finds its shape', href: FEED },
+    { date: '', day: 'L5', title: 'Topology optimization: SIMP, BESO, level set, MMC', href: FEED },
+    { date: '', day: 'L6', title: 'TPMS lattices', href: FEED },
+    { date: '', day: 'L7', title: 'Boolean operations', href: FEED },
+  ],
+  links: [{ title: 'Issue 1: AI on surface modeling', href: post('7523608072913661952') }] };
+const NOW_ITEMS: Item[] = [CAD101, now('Isaac Factory', 'factory'), now('SoundReady', 'soundready'), now('Surface Checker', 'surface'),
+  now('Therbligs', 'therbligs')];
 const WORK_ORDER = ['optimo', 'folo', 'pin-defect-detection', 'mask-defect-detection', 'field-robotics', 'low-cost-ventilator'];
 const WORK: Item[] = await Promise.all(WORK_ORDER.map((id) => project(id, (projects.get(id)?.data.tags ?? []).slice(0, 2).join(' · '))));
 const RESEARCH = pubs.slice(0, 4).map((p) => ({ year: p.data.year, title: p.data.title,
@@ -87,30 +102,15 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
       </header>
 
       <nav class="tabs" aria-label="Sections">
-        {['Labs', 'Latest', 'Work'].map((t, i) => <button type="button" data-col={i}>{t}</button>)}
+        {['Latest', 'Labs', 'Work'].map((t, i) => <button type="button" data-col={i}>{t}</button>)}
       </nav>
 
       <main class="cols">
-        <section class="col col-intro" aria-label="Labs">
+        <section class="col col-intro" aria-label="Latest">
           <div class="intro">
             <h1>Bits <span class="tokens-word">Tokens</span> Atoms</h1>
             <p class="tagline">Simulation, AI and real hardware: I build experiments where they meet, and share them as I go.</p>
           </div>
-          <h2 class="mod">Labs <span>play in the browser</span></h2>
-          <ul class="labs">
-            {LABS.map((it) => (
-              <li>
-                <button type="button" class="lab" data-id={it.id}>
-                  <img src={it.thumb!} alt="" width="960" height="540" loading="lazy" />
-                  <span class="lab-t"><span class="title">{it.title}</span><span class="play">PLAY</span></span>
-                  <span class="sub">{it.sub}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section class="col col-now" aria-label="Latest">
           <h2 class="mod">Latest <span>building in public</span></h2>
           <ul class="rows fill">
             {NOW_ITEMS.map((it) => (
@@ -121,6 +121,21 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
                       <span class="blurb">{it.text}</span></span>
                   </button>
                 </li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="col col-labs" aria-label="Labs">
+          <h2 class="mod">Labs <span>play in the browser</span></h2>
+          <ul class="labs">
+            {LABS.map((it) => (
+              <li>
+                <button type="button" class="lab" data-id={it.id}>
+                  <img src={it.thumb!} alt="" width="960" height="540" loading="lazy" />
+                  <span class="lab-t"><span class="title">{it.title}</span><span class="play">PLAY</span></span>
+                  <span class="sub">{it.sub}</span>
+                </button>
+              </li>
             ))}
           </ul>
         </section>

@@ -176,3 +176,16 @@ dialog img[hidden]{ display:none; }
   .col-intro .lab{ height:100%; min-height:0; }
   .col-intro .lab img{ flex:1; min-height:120px; height:0; aspect-ratio:auto; }
 }
+
+/* order: intro + Latest | Labs | Research + Earlier work */
+.col-intro .mod{ margin-top:0; }
+@media (min-width:761px){
+  .col-intro .intro h1{ font-size:clamp(2.4rem,4.4vw,4.2rem); }
+  .col-intro .mod{ margin-top:0; }
+  .col-intro .blurb{ -webkit-line-clamp:1; }
+  .col-labs .labs{ grid-template-columns:1fr; flex:1; min-height:0; grid-auto-rows:minmax(0,1fr); }
+  .col-labs .labs > li{ min-height:0; display:flex; }
+  .col-labs .lab{ height:100%; min-height:0; }
+  .col-labs .lab img{ flex:1; min-height:100px; height:0; aspect-ratio:auto; }
+}
+@media (max-width:760px){ .col-labs .labs{ grid-template-columns:1fr 1fr; } }
