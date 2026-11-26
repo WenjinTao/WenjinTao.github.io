@@ -1,6 +1,7 @@
 ---
-// One-screen homepage (concept): "Bits Tokens Atoms" as the page's three columns. Everything fits one screen;
-// a row opens a detail panel in place (no page change). Phones: the columns swipe sideways.
+// One-screen homepage (concept): the homepage's sections side by side in one screen: intro + Labs | Now |
+// Earlier work + Research. A row opens a detail panel in place (no page change). Phones: three tabs that swipe.
+// (The first take, three columns Bits | Tokens | Atoms, is in git: f83ca32.)
 // Same content as the full homepage ("/"): labs, the build-in-public work (src/data/now.json), the earlier
 // projects (content collection + photos) and the publications.
 import '../styles/one.css';
@@ -27,26 +28,19 @@ const now = (title: string, id: string): Item => {
 };
 const pubs = (await getCollection('publications')).sort((a, b) => b.data.year - a.data.year);
 
-const COLS: { name: string; what: string; items: Item[] }[] = [
-  { name: 'Bits', what: 'simulation', items: [
-    { id: 'leaves', title: 'SimReady Leaves', sub: 'Lab · Isaac Sim', thumb: '/labs/thumbs/simready-leaves.jpg', play: '/labs/simready-leaves/',
-      text: '56 leaves of 28 tree species, turned from herbarium scans into simulation-ready assets. Flip one to see its mesh, collider and mass, then watch all of them fall in an Isaac Sim replay.' },
-    now('Isaac Factory', 'factory'), now('SoundReady', 'soundready'), now('Surface Checker', 'surface'), now('Conveyor', 'conveyor'),
-  ] },
-  { name: 'Tokens', what: 'AI & perception', items: [
-    await project('optimo', 'Operations analytics'), await project('folo', 'Work instructions'),
-    await project('pin-defect-detection', 'Inspection · edge AI'), await project('mask-defect-detection', 'Inspection · vision'),
-    { id: 'research', title: 'Research', sub: `${pubs.length} publications`, thumb: null, page: '/publications',
-      text: 'Papers on recognizing and guiding human work in manufacturing: action recognition, sensor fusion, AR instructions, digital twins.',
-      pubs: pubs.slice(0, 4).map((p) => ({ title: `${p.data.year} · ${p.data.title}`, href: p.data.link ?? (p.data.doi ? `https://doi.org/${p.data.doi}` : '/publications') })) },
-  ] },
-  { name: 'Atoms', what: 'hardware & motion', items: [
-    { id: 'banana', title: 'Banana Boolean', sub: 'Lab · WebAssembly', thumb: '/labs/thumbs/banana-boolean.jpg', play: '/labs/banana-boolean/',
-      text: 'Swipe to slice a banana. Every cut is an exact Boolean from my own C++ geometry kernel, running in your browser, with physics, browning and combos.' },
-    await project('low-cost-ventilator', 'COVID-19 prototype'), await project('field-robotics', 'Autonomy'), now('Therbligs', 'therbligs'),
-  ] },
+const LABS: Item[] = [
+  { id: 'banana', title: 'Banana Boolean', sub: 'WebAssembly', thumb: '/labs/thumbs/banana-boolean.jpg', play: '/labs/banana-boolean/',
+    text: 'Swipe to slice a banana. Every cut is an exact Boolean from my own C++ geometry kernel, running in your browser, with physics, browning and combos.' },
+  { id: 'leaves', title: 'SimReady Leaves', sub: 'Isaac Sim', thumb: '/labs/thumbs/simready-leaves.jpg', play: '/labs/simready-leaves/',
+    text: '56 leaves of 28 tree species, turned from herbarium scans into simulation-ready assets. Flip one to see its mesh, collider and mass, then watch all of them fall in an Isaac Sim replay.' },
 ];
-const DATA = Object.fromEntries(COLS.flatMap((c) => c.items.map((i) => [i.id, i])));
+const NOW_ITEMS: Item[] = [now('Isaac Factory', 'factory'), now('SoundReady', 'soundready'), now('Surface Checker', 'surface'),
+  now('Conveyor', 'conveyor'), now('Therbligs', 'therbligs')];
+const WORK_ORDER = ['optimo', 'folo', 'pin-defect-detection', 'mask-defect-detection', 'field-robotics', 'low-cost-ventilator'];
+const WORK: Item[] = await Promise.all(WORK_ORDER.map((id) => project(id, (projects.get(id)?.data.tags ?? []).slice(0, 2).join(' · '))));
+const RESEARCH = pubs.slice(0, 3).map((p) => ({ year: p.data.year, title: p.data.title,
+  href: p.data.link ?? (p.data.doi ? `https://doi.org/${p.data.doi}` : '/publications') }));
+const DATA = Object.fromEntries([...LABS, ...NOW_ITEMS, ...WORK].map((i) => [i.id, i]));
 
 const title = 'Wenjin Tao — Bits Tokens Atoms';
 const description = 'Wenjin Tao — Staff Product Manager, Physical AI. Simulation, AI and manufacturing, built in public.';
@@ -93,29 +87,64 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
         </div>
       </header>
 
-      <nav class="tabs" aria-label="Columns">
-        {COLS.map((c, i) => <button type="button" data-col={i}>{c.name}</button>)}
+      <nav class="tabs" aria-label="Sections">
+        {['Labs', 'Now', 'Work'].map((t, i) => <button type="button" data-col={i}>{t}</button>)}
       </nav>
 
       <main class="cols">
-        {COLS.map((c) => (
-          <section class={`col col-${c.name.toLowerCase()}`} aria-label={c.name}>
-            <h2>{c.name}</h2>
-            <p class="what">{c.what}</p>
-            <ul>
-              {c.items.map((it) => (
+        <section class="col col-intro" aria-label="Labs">
+          <div class="intro">
+            <h1>Bits <span class="tokens-word">Tokens</span> Atoms</h1>
+            <p class="tagline">Simulation, AI and real hardware: I build experiments where they meet, and share them as I go.</p>
+          </div>
+          <h2 class="mod">Labs <span>play in the browser</span></h2>
+          <ul class="labs">
+            {LABS.map((it) => (
+              <li>
+                <button type="button" class="lab" data-id={it.id}>
+                  <img src={it.thumb!} alt="" width="960" height="540" loading="lazy" />
+                  <span class="lab-t"><span class="title">{it.title}</span><span class="play">PLAY</span></span>
+                  <span class="sub">{it.sub}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="col col-now" aria-label="Now">
+          <h2 class="mod">Now <span>building in public</span></h2>
+          <ul class="rows">
+            {NOW_ITEMS.map((it) => (
                 <li>
                   <button type="button" class="item" data-id={it.id} data-thumb={it.thumb ?? ''}>
-                    {it.thumb ? <img src={it.thumb} alt="" width="96" height="60" loading="lazy" /> :
-                      <span class="ph" aria-hidden="true">{pubs.length}</span>}
+                    {it.thumb && <img src={it.thumb} alt="" width="96" height="60" loading="lazy" />}
                     <span class="t"><span class="title">{it.title}</span><span class="sub">{it.sub}</span></span>
-                    {it.play && <span class="play">PLAY</span>}
                   </button>
                 </li>
-              ))}
-            </ul>
-          </section>
-        ))}
+            ))}
+          </ul>
+        </section>
+
+        <section class="col col-work" aria-label="Earlier work">
+          <h2 class="mod">Earlier work <span>industry &amp; research</span></h2>
+          <ul class="rows compact">
+            {WORK.map((it) => (
+                <li>
+                  <button type="button" class="item" data-id={it.id} data-thumb={it.thumb ?? ''}>
+                    {it.thumb && <img src={it.thumb} alt="" width="96" height="60" loading="lazy" />}
+                    <span class="t"><span class="title">{it.title}</span><span class="sub">{it.sub}</span></span>
+                  </button>
+                </li>
+            ))}
+          </ul>
+          <h2 class="mod mod-research">Research <span>{pubs.length} publications</span></h2>
+          <ul class="pubs">
+            {RESEARCH.map((r) => (
+              <li><a href={r.href} target="_blank" rel="noopener"><b>{r.year}</b> {r.title}</a></li>
+            ))}
+          </ul>
+          <a class="more" href="/publications">All {pubs.length} publications →</a>
+        </section>
       </main>
 
       <footer>
@@ -156,9 +185,9 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
     <script>
       // hover: the column shows the item's picture faintly behind its list; click: the detail panel
       const DATA = JSON.parse(document.getElementById('items-data')!.textContent || '{}');
-      document.querySelectorAll<HTMLButtonElement>('.item').forEach((b) => {
+      document.querySelectorAll<HTMLButtonElement>('.item, .lab').forEach((b) => {
         const col = b.closest('.col') as HTMLElement;
-        const lit = () => { if (b.dataset.thumb) { col.style.setProperty('--stage', `url("${b.dataset.thumb}")`); col.classList.add('lit'); } };
+        const lit = () => { if (b.dataset.thumb && b.classList.contains('item')) { col.style.setProperty('--stage', `url("${b.dataset.thumb}")`); col.classList.add('lit'); } };
         b.addEventListener('mouseenter', lit); b.addEventListener('focus', lit);
         b.addEventListener('mouseleave', () => col.classList.remove('lit'));
         b.addEventListener('blur', () => col.classList.remove('lit'));
