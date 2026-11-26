@@ -1,0 +1,156 @@
+{
+ "slice": {
+  "prompt": "Close-up foley: a sharp kitchen knife slices quickly through a soft ripe peeled banana, one single short wet squishy cut, no other sounds, dry studio recording",
+  "seconds": 0.6,
+  "model_id": "eleven_text_to_sound_v3",
+  "prompt_influence": 0.7,
+  "kind": "one",
+  "takes": [
+   {
+    "file": "slice_0.mp3",
+    "use": true,
+    "hits": 1,
+    "length": 0.265,
+    "final_s": 0.543,
+    "peak_s": 0.276
+   },
+   {
+    "file": "slice_1.mp3",
+    "use": false,
+    "hits": 3,
+    "length": 0.331,
+    "final_s": 0.483,
+    "peak_s": 0.306
+   },
+   {
+    "file": "slice_2.mp3",
+    "use": true,
+    "hits": 1,
+    "length": 0.368,
+    "final_s": 0.503,
+    "peak_s": 0.329
+   },
+   {
+    "file": "slice_3.mp3",
+    "use": true,
+    "hits": 1,
+    "length": 0.33,
+    "final_s": 0.533,
+    "peak_s": 0.306
+   }
+  ]
+ },
+ "board": {
+  "prompt": "Close-up foley: the edge of a kitchen knife taps once on a thick wooden cutting board, a single short crisp wooden knock, dry studio recording",
+  "seconds": 0.5,
+  "model_id": "eleven_text_to_sound_v3",
+  "prompt_influence": 0.7,
+  "kind": "one",
+  "takes": [
+   {
+    "file": "board_0.mp3",
+    "use": true,
+    "hits": 1,
+    "length": 0.088,
+    "final_s": 0.32,
+    "peak_s": 0.025
+   },
+   {
+    "file": "board_1.mp3",
+    "use": true,
+    "hits": 1,
+    "length": 0.126,
+    "final_s": 0.308,
+    "peak_s": 0.051
+   },
+   {
+    "file": "board_2.mp3",
+    "use": true,
+    "hits": 1,
+    "length": 0.117,
+    "final_s": 0.392,
+    "peak_s": 0.061
+   },
+   {
+    "file": "board_3.mp3",
+    "use": true,
+    "hits": 1,
+    "length": 0.098,
+    "final_s": 0.38,
+    "peak_s": 0.051
+   }
+  ]
+ },
+ "whoosh": {
+  "prompt": "A quick short swish of a kitchen knife moving fast through the air, a single soft whoosh, dry studio recording",
+  "seconds": 0.5,
+  "model_id": "eleven_text_to_sound_v3",
+  "prompt_influence": 0.7,
+  "kind": "one",
+  "takes": [
+   {
+    "file": "whoosh_0.mp3",
+    "use": true,
+    "hits": 1,
+    "length": 0.09,
+    "final_s": 0.231,
+    "peak_s": 0.034
+   },
+   {
+    "file": "whoosh_1.mp3",
+    "use": true,
+    "hits": 1,
+    "length": 0.077,
+    "final_s": 0.317,
+    "peak_s": 0.049
+   },
+   {
+    "file": "whoosh_2.mp3",
+    "use": true,
+    "hits": 1,
+    "length": 0.12,
+    "final_s": 0.284,
+    "peak_s": 0.043
+   }
+  ]
+ },
+ "buzz": {
+  "prompt": "A tiny gnat or fruit fly, a few millimetres long, hovering near the ear: a very faint, very high-pitched thin whine like a mosquito but softer, steady with slight wavering, no low hum, no housefly drone, quiet room, nothing else",
+  "seconds": 4.0,
+  "model_id": "eleven_text_to_sound_v3",
+  "prompt_influence": 0.7,
+  "kind": "loop",
+  "takes": [
+   {
+    "file": "buzz_0.mp3",
+    "use": false,
+    "hits": 39,
+    "length": 3.489,
+    "final_s": 3.0,
+    "peak_s": 2.283,
+    "tone_hz": 259,
+    "swing_db": 6.1
+   },
+   {
+    "file": "buzz_1.mp3",
+    "use": false,
+    "hits": 16,
+    "length": 3.646,
+    "final_s": 3.0,
+    "peak_s": 0.044,
+    "tone_hz": 452,
+    "swing_db": 12.6
+   },
+   {
+    "file": "buzz_2.mp3",
+    "use": true,
+    "hits": 45,
+    "length": 3.67,
+    "final_s": 3.0,
+    "peak_s": 0.469,
+    "tone_hz": 512,
+    "swing_db": 6.2
+   }
+  ]
+ }
+}
