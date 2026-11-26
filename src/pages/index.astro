@@ -1,6 +1,6 @@
 ---
 // Homepage: "Bits Tokens Atoms" (from the downloaded design, rebuilt as an Astro page). The previous homepage is
-// /classic. The 3D arm (src/scripts/arm.js) loads after first paint, so the text shows at once.
+// /classic. The hero scene (src/scripts/leaves.js; ?hero=arm -> arm.js) loads after first paint, so the text shows at once.
 import '../styles/home.css';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
@@ -274,8 +274,9 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
       </footer>
     </div>
     <script>
-      // the 3D arm after first paint (three.js is a separate chunk)
-      const start = () => import('../scripts/arm.js');
+      // the hero scene after first paint (three.js is a separate chunk): falling leaves; ?hero=arm = the robot arm
+      const start = () => (new URLSearchParams(location.search).get('hero') === 'arm'
+        ? import('../scripts/arm.js') : import('../scripts/leaves.js'));
       if ('requestIdleCallback' in window) requestIdleCallback(start, { timeout: 1200 });
       else setTimeout(start, 200);
     </script>
