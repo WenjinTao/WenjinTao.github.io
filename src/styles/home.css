@@ -1,14 +1,20 @@
 /* Homepage (Bits Tokens Atoms). From the downloaded design; Labs grid + header links added. */
-:root{
-        --bg:#07090d;
-        --bg-2:#0b0f14;
-        --ink:#f4f7f9;
-        --muted:#a7b4be;
-        --faint:#8b99a5;   /* was #6e7d89: small grey labels now pass the 4.5:1 contrast rule */
-        --bits:#3fd9f2;
-        --line:rgba(167,180,190,.22);
+:root, :root[data-theme="light"]{
+        /* light (default): warm paper, dark ink, a deeper teal so the accent reads on light */
+        --bg:#f5f2ea; --bg-rgb:245,242,234; --bg-2:#fffdf8;
+        --ink:#12161c; --muted:#45505b; --faint:#646f7a;
+        --bits:#0a8aa3; --bits-rgb:10,138,163; --on-bits:#ffffff;
+        --line:rgba(18,22,28,.14); --line-soft:rgba(18,22,28,.07); --card-shadow:0 1px 2px rgba(18,22,28,.06), 0 8px 24px rgba(18,22,28,.06);
         --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
         --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+        color-scheme:light;
+      }
+      :root[data-theme="dark"]{
+        --bg:#07090d; --bg-rgb:7,9,13; --bg-2:#0b0f14;
+        --ink:#f4f7f9; --muted:#a7b4be; --faint:#8b99a5;
+        --bits:#3fd9f2; --bits-rgb:63,217,242; --on-bits:#041016;
+        --line:rgba(167,180,190,.22); --line-soft:var(--line-soft); --card-shadow:none;
+        color-scheme:dark;
       }
       *{ box-sizing:border-box; }
       html,body{ height:100%; }
@@ -34,8 +40,8 @@
       .shade{
         position:fixed; inset:0; z-index:1; pointer-events:none;
         background:
-          radial-gradient(ellipse 90% 65% at 50% 44%, rgba(7,9,13,0) 30%, rgba(7,9,13,.55) 100%),
-          linear-gradient(90deg, rgba(7,9,13,.72) 0%, rgba(7,9,13,.28) 46%, rgba(7,9,13,0) 78%);
+          radial-gradient(ellipse 90% 65% at 50% 44%, rgba(var(--bg-rgb),0) 30%, rgba(var(--bg-rgb),.55) 100%),
+          linear-gradient(90deg, rgba(var(--bg-rgb),.72) 0%, rgba(var(--bg-rgb),.28) 46%, rgba(var(--bg-rgb),0) 78%);
       }
 
       /* ---------- Frame ---------- */
@@ -156,7 +162,7 @@
       .day-list li{
         display:flex; align-items:baseline; gap:14px;
         padding:7px 0;
-        border-bottom:1px solid rgba(167,180,190,.1);
+        border-bottom:1px solid var(--line-soft);
         font-size:.9rem; line-height:1.5;
       }
       .day-list li:last-child{ border-bottom:0; }
@@ -177,7 +183,7 @@
       html{ scroll-behavior:smooth; }
       .page{
         position:relative; z-index:2;
-        background:linear-gradient(180deg, rgba(7,9,13,0) 0, rgba(7,9,13,.93) 110px, var(--bg) 300px);
+        background:linear-gradient(180deg, rgba(var(--bg-rgb),0) 0, rgba(var(--bg-rgb),.93) 110px, var(--bg) 300px);
       }
       .section{
         max-width:1180px;
@@ -257,13 +263,13 @@
       .tag{
         flex:none; font-family:var(--mono); font-size:.66rem; letter-spacing:.16em;
         text-transform:uppercase; color:var(--bits);
-        border:1px solid rgba(63,217,242,.35); border-radius:999px; padding:4px 10px;
+        border:1px solid rgba(var(--bits-rgb),.35); border-radius:999px; padding:4px 10px;
       }
       .tag.warm{ color:var(--muted); border-color:var(--line); }
       @media (max-width:560px){
         .shade{ background:
-          radial-gradient(ellipse 110% 60% at 50% 40%, rgba(7,9,13,0) 20%, rgba(7,9,13,.6) 100%),
-          linear-gradient(180deg, rgba(7,9,13,.55) 0%, rgba(7,9,13,.35) 45%, rgba(7,9,13,.66) 100%); }
+          radial-gradient(ellipse 110% 60% at 50% 40%, rgba(var(--bg-rgb),0) 20%, rgba(var(--bg-rgb),.6) 100%),
+          linear-gradient(180deg, rgba(var(--bg-rgb),.55) 0%, rgba(var(--bg-rgb),.35) 45%, rgba(var(--bg-rgb),.66) 100%); }
         footer{ align-items:center; }
         .sim{ grid-template-columns:auto 1fr; }
         .sim .tag{ grid-column:2; justify-self:start; margin-top:12px; }
@@ -285,11 +291,11 @@
 .lab{ display:flex; flex-direction:column; height:100%; text-decoration:none; color:inherit;
   border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--bg-2);
   transition:border-color .2s ease, transform .2s ease; }
-.lab:hover{ border-color:rgba(63,217,242,.55); transform:translateY(-2px); }
+.lab:hover{ border-color:rgba(var(--bits-rgb),.55); transform:translateY(-2px); }
 .lab .shot{ position:relative; aspect-ratio:16/9; overflow:hidden; background:#000; }
 .lab .shot img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .45s ease; }
 .lab:hover .shot img{ transform:scale(1.035); }
-.lab .shot .tag{ position:absolute; left:14px; bottom:14px; background:rgba(7,9,13,.72); backdrop-filter:blur(4px); }
+.lab .shot .tag{ position:absolute; left:14px; bottom:14px; background:rgba(var(--bg-rgb),.72); backdrop-filter:blur(4px); }
 .lab .body{ padding:18px 20px 20px; display:flex; flex-direction:column; flex:1; }
 .lab h3{ margin:0; font-size:1.2rem; font-weight:700; letter-spacing:-.01em; }
 .lab p{ margin:8px 0 0; color:var(--muted); font-size:.95rem; line-height:1.6; flex:1; }
@@ -342,12 +348,12 @@
 .identity{ margin-top:clamp(16px,2.6vh,24px); }
 .cta{ display:flex; flex-wrap:wrap; gap:12px; margin-top:clamp(22px,3.6vh,34px); }
 .btn{ display:inline-flex; align-items:center; gap:10px; padding:0 20px; min-height:2.9rem; border-radius:999px;
-  border:1px solid rgba(63,217,242,.45); color:var(--ink); text-decoration:none;
+  border:1px solid rgba(var(--bits-rgb),.45); color:var(--ink); text-decoration:none;
   font-family:var(--mono); font-size:.8rem; letter-spacing:.14em; text-transform:uppercase;
-  background:rgba(7,9,13,.35); backdrop-filter:blur(4px); transition:background .2s ease, border-color .2s ease, color .2s ease; }
+  background:rgba(var(--bg-rgb),.35); backdrop-filter:blur(4px); transition:background .2s ease, border-color .2s ease, color .2s ease; }
 .btn:hover{ border-color:var(--bits); }
-.btn.primary{ background:var(--bits); border-color:var(--bits); color:#041016; font-weight:700; }
-.btn.primary:hover{ background:#7be6f7; }
+.btn.primary{ background:var(--bits); border-color:var(--bits); color:var(--on-bits); font-weight:700; }
+.btn.primary:hover{ filter:brightness(1.12); }
 @media (prefers-reduced-motion:reduce){ .btn{ transition:none; } }
 
 /* ---------- Now: picture per project, tag beside the title, short day log ---------- */
@@ -375,3 +381,13 @@
   .wordmark{ letter-spacing:.26em; }
   .cta .btn{ padding:0 16px; }
 }
+
+/* ---------- themes: cards lift a little on light; the theme button ---------- */
+.lab{ box-shadow:var(--card-shadow); }
+.theme-toggle{ display:inline-flex; align-items:center; justify-content:center; width:2.4rem; height:2.4rem; min-height:0;
+  padding:0; border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--ink); cursor:pointer;
+  pointer-events:auto; transition:border-color .2s ease, color .2s ease; }
+.theme-toggle:hover{ border-color:var(--bits); color:var(--bits); }
+.theme-toggle svg{ width:18px; height:18px; }
+.theme-toggle .moon{ display:none; } :root[data-theme="dark"] .theme-toggle .sun{ display:none; }
+:root[data-theme="dark"] .theme-toggle .moon{ display:block; }

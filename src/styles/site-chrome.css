@@ -1,9 +1,21 @@
 /* Inner pages (projects, publications, blog, about, contact): the homepage's look around the existing content.
    Header + footer + background + type; the page bodies keep their Tailwind classes (same cyan / grey palette). */
-:root{
-  --bg:#07090d; --ink:#f4f7f9; --muted:#a7b4be; --faint:#8b99a5; --bits:#3fd9f2; --line:rgba(167,180,190,.22);
+:root, :root[data-theme="light"]{
+  /* light (default): warm paper, dark ink, a deeper teal so the accent reads on light */
+  --bg:#f5f2ea; --bg-rgb:245,242,234; --bg-2:#fffdf8;
+  --ink:#12161c; --muted:#45505b; --faint:#646f7a;
+  --bits:#0a8aa3; --bits-rgb:10,138,163; --on-bits:#ffffff;
+  --line:rgba(18,22,28,.14); --line-soft:rgba(18,22,28,.07); --card-shadow:0 1px 2px rgba(18,22,28,.06), 0 8px 24px rgba(18,22,28,.06);
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
   --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#07090d; --bg-rgb:7,9,13; --bg-2:#0b0f14;
+  --ink:#f4f7f9; --muted:#a7b4be; --faint:#8b99a5;
+  --bits:#3fd9f2; --bits-rgb:63,217,242; --on-bits:#041016;
+  --line:rgba(167,180,190,.22); --line-soft:rgba(167,180,190,.1); --card-shadow:none;
+  color-scheme:dark;
 }
 body.site{ background:var(--bg); background-image:none; color:var(--ink); font-family:var(--sans); }
 body.site .page-top{ padding-top:clamp(28px,6vh,64px); }
@@ -26,3 +38,23 @@ body.site .page-top{ padding-top:clamp(28px,6vh,64px); }
 .site-foot a{ color:var(--muted); text-decoration:none; padding:6px 0; }
 .site-foot a:hover{ color:var(--bits); }
 :focus-visible{ outline:2px solid var(--bits); outline-offset:3px; border-radius:4px; }
+
+/* light theme: the page bodies were written for dark (text-white, gray-300/400, cyan-400, glass cards) */
+:root[data-theme="light"] body.site .text-white,
+:root[data-theme="light"] body.site .prose :is(h1,h2,h3,h4,strong){ color:var(--ink) !important; }
+:root[data-theme="light"] body.site :is(.text-gray-300,.text-gray-400),
+:root[data-theme="light"] body.site .prose :is(p,li,td){ color:var(--muted) !important; }
+:root[data-theme="light"] body.site .text-gray-500{ color:var(--faint) !important; }
+:root[data-theme="light"] body.site :is(.text-cyan-400,.text-cyan-100\/70,.text-cyan-100\/80),
+:root[data-theme="light"] body.site .prose a,
+:root[data-theme="light"] body.site :is(.group:hover .group-hover\:text-cyan-400,.hover\:text-cyan-400:hover,.hover\:text-cyan-100:hover){ color:var(--bits) !important; }
+:root[data-theme="light"] body.site .prose li::marker{ color:var(--bits) !important; }
+:root[data-theme="light"] body.site :is(.glass-card,.glass-card-hover){ background:var(--bg-2); border-color:var(--line); box-shadow:var(--card-shadow); }
+:root[data-theme="light"] body.site .bg-black\/60{ background:rgba(18,22,28,.55); }
+:root[data-theme="light"] body.site .glow-line{ opacity:.5; }
+.theme-toggle{ display:inline-flex; align-items:center; justify-content:center; width:2.2rem; height:2.2rem; padding:0;
+  border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--ink); cursor:pointer; }
+.theme-toggle:hover{ border-color:var(--bits); color:var(--bits); }
+.theme-toggle svg{ width:16px; height:16px; }
+.theme-toggle .moon{ display:none; } :root[data-theme="dark"] .theme-toggle .sun{ display:none; }
+:root[data-theme="dark"] .theme-toggle .moon{ display:block; }

@@ -35,7 +35,18 @@ async function main() {
   key.position.set(3, 4, 4);
   const rim = new THREE.DirectionalLight(0x9fdcf0, 0.8);     // a cool rim in the accent colour
   rim.position.set(-4, 1, -3);
-  scene.add(key, rim, new THREE.HemisphereLight(0xcfd8e0, 0x1a1410, 0.35));
+  const hemi = new THREE.HemisphereLight(0xcfd8e0, 0x1a1410, 0.35);
+  scene.add(key, rim, hemi);
+  // follow the page theme: far leaves fade into the page colour (paper or night)
+  function applyTheme() {
+    const dark = document.documentElement.dataset.theme === "dark";
+    scene.fog.color.set(dark ? 0x07090d : 0xf5f2ea);
+    renderer.toneMappingExposure = dark ? 1.25 : 1.0;
+    key.intensity = dark ? 3.0 : 2.3;
+    hemi.intensity = dark ? 0.35 : 0.9;
+  }
+  applyTheme();
+  addEventListener("themechange", () => { applyTheme(); if (reduceMotion) renderer.render(scene, camera); });
 
   // the leaves: one geometry + two scan textures each (top and underside), shared by every falling copy
   const tl = new THREE.TextureLoader();
