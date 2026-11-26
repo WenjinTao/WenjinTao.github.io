@@ -7,7 +7,6 @@ body{ margin:0; height:100dvh; overflow:hidden; background:var(--bg); color:var(
   -webkit-font-smoothing:antialiased; }
 a{ color:inherit; }
 :focus-visible{ outline:2px solid var(--bits); outline-offset:3px; border-radius:6px; }
-#field{ position:fixed; inset:0; width:100%; height:100%; z-index:0; pointer-events:none; opacity:.3 !important; }
 
 .shell{ position:relative; z-index:1; height:100dvh; display:grid; grid-template-rows:auto 1fr auto;   /* header | columns | footer */
   padding:clamp(16px,3vh,30px) clamp(20px,4vw,60px) clamp(14px,2.4vh,24px); gap:clamp(10px,2vh,22px); }
@@ -150,7 +149,6 @@ dialog img[hidden]{ display:none; }
   .lab-t{ flex-direction:column; align-items:flex-start; gap:6px; }
   .lab .sub{ margin-top:0; }
 }
-@media (max-width:760px){ #field{ opacity:.2 !important; } }
 
 /* ---------- fill the screen: rows share the column height; blurbs in Latest; Labs at the bottom ---------- */
 .rows.fill{ display:flex; flex-direction:column; flex:1; }
