@@ -9,7 +9,7 @@ a{ color:inherit; }
 :focus-visible{ outline:2px solid var(--bits); outline-offset:3px; border-radius:6px; }
 #field{ position:fixed; inset:0; width:100%; height:100%; z-index:0; pointer-events:none; opacity:.3 !important; }
 
-.shell{ position:relative; z-index:1; height:100dvh; display:grid; grid-template-rows:auto auto 1fr auto;
+.shell{ position:relative; z-index:1; height:100dvh; display:grid; grid-template-rows:auto 1fr auto;   /* header | columns | footer */
   padding:clamp(16px,3vh,30px) clamp(20px,4vw,60px) clamp(14px,2.4vh,24px); gap:clamp(10px,2vh,22px); }
 
 /* header */
@@ -126,7 +126,7 @@ dialog img[hidden]{ display:none; }
 
 /* phones: the columns swipe sideways (tabs on top), still one screen */
 @media (max-width:760px){
-  .shell{ padding:14px 16px 12px; gap:10px; }
+  .shell{ padding:14px 16px 12px; gap:10px; grid-template-rows:auto auto 1fr auto; }   /* + the tab bar */
   header{ grid-template-columns:1fr auto; }
   .kicker{ grid-column:1 / -1; grid-row:2; white-space:normal; font-size:.74rem; }
   .controls .full{ display:none; }
@@ -151,3 +151,30 @@ dialog img[hidden]{ display:none; }
   .lab .sub{ margin-top:0; }
 }
 @media (max-width:760px){ #field{ opacity:.2 !important; } }
+
+/* ---------- fill the screen: rows share the column height; blurbs in Latest; Labs at the bottom ---------- */
+.rows.fill{ display:flex; flex-direction:column; flex:1; }
+.rows.fill > li{ flex:1 1 0; display:flex; min-height:0; }
+.rows.fill > li > .item{ height:100%; }
+.item.big{ grid-template-columns:clamp(96px,8.4vw,150px) 1fr; gap:16px; align-items:center; }
+.item.big .title{ font-size:clamp(.95rem,1.12vw,1.1rem); }
+.blurb{ display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin-top:6px;
+  color:var(--muted); font-size:clamp(.8rem,.92vw,.9rem); line-height:1.45; }
+.mod-work{ margin-top:clamp(14px,2.4vh,26px); }
+.col-work .pubs li{ padding:5px 0; }
+.col-intro .labs{ margin-bottom:0; }
+@media (max-height:760px) and (min-width:761px){ .blurb{ -webkit-line-clamp:1; } }
+@media (max-width:760px){
+  .rows.fill > li{ flex:0 0 auto; }
+  .item.big{ grid-template-columns:96px 1fr; }
+  .blurb{ -webkit-line-clamp:2; }
+}
+
+/* desktop: Labs right under the intro, the two cards grow to fill the rest of the column */
+@media (min-width:761px){
+  .col-intro .mod{ margin-top:clamp(18px,3.2vh,34px); }
+  .col-intro .labs{ flex:1; min-height:0; }
+  .col-intro .labs > li{ min-height:0; display:flex; }
+  .col-intro .lab{ height:100%; min-height:0; }
+  .col-intro .lab img{ flex:1; min-height:120px; height:0; aspect-ratio:auto; }
+}
