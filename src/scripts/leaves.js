@@ -1,4 +1,4 @@
-// Homepage hero: real scanned leaves (the SimReady Leaves lab's data, LeafSnap30 scans, CC BY 4.0) falling behind
+// Homepage hero (or, with data-card, the SimReady Leaves card on /one): real scanned leaves (the SimReady Leaves lab's data, LeafSnap30 scans, CC BY 4.0) falling behind
 // the headline. Procedural flutter (swing + tilt with the swing, slow spin, speed dips at the turns), recycled at
 // the bottom. The pointer is a light breeze: leaves near it drift with its movement. Loaded after first paint;
 // runs only while the hero is on screen; one still frame with "reduce motion".
@@ -11,6 +11,7 @@ const KEYS = ["acer_palmatum__wb1127-01-1", "acer_rubrum__pi2388-01-1", "liriode
 const DATA = "/labs/simready-leaves/viewer_data/";
 
 const canvas = document.getElementById("field");
+const card = !!canvas && canvas.hasAttribute("data-card");   // inside a lab card (/one) instead of the hero
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const narrow = () => innerWidth < 760;
 
@@ -40,7 +41,8 @@ async function main() {
   // follow the page theme: far leaves fade into the page colour (paper or night)
   function applyTheme() {
     const dark = document.documentElement.dataset.theme === "dark";
-    scene.fog.color.set(dark ? 0x07090d : 0xf5f2ea);
+    if (card) scene.fog.color.set(getComputedStyle(document.documentElement).getPropertyValue("--bg-2").trim() || "#fffdf8");
+    else scene.fog.color.set(dark ? 0x07090d : 0xf5f2ea);
     renderer.toneMappingExposure = dark ? 1.25 : 1.0;
     key.intensity = dark ? 3.0 : 2.3;
     hemi.intensity = dark ? 0.35 : 0.9;
@@ -70,21 +72,21 @@ async function main() {
   const leaves = [];
   function spawn(L, anywhere) {
     // desktop: mostly the right side (the headline is on the left); phones: across, fewer
-    const right = !narrow() && Math.random() < 0.86;
-    L.z = right || narrow() ? rnd(-3.6, 1.6) : rnd(-4.2, -2.6);   // the few behind the headline stay far back, dim
+    const right = !card && !narrow() && Math.random() < 0.86;
+    L.z = card ? rnd(-2.4, 1.4) : right || narrow() ? rnd(-3.6, 1.6) : rnd(-4.2, -2.6);   // the few behind the headline stay far back, dim
     const k = (6 - L.z) / 6;                                 // view grows with depth
     L.x0 = right ? rnd(-0.05, 1.05) * W * k : rnd(-1.05, 1.05) * W * k;
     L.y = anywhere ? rnd(-1.1, 1.1) * H * k : H * k * rnd(1.08, 1.4);
     L.w = rnd(1.1, 1.9); L.ph = rnd(0, 6.3); L.A = rnd(0.25, 0.55); L.vy = rnd(0.32, 0.55);
     L.spin = rnd(-0.6, 0.6); L.yaw = rnd(0, 6.3); L.base = rnd(-1.35, -0.95); L.vx = 0; L.t = 0;
   }
-  const COUNT = () => (narrow() ? 11 : 26);
+  const COUNT = () => (card ? 16 : narrow() ? 11 : 26);
   function populate() {
     while (leaves.length < COUNT()) {
       const kd = kinds[leaves.length % kinds.length];
       const obj = new THREE.Group();
       obj.add(new THREE.Mesh(kd.g, kd.under), new THREE.Mesh(kd.g, kd.top));
-      obj.scale.setScalar(rnd(0.5, 0.72) / kd.size);            // ~0.5-0.7 m across: magnified, like a still life
+      obj.scale.setScalar((card ? rnd(0.85, 1.2) : rnd(0.5, 0.72)) / kd.size);            // ~0.5-0.7 m across: magnified, like a still life
       const L = { obj }; spawn(L, true); leaves.push(L); scene.add(obj);
     }
     while (leaves.length > COUNT()) scene.remove(leaves.pop().obj);
@@ -115,7 +117,8 @@ async function main() {
       L.y -= L.vy * (0.45 + 0.55 * Math.abs(c)) * dt;        // slower at the ends of each swing
       if (gust) {                                            // pushed along by a passing pointer
         v.set(L.x0 + L.A * s, L.y, L.z).project(camera);
-        const sx = (v.x + 1) / 2 * innerWidth, sy = (1 - v.y) / 2 * innerHeight;
+        const r = canvas.getBoundingClientRect();
+        const sx = r.left + (v.x + 1) / 2 * r.width, sy = r.top + (1 - v.y) / 2 * r.height;
         if (Math.hypot(sx - ptr.x, sy - ptr.y) < 150) L.vx += ptr.vx * 0.00035 * Math.min(1, dt * 30);
       }
       L.vx *= Math.exp(-dt * 1.4); L.x0 += L.vx * dt;
@@ -127,6 +130,7 @@ async function main() {
     }
   }
 
+  if (card) canvas.parentElement.classList.add("live");     // the leaves replace the card's still image
   if (reduceMotion) { renderer.render(scene, camera); return; }
   let raf = null, last = performance.now(), heroOn = true;
   const frame = (now) => {
@@ -140,13 +144,12 @@ async function main() {
     else if (run && !raf) { last = performance.now(); raf = requestAnimationFrame(frame); }
   };
   document.addEventListener("visibilitychange", sync);
-  const hero = document.querySelector(".frame");
+  const hero = card ? canvas : document.querySelector(".frame");
   if (hero && "IntersectionObserver" in window) {
     new IntersectionObserver((es) => { heroOn = es[0].isIntersecting; sync(); }, { threshold: 0 }).observe(hero);
   }
   const fade = () => { canvas.style.opacity = String(Math.max(0, 1 - scrollY / (innerHeight * 0.9))); };
-  addEventListener("scroll", fade, { passive: true });
-  fade();
+  if (!card) { addEventListener("scroll", fade, { passive: true }); fade(); }
   sync();
 }
 

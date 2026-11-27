@@ -130,7 +130,8 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
             {LABS.map((it) => (
               <li>
                 <button type="button" class="lab" data-id={it.id}>
-                  <img src={it.thumb!} alt="" width="960" height="540" loading="lazy" />
+                  <span class="lab-media"><img src={it.thumb!} alt="" width="960" height="540" loading="lazy" />
+                    {it.id === 'leaves' && <canvas id="field" data-card aria-hidden="true"></canvas>}</span>
                   <span class="lab-t"><span class="title">{it.title}</span><span class="play">PLAY</span></span>
                   <span class="sub">{it.sub}</span>
                 </button>
@@ -233,6 +234,10 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
       tabs.forEach((t, i) => t.addEventListener('click', () => cols.scrollTo({ left: i * cols.clientWidth, behavior: 'smooth' })));
       const mark = () => { const i = Math.round(cols.scrollLeft / Math.max(1, cols.clientWidth)); tabs.forEach((t, k) => t.classList.toggle('on', k === i)); };
       cols.addEventListener('scroll', mark, { passive: true }); mark();
+
+      // the SimReady Leaves card: its leaves fall, after first paint
+      const leaves = () => import('../scripts/leaves.js');
+      if ('requestIdleCallback' in window) requestIdleCallback(leaves, { timeout: 1200 }); else setTimeout(leaves, 200);
 
     </script>
   </body>
