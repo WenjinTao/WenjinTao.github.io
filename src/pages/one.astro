@@ -1,6 +1,6 @@
 ---
 // One-screen homepage (concept): the homepage's sections side by side in one screen: intro + Latest | Labs |
-// Research + Projects. A row opens a detail panel in place (no page change). Phones: three tabs that swipe.
+// Publications + Projects. A row opens a detail panel in place (no page change). Phones: three tabs that swipe.
 // (The first take, three columns Bits | Tokens | Atoms, is in git: f83ca32.)
 // Same content as the full homepage ("/"): labs, the build-in-public work (src/data/now.json), the earlier
 // projects (content collection + photos) and the publications.
@@ -141,8 +141,8 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
           </ul>
         </section>
 
-        <section class="col col-work" aria-label="Research and projects">
-          <h2 class="mod">Research <span>{pubs.length} publications</span></h2>
+        <section class="col col-work" aria-label="Publications and projects">
+          <h2 class="mod">Publications <span>{pubs.length} papers</span></h2>
           <ul class="pubs">
             {RESEARCH.map((r) => (
               <li><a href={r.href} target="_blank" rel="noopener"><b>{r.year}</b> {r.title}</a></li>
