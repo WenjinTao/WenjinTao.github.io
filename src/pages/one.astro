@@ -57,7 +57,7 @@ const RESEARCH = pubs.slice(0, 4).map((p) => ({ year: p.data.year, title: p.data
   href: p.data.link ?? (p.data.doi ? `https://doi.org/${p.data.doi}` : '/publications') }));
 const DATA = Object.fromEntries([...LABS, ...NOW_ITEMS, ...WORK].map((i) => [i.id, i]));
 
-const title = 'Wenjin Tao — Bits Tokens Atoms';
+const title = 'Wenjin Tao — Bits to Atoms, Faster';
 const description = 'Wenjin Tao — Staff Product Manager, Physical AI. Simulation, AI and manufacturing, built in public.';
 const canonical = new URL('/one', Astro.site).href;
 const ogImage = new URL('/og-home.jpg', Astro.site).href;
@@ -90,7 +90,6 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
     <div class="shell">
       <header>
         <a class="wordmark" href="/">WENJIN&nbsp;TAO<span class="dot">.</span></a>
-        <p class="kicker">Physical AI × Simulation × Manufacturing</p>
         <div class="controls">
           <a class="full" href="/">Full page</a>
           <button class="accent-toggle" type="button" aria-label="Change the accent colour" title="Accent colour"><span></span></button>
@@ -108,8 +107,8 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
       <main class="cols">
         <section class="col col-intro" aria-label="Latest">
           <div class="intro">
-            <h1>Bits <span class="tokens-word">Tokens</span> Atoms</h1>
-            <p class="tagline">Simulation, AI and real hardware: I build experiments where they meet, and share them as I go.</p>
+            <h1>Bits to Atoms, <span class="tokens-word">Faster</span></h1>
+            <p class="tagline">Experiments in robotics, simulation, CAD, and anything else I&rsquo;m curious about.</p>
           </div>
           <h2 class="mod">Latest <span>building in public</span></h2>
           <ul class="rows fill">
