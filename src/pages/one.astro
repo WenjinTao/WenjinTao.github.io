@@ -1,5 +1,5 @@
 ---
-// One-screen homepage (concept): the homepage's sections side by side in one screen: intro + Latest | Labs |
+// One-screen homepage (concept): the homepage's sections side by side in one screen: intro + Recent work | Labs |
 // Publications + Projects. A row opens a detail panel in place (no page change). Phones: three tabs that swipe.
 // (The first take, three columns Bits | Tokens | Atoms, is in git: f83ca32.)
 // Same content as the full homepage ("/"): labs, the build-in-public work (src/data/now.json), the earlier
@@ -105,16 +105,16 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
       </header>
 
       <nav class="tabs" aria-label="Sections">
-        {['Latest', 'Labs', 'Work'].map((t, i) => <button type="button" data-col={i}>{t}</button>)}
+        {['Recent', 'Labs', 'Work'].map((t, i) => <button type="button" data-col={i}>{t}</button>)}
       </nav>
 
       <main class="cols">
-        <section class="col col-intro" aria-label="Latest">
+        <section class="col col-intro" aria-label="Recent work">
           <div class="intro">
             <h1>Bits to Atoms, <span class="tokens-word">Faster</span></h1>
             <p class="tagline">Experiments in robotics, simulation, AI for engineering, and anything else I&rsquo;m curious about.</p>
           </div>
-          <h2 class="mod">Latest <span>building in public</span></h2>
+          <h2 class="mod">Recent work</h2>
           <ul class="rows fill">
             {NOW_ITEMS.map((it) => (
                 <li>
