@@ -52,8 +52,10 @@ const CAD101: Item = { id: 'cad101', title: 'CAD 101', sub: 'Lessons 1–7', thu
   links: [{ title: 'Issue 1: AI on surface modeling', href: post('7523608072913661952') }] };
 const NOW_ITEMS: Item[] = [CAD101, now('Isaac Factory', 'factory'), now('SoundReady', 'soundready'), now('Surface Checker', 'surface'),
   now('Therbligs', 'therbligs')];
-const WORK_ORDER = ['optimo', 'folo', 'pin-defect-detection', 'mask-defect-detection', 'field-robotics', 'low-cost-ventilator'];
-const WORK: Item[] = await Promise.all(WORK_ORDER.map((id) => project(id, (projects.get(id)?.data.tags ?? []).slice(0, 2).join(' · '))));
+const WORK_ORDER: [string, string][] = [['optimo', 'AI × Manufacturing'], ['folo', 'AI × Manufacturing'],
+  ['pin-defect-detection', 'Vision AI'], ['mask-defect-detection', 'Vision AI'],
+  ['field-robotics', 'Robotics & Hardware'], ['low-cost-ventilator', 'Robotics & Hardware']];
+const WORK: Item[] = await Promise.all(WORK_ORDER.map(([id, label]) => project(id, label)));
 const RESEARCH = pubs.slice(0, 4).map((p) => ({ year: p.data.year, title: p.data.title,
   href: p.data.link ?? (p.data.doi ? `https://doi.org/${p.data.doi}` : SCHOLAR) }));
 const DATA = Object.fromEntries([...LABS, ...NOW_ITEMS, ...WORK].map((i) => [i.id, i]));
