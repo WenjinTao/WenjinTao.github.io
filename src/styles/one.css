@@ -216,3 +216,10 @@ header{ grid-template-columns:1fr auto; }
   .col-labs .lab-media{ flex:none; height:auto; min-height:0; aspect-ratio:16/10; }
   .col-labs .lab .lab-media img{ height:100%; }
 }
+
+/* Projects grouped: a category label, then its project rows */
+.rows.fill > li.grp{ flex:0 0 auto; display:block; margin:clamp(6px,1.2vh,12px) 0 2px; padding:0 6px;
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--bits); }
+.rows.fill > li.grp:first-child{ margin-top:0; }
+.item .desc{ display:block; margin-top:3px; color:var(--muted); font-size:.8rem; line-height:1.35;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }

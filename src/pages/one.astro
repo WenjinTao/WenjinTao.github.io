@@ -56,6 +56,7 @@ const WORK_ORDER: [string, string][] = [['optimo', 'AI × Manufacturing'], ['fol
   ['pin-defect-detection', 'Vision AI'], ['mask-defect-detection', 'Vision AI'],
   ['field-robotics', 'Robotics & Hardware'], ['low-cost-ventilator', 'Robotics & Hardware']];
 const WORK: Item[] = await Promise.all(WORK_ORDER.map(([id, label]) => project(id, label)));
+const GROUPS = [...new Set(WORK_ORDER.map(([, g]) => g))].map((g) => ({ name: g, items: WORK.filter((w) => w.sub === g) }));
 const RESEARCH = pubs.slice(0, 4).map((p) => ({ year: p.data.year, title: p.data.title,
   href: p.data.link ?? (p.data.doi ? `https://doi.org/${p.data.doi}` : SCHOLAR) }));
 const DATA = Object.fromEntries([...LABS, ...NOW_ITEMS, ...WORK].map((i) => [i.id, i]));
@@ -152,14 +153,19 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
           </ul>
           <a class="more" href={SCHOLAR} target="_blank" rel="noopener">All publications on Google Scholar ↗</a>
           <h2 class="mod mod-work">Projects <span>industry &amp; research</span></h2>
-          <ul class="rows compact fill">
-            {WORK.map((it) => (
-                <li>
-                  <button type="button" class="item" data-id={it.id}>
-                    {it.thumb && <img src={it.thumb} alt="" width="96" height="60" loading="lazy" />}
-                    <span class="t"><span class="title">{it.title}</span><span class="sub">{it.sub}</span></span>
-                  </button>
-                </li>
+          <ul class="rows compact fill grouped">
+            {GROUPS.map((g) => (
+              <>
+                <li class="grp">{g.name}</li>
+                {g.items.map((it) => (
+                  <li>
+                    <button type="button" class="item" data-id={it.id}>
+                      {it.thumb && <img src={it.thumb} alt="" width="96" height="60" loading="lazy" />}
+                      <span class="t"><span class="title">{it.title}</span><span class="desc">{it.text}</span></span>
+                    </button>
+                  </li>
+                ))}
+              </>
             ))}
           </ul>
         </section>
