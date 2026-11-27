@@ -80,13 +80,13 @@ async function main() {
     L.w = rnd(1.1, 1.9); L.ph = rnd(0, 6.3); L.A = rnd(0.25, 0.55); L.vy = rnd(0.32, 0.55);
     L.spin = rnd(-0.6, 0.6); L.yaw = rnd(0, 6.3); L.base = rnd(-1.35, -0.95); L.vx = 0; L.t = 0;
   }
-  const COUNT = () => (card ? 16 : narrow() ? 11 : 26);
+  const COUNT = () => (card ? 14 : narrow() ? 11 : 26);
   function populate() {
     while (leaves.length < COUNT()) {
       const kd = kinds[leaves.length % kinds.length];
       const obj = new THREE.Group();
       obj.add(new THREE.Mesh(kd.g, kd.under), new THREE.Mesh(kd.g, kd.top));
-      obj.scale.setScalar((card ? rnd(0.85, 1.2) : rnd(0.5, 0.72)) / kd.size);            // ~0.5-0.7 m across: magnified, like a still life
+      obj.scale.setScalar((card ? rnd(0.6, 0.85) : rnd(0.5, 0.72)) / kd.size);            // ~0.5-0.7 m across: magnified, like a still life
       const L = { obj }; spawn(L, true); leaves.push(L); scene.add(obj);
     }
     while (leaves.length > COUNT()) scene.remove(leaves.pop().obj);

@@ -1,6 +1,6 @@
 ---
 // One-screen homepage (concept): the homepage's sections side by side in one screen: intro + Latest | Labs |
-// Research + Earlier work. A row opens a detail panel in place (no page change). Phones: three tabs that swipe.
+// Research + Projects. A row opens a detail panel in place (no page change). Phones: three tabs that swipe.
 // (The first take, three columns Bits | Tokens | Atoms, is in git: f83ca32.)
 // Same content as the full homepage ("/"): labs, the build-in-public work (src/data/now.json), the earlier
 // projects (content collection + photos) and the publications.
@@ -114,7 +114,7 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
           <ul class="rows fill">
             {NOW_ITEMS.map((it) => (
                 <li>
-                  <button type="button" class="item big" data-id={it.id} data-thumb={it.thumb ?? ''}>
+                  <button type="button" class="item big" data-id={it.id}>
                     {it.thumb && <img src={it.thumb} alt="" width="160" height="100" loading="lazy" />}
                     <span class="t"><span class="title">{it.title}</span><span class="sub">{it.sub}</span>
                       <span class="blurb">{it.text}</span></span>
@@ -140,7 +140,7 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
           </ul>
         </section>
 
-        <section class="col col-work" aria-label="Research and earlier work">
+        <section class="col col-work" aria-label="Research and projects">
           <h2 class="mod">Research <span>{pubs.length} publications</span></h2>
           <ul class="pubs">
             {RESEARCH.map((r) => (
@@ -148,11 +148,11 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
             ))}
           </ul>
           <a class="more" href="/publications">All {pubs.length} publications →</a>
-          <h2 class="mod mod-work">Earlier work <span>industry &amp; research</span></h2>
+          <h2 class="mod mod-work">Projects <span>industry &amp; research</span></h2>
           <ul class="rows compact fill">
             {WORK.map((it) => (
                 <li>
-                  <button type="button" class="item" data-id={it.id} data-thumb={it.thumb ?? ''}>
+                  <button type="button" class="item" data-id={it.id}>
                     {it.thumb && <img src={it.thumb} alt="" width="96" height="60" loading="lazy" />}
                     <span class="t"><span class="title">{it.title}</span><span class="sub">{it.sub}</span></span>
                   </button>
@@ -198,16 +198,9 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
       });
     </script>
     <script>
-      // hover: the column shows the item's picture faintly behind its list; click: the detail panel
+      // click: the detail panel
       const DATA = JSON.parse(document.getElementById('items-data')!.textContent || '{}');
-      document.querySelectorAll<HTMLButtonElement>('.item, .lab').forEach((b) => {
-        const col = b.closest('.col') as HTMLElement;
-        const lit = () => { if (b.dataset.thumb && b.classList.contains('item')) { col.style.setProperty('--stage', `url("${b.dataset.thumb}")`); col.classList.add('lit'); } };
-        b.addEventListener('mouseenter', lit); b.addEventListener('focus', lit);
-        b.addEventListener('mouseleave', () => col.classList.remove('lit'));
-        b.addEventListener('blur', () => col.classList.remove('lit'));
-        b.addEventListener('click', () => open(b.dataset.id!));
-      });
+      document.querySelectorAll<HTMLButtonElement>('.item, .lab').forEach((b) => b.addEventListener('click', () => open(b.dataset.id!)));
       const dlg = document.getElementById('detail') as HTMLDialogElement;
       const $ = (id: string) => document.getElementById(id)!;
       const el = (tag: string, html: string) => { const e = document.createElement(tag); e.innerHTML = html; return e; };
