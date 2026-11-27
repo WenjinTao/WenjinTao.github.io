@@ -1,14 +1,14 @@
 // Banana − knife, in the browser. Every click subtracts the knife blade's swept slab (1.59 mm, the SimReady knife's
 // measured blade thickness) from the current pieces with our own Boolean kernel (bk.wasm, in a Web Worker), and the
 // kernel also computes the removed part (pieces ∩ slab), so the two volumes must add back up to the banana's.
-// Frame: banana coordinates in meters, z up (as in the L7 film). Physics: Rapier rigid bodies, one per piece.
+// Frame: banana coordinates in meters, z up (as in the L7 film). Physics: our own kernel (phys.js), one rigid body per piece.
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import RAPIER from "https://cdn.jsdelivr.net/npm/@dimforge/rapier3d-compat@0.12.0/rapier.es.js";
-import { bananaAnatomy, NS, NA } from "./anatomy.js?v=a50a0878ae";
-import { createFlies } from "./flies.js?v=a50a0878ae";
-import { sfx, toggleSound, soundOn, toggleMusic, musicOn } from "./sound.js?v=a50a0878ae";
-await RAPIER.init();
+import PHYS from "./phys.js?v=b291ec8e57";                    // our own physics kernel (phys-kernel -> bp.wasm), Rapier-like API
+import { bananaAnatomy, NS, NA } from "./anatomy.js?v=b291ec8e57";
+import { createFlies } from "./flies.js?v=b291ec8e57";
+import { sfx, toggleSound, soundOn, toggleMusic, musicOn } from "./sound.js?v=b291ec8e57";
+await PHYS.init();
 
 const $ = (id) => document.getElementById(id);
 // models: int32 [nv, nt], float32 V, int32 T, float32 per-corner UV (prep_assets.py)
@@ -438,18 +438,18 @@ vec3 oxidize(vec3 c, float r, float dep, vec3 p) {
     .replace("#include <emissivemap_fragment>", "#include <emissivemap_fragment>\ntotalEmissiveRadiance += diffuseColor.rgb * 0.12;");  // flesh is translucent
 };
 
-// ---- physics (Rapier) ------------------------------------------------------------------------------------------------
+// ---- physics (own kernel) --------------------------------------------------------------------------------------------
 // Each piece is a rigid body: its geometry stays in the banana's original frame (local), M = local -> world.
 // The physics world runs 10x larger (decimeters) so the solver's tolerances suit 2-5 cm pieces.
 const PS = 10;
-const world = new RAPIER.World({ x: 0, y: 0, z: -9.81 * PS });
+const world = new PHYS.World({ x: 0, y: 0, z: -9.81 * PS });
 world.integrationParameters.numSolverIterations = 8;      // steadier resting contacts
 const VMAX = 1.5 * PS;                                     // m/s cap: a safety net against a bad contact launching a piece
 const WMAX = 25;                                           // rad/s cap: thin slices have tiny inertia and can spin up
 {
-  const fixed = world.createRigidBody(RAPIER.RigidBodyDesc.fixed()
+  const fixed = world.createRigidBody(PHYS.RigidBodyDesc.fixed()
     .setTranslation((BOARD_LO[0] + BOARD_HI[0]) / 2 * PS, (BOARD_LO[1] + BOARD_HI[1]) / 2 * PS, (BOARD_LO[2] + BOARD_HI[2]) / 2 * PS));
-  world.createCollider(RAPIER.ColliderDesc.cuboid((BOARD_HI[0] - BOARD_LO[0]) / 2 * PS, (BOARD_HI[1] - BOARD_LO[1]) / 2 * PS,
+  world.createCollider(PHYS.ColliderDesc.cuboid((BOARD_HI[0] - BOARD_LO[0]) / 2 * PS, (BOARD_HI[1] - BOARD_LO[1]) / 2 * PS,
     (BOARD_HI[2] - BOARD_LO[2]) / 2 * PS).setFriction(0.9), fixed);
   // no floor: a piece pushed off the board falls, fades out and is removed (see the animation loop)
 }
@@ -630,12 +630,12 @@ function convexParts(V, T) {
 function addPiece(V, T, tmesh, tface, M, linvel, angvel, planes = []) {
   const q = new THREE.Quaternion(), t = new THREE.Vector3(), s = new THREE.Vector3();
   M.decompose(t, q, s);
-  const body = world.createRigidBody(RAPIER.RigidBodyDesc.dynamic()
+  const body = world.createRigidBody(PHYS.RigidBodyDesc.dynamic()
     .setTranslation(t.x * PS, t.y * PS, t.z * PS).setRotation({ x: q.x, y: q.y, z: q.z, w: q.w })
     .setLinvel(linvel[0], linvel[1], linvel[2]).setAngvel({ x: angvel[0], y: angvel[1], z: angvel[2] })
     .setCcdEnabled(true).setLinearDamping(0.6).setAngularDamping(2.5));
   for (const pts of convexParts(V, T)) {
-    const cd = RAPIER.ColliderDesc.convexHull(pts);
+    const cd = PHYS.ColliderDesc.convexHull(pts);
     if (cd) world.createCollider(cd.setDensity(1).setFriction(0.9).setRestitution(0.0), body);
   }
   const group = pieceMeshes(V, T, tmesh, tface, planes);
@@ -913,7 +913,7 @@ function slab(x, y, angDeg) {
   return { V: new Float64Array(V), T: new Int32Array(T), n, c, u, h, L, z0, z1 };
 }
 
-const worker = new Worker("worker.js?v=a50a0878ae");
+const worker = new Worker("worker.js?v=b291ec8e57");
 let reqId = 0;
 const pending = new Map();
 worker.onmessage = (e) => { const p = pending.get(e.data.id); pending.delete(e.data.id); p(e.data); };
@@ -968,7 +968,7 @@ function endPreview(p) {
 // a crossed piece holds still while the kernel works on it (its pose is the one the kernel got); the rest keep moving
 function hold(p, on) {
   p.held = on;
-  p.body.setBodyType(on ? RAPIER.RigidBodyType.KinematicPositionBased : RAPIER.RigidBodyType.Dynamic, true);
+  p.body.setBodyType(on ? PHYS.RigidBodyType.KinematicPositionBased : PHYS.RigidBodyType.Dynamic, true);
 }
 
 // multi-slice combo: k = pieces the blade went through, gained = new pieces; points = gained x k. A pop-up at the
@@ -1053,7 +1053,7 @@ let anim = null;
 function chop(ms) { return new Promise((res) => { anim = { from: knifeZ, to: Z_DOWN, t0: performance.now(), ms, done: res }; }); }
 function lift() { anim = { from: knifeZ, to: Z_UP, t0: performance.now(), ms: 260, done: () => {} }; }
 
-window.__dbg = { camera, controls, CEN, lo, hi, pieces: () => pieces,       // for testing
+window.__dbg = { camera, controls, CEN, lo, hi, world, pieces: () => pieces,  // for testing
                  cutAt: async (y, t, x = CEN.x) => { aimX = x; aimY = y; aimA = t; await cut(); },
                  hit: (x, y) => { ray.setFromCamera(ndc(x, y), camera); return ray.intersectObjects(piecesGroup.children, true).length; },
                  table: (x, y) => onTable(x, y), age: (s) => { TSHIFT += s; } };

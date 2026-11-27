@@ -7,7 +7,7 @@
 // through one to shoo it; it comes back a few seconds later. Reset or a challenge round sends them all away.
 // A faint buzz while they fly. F calls one more (summoned flies stay until shooed).
 import * as THREE from "three";
-import { audio, sfx, loop } from "./sound.js?v=a50a0878ae";
+import { audio, sfx, loop } from "./sound.js?v=b291ec8e57";
 
 const MAX = 5;                                              // flies
 const RIPE0 = 60, RIPE1 = 210;                              // s (page time): a face starts to smell / smells fully
