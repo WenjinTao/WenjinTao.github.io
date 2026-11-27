@@ -30,9 +30,9 @@ const SCHOLAR = 'https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en';
 const pubs = (await getCollection('publications')).sort((a, b) => b.data.year - a.data.year);
 
 const LABS: Item[] = [
-  { id: 'banana', title: 'Banana Boolean', sub: 'WebAssembly', thumb: '/labs/thumbs/banana-boolean.jpg', play: '/labs/banana-boolean/',
+  { id: 'banana', title: 'Banana Boolean', sub: 'Lab', thumb: '/labs/thumbs/banana-boolean.jpg', play: '/labs/banana-boolean/',
     text: 'Swipe to slice a banana. Every cut is an exact Boolean from my own C++ geometry kernel, running in your browser, with physics, browning and combos.' },
-  { id: 'leaves', title: 'SimReady Leaves', sub: 'Isaac Sim', thumb: '/labs/thumbs/simready-leaves.jpg', play: '/labs/simready-leaves/',
+  { id: 'leaves', title: 'SimReady Leaves', sub: 'Lab', thumb: '/labs/thumbs/simready-leaves.jpg', play: '/labs/simready-leaves/',
     text: '56 leaves of 28 tree species, turned from herbarium scans into simulation-ready assets. Flip one to see its mesh, collider and mass, then watch all of them fall in an Isaac Sim replay.' },
 ];
 // CAD 101: links for L3-L7 are not in post-log.md yet -> the profile's activity page until they are.
@@ -137,7 +137,6 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
                   <span class="lab-media"><img src={it.thumb!} alt="" width="960" height="540" loading="lazy" />
                     {it.id === 'leaves' && <canvas id="field" data-card aria-hidden="true"></canvas>}</span>
                   <span class="lab-t"><span class="title">{it.title}</span><span class="play">PLAY</span></span>
-                  <span class="sub">{it.sub}</span>
                 </button>
               </li>
             ))}
