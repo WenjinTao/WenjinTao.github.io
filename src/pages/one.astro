@@ -26,6 +26,7 @@ const now = (title: string, id: string): Item => {
   const n = NOW.find((x) => x.title.startsWith(title))!;
   return { id, title: n.title, sub: n.tag, text: n.text, thumb: n.shot, links: n.links, days: n.days };
 };
+const SCHOLAR = 'https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en';
 const pubs = (await getCollection('publications')).sort((a, b) => b.data.year - a.data.year);
 
 const LABS: Item[] = [
@@ -54,7 +55,7 @@ const NOW_ITEMS: Item[] = [CAD101, now('Isaac Factory', 'factory'), now('SoundRe
 const WORK_ORDER = ['optimo', 'folo', 'pin-defect-detection', 'mask-defect-detection', 'field-robotics', 'low-cost-ventilator'];
 const WORK: Item[] = await Promise.all(WORK_ORDER.map((id) => project(id, (projects.get(id)?.data.tags ?? []).slice(0, 2).join(' · '))));
 const RESEARCH = pubs.slice(0, 4).map((p) => ({ year: p.data.year, title: p.data.title,
-  href: p.data.link ?? (p.data.doi ? `https://doi.org/${p.data.doi}` : '/publications') }));
+  href: p.data.link ?? (p.data.doi ? `https://doi.org/${p.data.doi}` : SCHOLAR) }));
 const DATA = Object.fromEntries([...LABS, ...NOW_ITEMS, ...WORK].map((i) => [i.id, i]));
 
 const title = 'Wenjin Tao — Bits to Atoms, Faster';
@@ -147,7 +148,7 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
               <li><a href={r.href} target="_blank" rel="noopener"><b>{r.year}</b> {r.title}</a></li>
             ))}
           </ul>
-          <a class="more" href="/publications">All {pubs.length} publications →</a>
+          <a class="more" href={SCHOLAR} target="_blank" rel="noopener">All publications on Google Scholar ↗</a>
           <h2 class="mod mod-work">Projects <span>industry &amp; research</span></h2>
           <ul class="rows compact fill">
             {WORK.map((it) => (
@@ -167,6 +168,7 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
         <nav aria-label="Profiles">
           <a href="https://www.linkedin.com/in/wenjin-tao" target="_blank" rel="noopener">LinkedIn ↗</a>
           <a href="https://github.com/WenjinTao" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href={SCHOLAR} target="_blank" rel="noopener">Scholar ↗</a>
         </nav>
       </footer>
     </div>
