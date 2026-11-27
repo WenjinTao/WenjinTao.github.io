@@ -1,52 +1,76 @@
 ---
-// Homepage: "Bits Tokens Atoms" (from the downloaded design, rebuilt as an Astro page). The previous homepage is
-// /classic. The hero scene (src/scripts/leaves.js; ?hero=arm -> arm.js) loads after first paint, so the text shows at once.
-import '../styles/home.css';
+// Homepage (one screen): the sections side by side: intro + Lately | Labs |
+// Publications + Projects. A row opens a detail panel in place (no page change). Phones: three tabs that swipe.
+// (The first take, three columns Bits | Tokens | Atoms, is in git: f83ca32.)
+// Same content as the full homepage ("/"): labs, the build-in-public work (src/data/now.json), the earlier
+// projects (content collection + photos) and the publications.
+import '../styles/one.css';
 import { getCollection } from 'astro:content';
-import { Image } from 'astro:assets';
+import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
+import NOW from '../data/now.json';
 
-// Selected work = the earlier projects (src/content/projects), photo = <id>-1.jpg in src/assets/projects.
-// Order: closest to "Physical AI" first; projects not listed here come after, by title.
-const WORK_ORDER = ['optimo', 'folo', 'pin-defect-detection', 'mask-defect-detection', 'field-robotics', 'low-cost-ventilator'];
+type Link = { title: string; href: string };
+type Item = { id: string; title: string; sub: string; thumb: string | null; text: string; play?: string; page?: string;
+  links?: Link[]; days?: { date: string; day: string; title: string; href: string }[]; pubs?: Link[] };
+
 const photos = import.meta.glob<{ default: ImageMetadata }>('../assets/projects/*-1.jpg', { eager: true });
-const rank = (id: string) => (WORK_ORDER.includes(id) ? WORK_ORDER.indexOf(id) : 99);
-const work = (await getCollection('projects'))
-  .sort((a, b) => rank(a.id) - rank(b.id) || a.data.title.localeCompare(b.data.title))
-  .map((p) => ({
-    title: p.data.title,
-    description: p.data.description,
-    tags: p.data.tags.slice(0, 3),
-    href: `/projects/${p.id}`,
-    photo: photos[`../assets/projects/${p.id}-1.jpg`]?.default,
-  }));
-
-// Research: the three most recent publications on the homepage, the rest on /publications
+const projects = new Map((await getCollection('projects')).map((p) => [p.id, p]));
+async function project(id: string, sub: string): Promise<Item> {
+  const p = projects.get(id)!;
+  const ph = photos[`../assets/projects/${id}-1.jpg`]?.default;
+  return { id, title: p.data.title.split(':')[0], sub, text: p.data.description,
+    thumb: ph ? (await getImage({ src: ph, width: 640 })).src : null };
+}
+const now = (title: string, id: string): Item => {
+  const n = NOW.find((x) => x.title.startsWith(title))!;
+  return { id, title: n.title, sub: n.tag, text: n.text, thumb: n.shot, links: n.links, days: n.days };
+};
+const SCHOLAR = 'https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en';
 const pubs = (await getCollection('publications')).sort((a, b) => b.data.year - a.data.year);
-const research = pubs.slice(0, 3).map((p) => ({
-  title: p.data.title, venue: p.data.venue, year: p.data.year,
-  href: p.data.link ?? (p.data.doi ? `https://doi.org/${p.data.doi}` : '/publications'),
-}));
 
-const LABS = [
-  {
-    title: 'Banana Boolean',
-    href: '/labs/banana-boolean/',
-    thumb: '/labs/thumbs/banana-boolean.jpg',
-    tag: 'WebAssembly',
-    text: 'Swipe to slice a banana. Every cut is an exact Boolean from my own C++ geometry kernel, running in your browser, with physics, browning and combos.',
-  },
-  {
-    title: 'SimReady Leaves',
-    href: '/labs/simready-leaves/',
-    thumb: '/labs/thumbs/simready-leaves.jpg',
-    tag: 'Isaac Sim',
-    text: '56 leaves of 28 tree species, turned from herbarium scans into simulation-ready assets. Flip one to see its mesh, collider and mass, then watch all of them fall in an Isaac Sim replay.',
-  },
+const LABS: Item[] = [
+  { id: 'banana', title: 'Banana Boolean', sub: 'Lab · Geometry kernel', thumb: '/labs/thumbs/banana-boolean.jpg', play: '/labs/banana-boolean/',
+    text: 'Swipe to slice a banana. Every cut is an exact Boolean from my own C++ geometry kernel, running in your browser, with physics, browning and combos.' },
+  { id: 'forklift', title: 'SimReady Forklift', sub: 'Lab · Assets as code', thumb: '/labs/thumbs/simready-forklift.jpg', play: '/labs/simready-forklift/',
+    text: 'Assets as code: a 25 MB NVIDIA SimReady USD forklift rebuilt as a 0.5 MB web page, its textures turned into shader code.' },
+  { id: 'leaves', title: 'SimReady Leaves', sub: 'Lab · Scan to asset', thumb: '/labs/thumbs/simready-leaves.jpg', play: '/labs/simready-leaves/',
+    text: '56 leaves of 28 tree species, turned from herbarium scans into simulation-ready assets. Flip one to see its mesh, collider, mass and species.' },
+  { id: 'fall', title: 'Falling Leaves', sub: 'Lab · Isaac Sim', thumb: '/labs/thumbs/falling-leaves.jpg', play: '/labs/simready-leaves/fall/',
+    text: 'All 56 leaves dropped in Isaac Sim with a thin-plate air model, replayed in the browser. Hover a leaf to see what it is.' },
 ];
+// AI for Engineering (CAD 101 + Surface Checker): links for L4-L7 are not in post-log.md yet -> the profile's activity page until they are.
+const FEED = 'https://www.linkedin.com/in/wenjin-tao/recent-activity/all/';
+const post = (id: string) => `https://www.linkedin.com/feed/update/urn:li:activity:${id}/`;
+const AIENG: Item = { id: 'aieng', title: 'AI for Engineering', sub: 'CAD 101 · Surface Checker', thumb: '/home/now/cad101.jpg',
+  text: 'CAD 101: short visual lessons on how CAD works under the hood, from freeform surfaces and G0–G3 continuity to topology optimization, TPMS lattices and Booleans. Surface Checker: surfaces written as code by AI, rendered in Isaac Sim and checked with zebra stripes; G2 so far, G3 next.',
+  days: [
+    { date: '11/05', day: 'L1', title: 'From a point to a freeform surface', href: post('7524327657862324224') },
+    { date: '11/06', day: 'L2', title: 'How curves meet (G0–G3)', href: post('7524606828048154624') },
+    { date: '', day: 'L3', title: 'How surfaces meet', href: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7526112794975453185/' },
+    { date: '', day: 'L4', title: 'How material finds its shape', href: FEED },
+    { date: '', day: 'L5', title: 'Topology optimization: SIMP, BESO, level set, MMC', href: FEED },
+    { date: '', day: 'L6', title: 'TPMS lattices', href: FEED },
+    { date: '', day: 'L7', title: 'Boolean operations', href: FEED },
+  ],
+  links: [{ title: 'Issue 1: AI on surface modeling', href: post('7523608072913661952') }] };
+const NOW_ITEMS: Item[] = [
+  { ...now('Isaac Factory', 'factory'), title: 'Factory Digital Twin' },
+  { ...now('Therbligs', 'therbligs'), title: 'Humanoid Time & Motion Study', sub: 'Therbligs · Isaac Sim' },
+  AIENG,
+  now('SoundReady', 'soundready'),
+];
+const WORK_ORDER: [string, string][] = [['optimo', 'AI × Manufacturing'], ['folo', 'AI × Manufacturing'],
+  ['pin-defect-detection', 'Vision AI'], ['mask-defect-detection', 'Vision AI'],
+  ['field-robotics', 'Robotics & Hardware'], ['low-cost-ventilator', 'Robotics & Hardware']];
+const WORK: Item[] = await Promise.all(WORK_ORDER.map(([id, label]) => project(id, label)));
+const GROUPS = [...new Set(WORK_ORDER.map(([, g]) => g))].map((g) => ({ name: g, items: WORK.filter((w) => w.sub === g) }));
+const RESEARCH = pubs.slice(0, 4).map((p) => ({ year: p.data.year, title: p.data.title,
+  href: p.data.link ?? (p.data.doi ? `https://doi.org/${p.data.doi}` : SCHOLAR) }));
+const DATA = Object.fromEntries([...LABS, ...NOW_ITEMS, ...WORK].map((i) => [i.id, i]));
 
-const title = 'Wenjin Tao — Bits Tokens Atoms';
-const description = 'Wenjin Tao — Staff Product Manager, Physical AI. Bits Tokens Atoms: simulation, AI and the physical world, built in public.';
+const title = 'Wenjin Tao — Bits to Atoms, Faster';
+const description = 'Wenjin Tao (陶文锦), Staff Product Manager, Physical AI. Experiments in robotics, simulation, AI for engineering, and anything else I’m curious about.';
 const canonical = new URL('/', Astro.site).href;
 const ogImage = new URL('/og-home.jpg', Astro.site).href;
 ---
@@ -56,7 +80,6 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
   <head>
     <meta charset="utf-8" />
     <script is:inline>
-      // theme before paint: light by default, dark if chosen (remembered)
       try {
         document.documentElement.dataset.theme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
         document.documentElement.dataset.accent = localStorage.getItem('accent') || 'teal';
@@ -69,238 +92,171 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
     <link rel="canonical" href={canonical} />
     <title>{title}</title>
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Wenjin Tao" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     <script type="application/ld+json" set:html={JSON.stringify({
-      '@context': 'https://schema.org', '@type': 'Person', name: 'Wenjin Tao', url: canonical,
+      '@context': 'https://schema.org', '@type': 'Person', name: 'Wenjin Tao', alternateName: '陶文锦', url: canonical,
       jobTitle: 'Staff Product Manager, Physical AI', image: new URL('/avatar.png', Astro.site).href,
-      sameAs: ['https://www.linkedin.com/in/wenjin-tao', 'https://github.com/WenjinTao'],
+      sameAs: ['https://www.linkedin.com/in/wenjin-tao', 'https://github.com/WenjinTao',
+        'https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en'],
     })} />
   </head>
   <body>
-    <canvas id="field" aria-hidden="true"></canvas>
-    <div class="shade" aria-hidden="true"></div>
-
-    <div class="frame">
+    <div class="shell">
       <header>
-        <a class="wordmark" href="#" aria-label="Wenjin Tao — home">WENJIN&nbsp;TAO<span class="dot">.</span></a>
-        <nav class="header-links" aria-label="Sections">
-          <a class="projects-link" href="#labs">LABS <span class="arrow" aria-hidden="true">↓</span></a>
-          <a class="projects-link" href="#now">LATEST <span class="arrow" aria-hidden="true">↓</span></a>
-          <a class="projects-link" href="#work">WORK <span class="arrow" aria-hidden="true">↓</span></a>
-          <button class="accent-toggle" type="button" aria-label="Change the accent colour" title="Accent colour"><span></span></button><button class="theme-toggle" type="button" aria-label="Switch between light and dark"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
-        </nav>
+        <a class="wordmark" href="/">WENJIN&nbsp;TAO<span class="cn" lang="zh-Hans">陶文锦</span></a>
+        <div class="controls">
+          <button class="accent-toggle" type="button" aria-label="Change the accent colour" title="Accent colour"><span></span></button>
+          <button class="theme-toggle" type="button" aria-label="Switch between light and dark">
+            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+          </button>
+        </div>
       </header>
 
-      <main>
-        <div class="vision">
-          <p class="line-bits rise d1">Physical AI × Simulation × Manufacturing</p>
-          <h1 class="rise d1">Bits <span class="tokens-word">Tokens</span> Atoms</h1>
+      <nav class="tabs" aria-label="Sections">
+        {['Lately', 'Labs', 'Work'].map((t, i) => <button type="button" data-col={i}>{t}</button>)}
+      </nav>
 
-          <p class="tagline rise d2">Simulation, AI and real hardware: I build experiments where they meet, and share them as I go.</p>
-          <p class="identity rise d3"><strong>Wenjin Tao</strong> — Staff Product Manager, Physical AI · San Francisco Bay Area</p>
-          <div class="cta rise d4">
-            <a class="btn primary" href="#labs">Play a lab <span aria-hidden="true">↓</span></a>
-            <a class="btn" href="#work">See my work <span aria-hidden="true">↓</span></a>
+      <main class="cols">
+        <section class="col col-intro" id="lately" aria-label="Lately">
+          <div class="intro">
+            <h1>Bits to Atoms, <span class="tokens-word">Faster</span></h1>
+            <p class="tagline">Experiments in robotics, simulation, AI for engineering, and anything else I&rsquo;m curious about.</p>
           </div>
-        </div>
+          <h2 class="mod">Lately</h2>
+          <ul class="rows fill">
+            {NOW_ITEMS.map((it) => (
+                <li>
+                  <button type="button" class="item big" data-id={it.id}>
+                    {it.thumb && <img src={it.thumb} alt="" width="160" height="100" loading="lazy" />}
+                    <span class="t"><span class="title">{it.title}</span><span class="sub">{it.sub}</span>
+                      <span class="blurb">{it.text}</span></span>
+                  </button>
+                </li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="col col-labs" id="labs" aria-label="Labs">
+          <h2 class="mod">Labs</h2>
+          <ul class="rows fill lab-rows">
+            {LABS.map((it) => (
+              <li>
+                <button type="button" class="item lab-row" data-id={it.id}>
+                  <span class="lab-media"><img src={it.thumb!} alt="" width="960" height="540" loading="lazy" />
+                    {it.id === 'fall' && <canvas id="field" data-card aria-hidden="true"></canvas>}</span>
+                  <span class="t"><span class="title">{it.title}</span><span class="blurb">{it.text}</span></span>
+                  <span class="play">PLAY</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="col col-work" id="work" aria-label="Publications and projects">
+          <h2 class="mod">Publications</h2>
+          <ul class="pubs">
+            {RESEARCH.map((r) => (
+              <li><a href={r.href} target="_blank" rel="noopener"><b>{r.year}</b> {r.title}</a></li>
+            ))}
+          </ul>
+          <a class="more" href={SCHOLAR} target="_blank" rel="noopener">All publications on Google Scholar ↗</a>
+          <h2 class="mod mod-work">Projects</h2>
+          <ul class="rows compact fill grouped">
+            {GROUPS.map((g) => (
+              <>
+                <li class="grp">{g.name}</li>
+                {g.items.map((it) => (
+                  <li>
+                    <button type="button" class="item noimg" data-id={it.id}>
+                      <span class="t"><span class="title">{it.title}</span><span class="desc">{it.text}</span></span>
+                    </button>
+                  </li>
+                ))}
+              </>
+            ))}
+          </ul>
+        </section>
       </main>
 
       <footer>
-        <nav class="social" aria-label="Profiles">
-          <a href="https://www.linkedin.com/in/wenjin-tao" target="_blank" rel="noopener">LinkedIn <span class="ext" aria-hidden="true">↗</span></a>
-          <a href="https://github.com/WenjinTao" target="_blank" rel="noopener">GitHub <span class="ext" aria-hidden="true">↗</span></a>
-        </nav>
-      </footer>
-    </div>
-
-    <div class="page">
-      <!-- Labs: playable demos -->
-      <section class="section" id="labs" aria-labelledby="labs-title">
-        <div class="section-head">
-          <h2 id="labs-title">Labs</h2>
-          <span class="note" aria-hidden="true">Play in the browser</span>
-        </div>
-        <ul class="labs">
-          {LABS.map((lab) => (
-            <li>
-              <a class="lab" href={lab.href}>
-                <div class="shot">
-                  <img src={lab.thumb} alt="" width="960" height="540" loading="lazy" />
-                  <span class="tag">{lab.tag}</span>
-                </div>
-                <div class="body">
-                  <h3>{lab.title}</h3>
-                  <p>{lab.text}</p>
-                  <span class="play">PLAY <span class="arrow" aria-hidden="true">→</span></span>
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-      <!-- Now: current build-in-public work -->
-      <section class="section" id="now" aria-labelledby="now-title">
-        <div class="section-head">
-          <h2 id="now-title">Latest</h2>
-          <span class="note" aria-hidden="true">Building in public</span>
-        </div>
-        <ul class="sim-list">
-          <li class="sim">
-            <span class="sim-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l5 3V9l5 3V5h8v16z"/><path d="M7 21v-3M12 21v-3M17 21v-3"/></svg></span>
-            <div>
-              <div class="sim-title"><h3>Isaac Factory Series</h3><span class="tag">Day 1–13</span></div>
-              <p>Thirteen days of factory simulation in NVIDIA Isaac Sim — one build a day, logged as it happened. A small audience, on purpose: this is the record of the work itself.</p>
-              <ol class="day-list">
-                <li><span class="d-date">10/21</span><span class="d-day">Day 1</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7518908158153515008/" target="_blank" rel="noopener">A factory from a single sentence<span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><span class="d-date">10/22</span><span class="d-day">Day 2</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7519275760751329280/" target="_blank" rel="noopener">Electronics inside the printer<span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><span class="d-date">10/23</span><span class="d-day">Day 3</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7519610414528258048/" target="_blank" rel="noopener">Stepper motor bench test<span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><span class="d-date">10/24</span><span class="d-day">Day 4</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7520009024487059456/" target="_blank" rel="noopener">CCTV camera<span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><span class="d-date">10/25</span><span class="d-day">Day 5</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7520344880674684928/" target="_blank" rel="noopener">From virtual to physical<span class="ext" aria-hidden="true">↗</span></a></li>
-              </ol>
-              <details class="more-days"><summary>Show all 13 days</summary>
-              <ol class="day-list" start="6">
-                <li><span class="d-date">10/26</span><span class="d-day">Day 6</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7520726546442002432/" target="_blank" rel="noopener">Robot dog on fire patrol<span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><span class="d-date">10/27</span><span class="d-day">Day 7</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7521072731732426752/" target="_blank" rel="noopener">Data center inspection<span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><span class="d-date">10/29</span><span class="d-day">Day 8</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7521594910026670080/" target="_blank" rel="noopener">Morning-shift simulation<span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><span class="d-date">10/30</span><span class="d-day">Day 9</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7522085168421974016/" target="_blank" rel="noopener">SMT production line<span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><span class="d-date">10/31</span><span class="d-day">Day 10</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7522477321002385408/" target="_blank" rel="noopener">Stepper motor<span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><span class="d-date">11/01</span><span class="d-day">Day 11</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7522831944833921025/" target="_blank" rel="noopener">Coil winder<span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><span class="d-date">11/02</span><span class="d-day">Day 12</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7523233932818046976/" target="_blank" rel="noopener">Read on LinkedIn<span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><span class="d-date">11/04</span><span class="d-day">Day 13</span><a class="d-title" href="https://www.linkedin.com/feed/update/urn:li:activity:7523928242194640896/" target="_blank" rel="noopener">CNC cell<span class="ext" aria-hidden="true">↗</span></a></li>
-              </ol></details>
-            </div>
-            <img class="sim-shot" src="/home/now/isaac-factory.jpg" alt="" width="640" height="400" loading="lazy" />
-          </li>
-          <li class="sim">
-            <span class="sim-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="7" rx="6" ry="2.4"/><path d="M4 7v7c0 1.3 2.7 2.4 6 2.4s6-1.1 6-2.4V7"/><path d="M19.3 4.6a5.8 5.8 0 0 1 0 6.8"/><path d="M21.6 2.9a9.2 9.2 0 0 1 0 10.2"/></svg></span>
-            <div>
-              <div class="sim-title"><h3>SoundReady</h3><span class="tag">In Isaac Sim</span></div>
-              <p>What if SimReady were also SoundReady? Six objects dropped in Isaac Sim — a socket as hi-hat, a 6&nbsp;g M8 nut, a plastic crate, a wood pallet, a 62&nbsp;kg steel drum as the 808 — play a drum kit. PhysX decides when each hit lands and how hard; the metadata decides whether it sounds right.</p>
-              <ul class="post-links">
-                <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7526501726019960832/" target="_blank" rel="noopener">SoundReady — the SimReady drum kit <span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7528675029815873536/" target="_blank" rel="noopener">SoundReady 2 — FEA wine glass <span class="ext" aria-hidden="true">↗</span></a></li>
-              </ul>
-            </div>
-            <img class="sim-shot" src="/home/now/soundready.jpg" alt="" width="640" height="400" loading="lazy" />
-          </li>
-          <li class="sim">
-            <span class="sim-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 17c4-8 8 3 12-3 2-3 4-4 6-4"/><path d="M6.6 10.4 5.2 7"/><path d="M10.9 9.6 10.1 6"/><path d="M15.1 10.8l.6-3.6"/><path d="M19.1 9.6l1.3-3.2"/></svg></span>
-            <div>
-              <div class="sim-title"><h3>Surface Checker — G1 / G2</h3><span class="tag">In progress</span></div>
-              <p>Surfaces written as code (build123d / OpenCascade), rendered from STEP in Isaac Sim, and checked with zebra stripes for continuity. The current set reaches G2 — one small spot where six patches meet falls short. G3 is the next test.</p>
-              <ul class="post-links">
-                <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7523608072913661952/" target="_blank" rel="noopener">Issue 1 — AI on surface modeling <span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7524327657862324224/" target="_blank" rel="noopener">Lesson 1 <span class="ext" aria-hidden="true">↗</span></a></li>
-                <li><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7526112794975453185/" target="_blank" rel="noopener">Lesson 3 — How surfaces meet <span class="ext" aria-hidden="true">↗</span></a></li>
-              </ul>
-            </div>
-            <img class="sim-shot" src="/home/now/surface-checker.jpg" alt="" width="640" height="400" loading="lazy" />
-          </li>
-          <li class="sim">
-            <span class="sim-icon warm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h6v5H8z"/><path d="M11 9v2.5"/><path d="M3 15.5h18"/><circle cx="6.5" cy="18.5" r="1.6"/><circle cx="12" cy="18.5" r="1.6"/><circle cx="17.5" cy="18.5" r="1.6"/><path d="M15.5 7.5h4"/><path d="M18 5.6l1.9 1.9-1.9 1.9"/></svg></span>
-            <div>
-              <div class="sim-title"><h3>Conveyor Launch Field</h3><span class="tag warm">Level 1 built</span></div>
-              <p>A SimReady physics game: launch parts down a conveyor and let mass, friction, and restitution decide where they land. Simulation data you can play with, not just read.</p>
-            </div>
-            <img class="sim-shot" src="/home/now/conveyor-launch-field.jpg" alt="" width="640" height="400" loading="lazy" />
-          </li>
-          <li class="sim">
-            <span class="sim-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="19" r="1.8"/><circle cx="12" cy="9" r="1.8"/><circle cx="19" cy="14" r="1.8"/><path d="M6.5 17.5 10.5 10.5"/><path d="M13.5 10.3l4 2.4"/></svg></span>
-            <div>
-              <div class="sim-title"><h3>Therbligs</h3><span class="tag">Concept</span></div>
-              <p>An interactive demo of the 18 therbligs — the elementary motions every assembly task is made of. Rearranging atoms starts with rearranging motion: cut the wasted moves, and the line gets faster.</p>
-              <ul class="post-links">
-                <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7526139573530361856/" target="_blank" rel="noopener">Therbligs — Day 1 <span class="ext" aria-hidden="true">↗</span></a></li>
-              </ul>
-            </div>
-            <img class="sim-shot" src="/home/now/therbligs.jpg" alt="" width="640" height="400" loading="lazy" />
-          </li>
-        </ul>
-      </section>
-
-      <!-- Earlier work: a compact list (the page's space goes to Labs and Now); rows -> the detail pages -->
-      <section class="section" id="work" aria-labelledby="work-title">
-        <div class="section-head">
-          <h2 id="work-title">Earlier work</h2>
-          <span class="note" aria-hidden="true">Industry &amp; research</span>
-        </div>
-        <ul class="work-list">
-          {work.map((w) => (
-            <li>
-              <a href={w.href}>
-                {w.photo && <Image class="w-thumb" src={w.photo} alt="" widths={[160, 320]} sizes="112px" loading="lazy" />}
-                <span class="w-text">
-                  <span class="w-title">{w.title}</span>
-                  <span class="w-desc">{w.description}</span>
-                </span>
-                <span class="w-tags">{w.tags.slice(0, 2).map((t) => <span class="tag warm">{t}</span>)}</span>
-                <span class="w-arrow" aria-hidden="true">→</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <!-- Research: three recent publications -->
-      <section class="section" id="research" aria-labelledby="research-title">
-        <div class="section-head">
-          <h2 id="research-title">Research</h2>
-          <span class="note" aria-hidden="true">{pubs.length} publications</span>
-        </div>
-        <ul class="pubs">
-          {research.map((r) => (
-            <li>
-              <span class="pub-year">{r.year}</span>
-              <div>
-                <a class="pub-title" href={r.href} target={r.href.startsWith('http') ? '_blank' : undefined} rel="noopener">{r.title}<span class="ext" aria-hidden="true">↗</span></a>
-                <span class="pub-venue">{r.venue}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
-        <a class="more-link" href="/publications">All {pubs.length} publications <span aria-hidden="true">→</span></a>
-      </section>
-
-      <footer class="site-foot">
-        <nav aria-label="More">
+        <p><strong>Wenjin Tao</strong> — Staff Product Manager, Physical AI · San Francisco Bay Area</p>
+        <nav aria-label="Profiles">
           <a href="https://www.linkedin.com/in/wenjin-tao" target="_blank" rel="noopener">LinkedIn ↗</a>
           <a href="https://github.com/WenjinTao" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="/classic">Classic site</a>
+          <a href={SCHOLAR} target="_blank" rel="noopener">Scholar ↗</a>
         </nav>
-        <span>© Wenjin Tao</span>
       </footer>
     </div>
+
+    <dialog id="detail" aria-labelledby="d-title">
+      <button class="close" type="button" aria-label="Close">×</button>
+      <img id="d-img" alt="" />
+      <div class="d-body">
+        <p class="d-sub" id="d-sub"></p>
+        <h3 id="d-title"></h3>
+        <p id="d-text"></p>
+        <ol id="d-days" class="d-days"></ol>
+        <ul id="d-links" class="d-links"></ul>
+        <div class="d-actions" id="d-actions"></div>
+      </div>
+    </dialog>
+
+    <script is:inline type="application/json" id="items-data" set:html={JSON.stringify(DATA)}></script>
     <script is:inline>
       const ACCENTS = ['teal', 'green', 'persimmon', 'indigo'];
-      document.querySelectorAll('.accent-toggle').forEach((b) => b.addEventListener('click', () => {
-        const cur = document.documentElement.dataset.accent || 'teal';
-        const next = ACCENTS[(ACCENTS.indexOf(cur) + 1) % ACCENTS.length];
-        document.documentElement.dataset.accent = next;
-        try { localStorage.setItem('accent', next); } catch (e) {}
-      }));
-      document.querySelectorAll('.theme-toggle').forEach((b) => b.addEventListener('click', () => {
-        const t = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-        document.documentElement.dataset.theme = t;
-        try { localStorage.setItem('theme', t); } catch (e) {}
+      document.querySelector('.accent-toggle').addEventListener('click', () => {
+        const de = document.documentElement, next = ACCENTS[(ACCENTS.indexOf(de.dataset.accent || 'teal') + 1) % ACCENTS.length];
+        de.dataset.accent = next; try { localStorage.setItem('accent', next); } catch (e) {}
+      });
+      document.querySelector('.theme-toggle').addEventListener('click', () => {
+        const de = document.documentElement, t = de.dataset.theme === 'dark' ? 'light' : 'dark';
+        de.dataset.theme = t; try { localStorage.setItem('theme', t); } catch (e) {}
         dispatchEvent(new CustomEvent('themechange', { detail: t }));
-      }));
+      });
     </script>
     <script>
-      // the hero scene after first paint (three.js is a separate chunk): falling leaves; ?hero=arm = the robot arm
-      const start = () => (new URLSearchParams(location.search).get('hero') === 'arm'
-        ? import('../scripts/arm.js') : import('../scripts/leaves.js'));
-      if ('requestIdleCallback' in window) requestIdleCallback(start, { timeout: 1200 });
-      else setTimeout(start, 200);
+      // click: the detail panel
+      const DATA = JSON.parse(document.getElementById('items-data')!.textContent || '{}');
+      document.querySelectorAll<HTMLButtonElement>('.item, .lab').forEach((b) => b.addEventListener('click', () => open(b.dataset.id!)));
+      const dlg = document.getElementById('detail') as HTMLDialogElement;
+      const $ = (id: string) => document.getElementById(id)!;
+      const el = (tag: string, html: string) => { const e = document.createElement(tag); e.innerHTML = html; return e; };
+      const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+      function open(id: string) {
+        const it = DATA[id]; if (!it) return;
+        const img = $('d-img') as HTMLImageElement;
+        img.hidden = !it.thumb; if (it.thumb) img.src = it.thumb;
+        $('d-sub').textContent = it.sub; $('d-title').textContent = it.title; $('d-text').textContent = it.text;
+        const days = $('d-days'); days.replaceChildren(...(it.days || []).map((d: any) =>
+          el('li', `<span>${esc(d.date)}</span><b>${esc(d.day)}</b><a href="${esc(d.href)}" target="_blank" rel="noopener">${esc(d.title)} ↗</a>`)));
+        const links = $('d-links'); links.replaceChildren(...[...(it.links || []), ...(it.pubs || [])].map((l: any) =>
+          el('li', `<a href="${esc(l.href)}" target="_blank" rel="noopener">${esc(l.title)} ↗</a>`)));
+        const act = $('d-actions'); act.replaceChildren();
+        if (it.play) act.append(el('span', `<a class="btn primary" href="${esc(it.play)}">Play →</a>`).firstChild!);
+        if (it.page) act.append(el('span', `<a class="btn" href="${esc(it.page)}">${id === 'research' ? 'All publications' : 'Project page'} →</a>`).firstChild!);
+        dlg.showModal();
+      }
+      dlg.querySelector('.close')!.addEventListener('click', () => dlg.close());
+      dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });   // click outside the panel
+
+      // phones: the tabs jump between the swiping columns, and follow them
+      const cols = document.querySelector('.cols') as HTMLElement, tabs = [...document.querySelectorAll<HTMLButtonElement>('.tabs button')];
+      tabs.forEach((t, i) => t.addEventListener('click', () => cols.scrollTo({ left: i * cols.clientWidth, behavior: 'smooth' })));
+      const mark = () => { const i = Math.round(cols.scrollLeft / Math.max(1, cols.clientWidth)); tabs.forEach((t, k) => t.classList.toggle('on', k === i)); };
+      cols.addEventListener('scroll', mark, { passive: true }); mark();
+
+      // the SimReady Leaves card: its leaves fall, after first paint
+      const leaves = () => import('../scripts/leaves.js');
+      if ('requestIdleCallback' in window) requestIdleCallback(leaves, { timeout: 1200 }); else setTimeout(leaves, 200);
+
     </script>
   </body>
 </html>
