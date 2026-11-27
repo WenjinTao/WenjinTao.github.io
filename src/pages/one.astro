@@ -35,22 +35,22 @@ const LABS: Item[] = [
   { id: 'leaves', title: 'SimReady Leaves', sub: 'Lab', thumb: '/labs/thumbs/simready-leaves.jpg', play: '/labs/simready-leaves/',
     text: '56 leaves of 28 tree species, turned from herbarium scans into simulation-ready assets. Flip one to see its mesh, collider and mass, then watch all of them fall in an Isaac Sim replay.' },
 ];
-// CAD 101: links for L3-L7 are not in post-log.md yet -> the profile's activity page until they are.
+// AI for Engineering (CAD 101 + Surface Checker): links for L4-L7 are not in post-log.md yet -> the profile's activity page until they are.
 const FEED = 'https://www.linkedin.com/in/wenjin-tao/recent-activity/all/';
 const post = (id: string) => `https://www.linkedin.com/feed/update/urn:li:activity:${id}/`;
-const CAD101: Item = { id: 'cad101', title: 'CAD 101', sub: 'Lessons 1–7', thumb: '/home/now/cad101.jpg',
-  text: 'Short visual lessons on how CAD works under the hood: freeform surfaces, G0–G3 continuity, topology optimization, TPMS lattices and Boolean operations, each a 30–40 s film made from real geometry.',
+const AIENG: Item = { id: 'aieng', title: 'AI for Engineering', sub: 'CAD 101 · Surface Checker', thumb: '/home/now/cad101.jpg',
+  text: 'CAD 101: short visual lessons on how CAD works under the hood, from freeform surfaces and G0–G3 continuity to topology optimization, TPMS lattices and Booleans. Surface Checker: surfaces written as code by AI, rendered in Isaac Sim and checked with zebra stripes; G2 so far, G3 next.',
   days: [
     { date: '11/05', day: 'L1', title: 'From a point to a freeform surface', href: post('7524327657862324224') },
     { date: '11/06', day: 'L2', title: 'How curves meet (G0–G3)', href: post('7524606828048154624') },
-    { date: '', day: 'L3', title: 'How surfaces meet', href: FEED },
+    { date: '', day: 'L3', title: 'How surfaces meet', href: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7526112794975453185/' },
     { date: '', day: 'L4', title: 'How material finds its shape', href: FEED },
     { date: '', day: 'L5', title: 'Topology optimization: SIMP, BESO, level set, MMC', href: FEED },
     { date: '', day: 'L6', title: 'TPMS lattices', href: FEED },
     { date: '', day: 'L7', title: 'Boolean operations', href: FEED },
   ],
   links: [{ title: 'Issue 1: AI on surface modeling', href: post('7523608072913661952') }] };
-const NOW_ITEMS: Item[] = [CAD101, now('Isaac Factory', 'factory'), now('SoundReady', 'soundready'), now('Surface Checker', 'surface'),
+const NOW_ITEMS: Item[] = [AIENG, now('Isaac Factory', 'factory'), now('SoundReady', 'soundready'),
   now('Therbligs', 'therbligs')];
 const WORK_ORDER: [string, string][] = [['optimo', 'AI × Manufacturing'], ['folo', 'AI × Manufacturing'],
   ['pin-defect-detection', 'Vision AI'], ['mask-defect-detection', 'Vision AI'],
