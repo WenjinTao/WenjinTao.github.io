@@ -70,7 +70,7 @@ const RESEARCH = pubs.slice(0, 4).map((p) => ({ year: p.data.year, title: p.data
 const DATA = Object.fromEntries([...LABS, ...NOW_ITEMS, ...WORK].map((i) => [i.id, i]));
 
 const title = 'Wenjin Tao — Bits to Atoms, Faster';
-const description = 'Wenjin Tao (陶文锦), Staff Product Manager, Physical AI. Experiments in robotics, simulation, AI for engineering, and anything else I’m curious about.';
+const description = 'Wenjin Tao, Staff Product Manager, Physical AI. Experiments in robotics, simulation, AI for engineering, and anything else I’m curious about.';
 const canonical = new URL('/', Astro.site).href;
 const ogImage = new URL('/og-home.jpg', Astro.site).href;
 ---
@@ -101,7 +101,7 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     <script type="application/ld+json" set:html={JSON.stringify({
-      '@context': 'https://schema.org', '@type': 'Person', name: 'Wenjin Tao', alternateName: '陶文锦', url: canonical,
+      '@context': 'https://schema.org', '@type': 'Person', name: 'Wenjin Tao', url: canonical,
       jobTitle: 'Staff Product Manager, Physical AI', image: new URL('/avatar.png', Astro.site).href,
       sameAs: ['https://www.linkedin.com/in/wenjin-tao', 'https://github.com/WenjinTao',
         'https://scholar.google.com/citations?user=jIQocKAAAAAJ&hl=en'],
@@ -110,7 +110,7 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
   <body>
     <div class="shell">
       <header>
-        <a class="wordmark" href="/">WENJIN&nbsp;TAO<span class="cn" lang="zh-Hans">陶文锦</span></a>
+        <a class="wordmark" href="/">WENJIN&nbsp;TAO</a>
         <div class="controls">
           <button class="accent-toggle" type="button" aria-label="Change the accent colour" title="Accent colour"><span></span></button>
           <button class="theme-toggle" type="button" aria-label="Switch between light and dark">
