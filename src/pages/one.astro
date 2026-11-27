@@ -19,7 +19,7 @@ const projects = new Map((await getCollection('projects')).map((p) => [p.id, p])
 async function project(id: string, sub: string): Promise<Item> {
   const p = projects.get(id)!;
   const ph = photos[`../assets/projects/${id}-1.jpg`]?.default;
-  return { id, title: p.data.title.split(':')[0], sub, text: p.data.description, page: `/projects/${id}`,
+  return { id, title: p.data.title.split(':')[0], sub, text: p.data.description,
     thumb: ph ? (await getImage({ src: ph, width: 640 })).src : null };
 }
 const now = (title: string, id: string): Item => {
