@@ -1,4 +1,4 @@
-// Homepage hero (or, with data-card, the SimReady Leaves card on /one): real scanned leaves (the SimReady Leaves lab's data, LeafSnap30 scans, CC BY 4.0) falling behind
+// Homepage hero (or, with data-card, the Falling Leaves thumbnail on /one): real scanned leaves (the SimReady Leaves lab's data, LeafSnap30 scans, CC BY 4.0) falling behind
 // the headline. Procedural flutter (swing + tilt with the swing, slow spin, speed dips at the turns), recycled at
 // the bottom. The pointer is a light breeze: leaves near it drift with its movement. Loaded after first paint;
 // runs only while the hero is on screen; one still frame with "reduce motion".
@@ -80,7 +80,7 @@ async function main() {
     L.w = rnd(1.1, 1.9); L.ph = rnd(0, 6.3); L.A = rnd(0.25, 0.55); L.vy = rnd(0.32, 0.55);
     L.spin = rnd(-0.6, 0.6); L.yaw = rnd(0, 6.3); L.base = rnd(-1.35, -0.95); L.vx = 0; L.t = 0;
   }
-  const COUNT = () => (card ? 14 : narrow() ? 11 : 26);
+  const COUNT = () => (card ? 9 : narrow() ? 11 : 26);
   function populate() {
     while (leaves.length < COUNT()) {
       const kd = kinds[leaves.length % kinds.length];
