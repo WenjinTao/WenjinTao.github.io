@@ -50,8 +50,12 @@ const AIENG: Item = { id: 'aieng', title: 'AI for Engineering', sub: 'CAD 101 ·
     { date: '', day: 'L7', title: 'Boolean operations', href: FEED },
   ],
   links: [{ title: 'Issue 1: AI on surface modeling', href: post('7523608072913661952') }] };
-const NOW_ITEMS: Item[] = [AIENG, now('Isaac Factory', 'factory'), now('SoundReady', 'soundready'),
-  now('Therbligs', 'therbligs')];
+const NOW_ITEMS: Item[] = [
+  { ...now('Isaac Factory', 'factory'), title: 'Factory Digital Twin' },
+  { ...now('Therbligs', 'therbligs'), title: 'Humanoid Time & Motion Study', sub: 'Therbligs · Isaac Sim' },
+  AIENG,
+  now('SoundReady', 'soundready'),
+];
 const WORK_ORDER: [string, string][] = [['optimo', 'AI × Manufacturing'], ['folo', 'AI × Manufacturing'],
   ['pin-defect-detection', 'Vision AI'], ['mask-defect-detection', 'Vision AI'],
   ['field-robotics', 'Robotics & Hardware'], ['low-cost-ventilator', 'Robotics & Hardware']];
