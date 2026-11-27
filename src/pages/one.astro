@@ -137,7 +137,7 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
         </section>
 
         <section class="col col-labs" aria-label="Labs">
-          <h2 class="mod">Labs <span>play in the browser</span></h2>
+          <h2 class="mod">Labs</h2>
           <ul class="rows fill lab-rows">
             {LABS.map((it) => (
               <li>
@@ -153,7 +153,7 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
         </section>
 
         <section class="col col-work" aria-label="Publications and projects">
-          <h2 class="mod">Publications <span>{pubs.length} papers</span></h2>
+          <h2 class="mod">Publications</h2>
           <ul class="pubs">
             {RESEARCH.map((r) => (
               <li><a href={r.href} target="_blank" rel="noopener"><b>{r.year}</b> {r.title}</a></li>
@@ -167,8 +167,7 @@ const ogImage = new URL('/og-home.jpg', Astro.site).href;
                 <li class="grp">{g.name}</li>
                 {g.items.map((it) => (
                   <li>
-                    <button type="button" class="item" data-id={it.id}>
-                      {it.thumb && <img src={it.thumb} alt="" width="96" height="60" loading="lazy" />}
+                    <button type="button" class="item noimg" data-id={it.id}>
                       <span class="t"><span class="title">{it.title}</span><span class="desc">{it.text}</span></span>
                     </button>
                   </li>

@@ -235,3 +235,6 @@ header{ grid-template-columns:1fr auto; }
   .cols{ grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,1.05fr); }
 }
 @media (max-width:760px){ .item.lab-row{ grid-template-columns:96px minmax(0,1fr) auto; } }
+
+/* Projects: text rows, no thumbnails (the panel still shows the photo) */
+.rows .item.noimg{ grid-template-columns:minmax(0,1fr); }
