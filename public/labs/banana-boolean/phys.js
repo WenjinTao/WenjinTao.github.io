@@ -1,7 +1,7 @@
 // Our own physics kernel (phys-kernel, C++ -> bp.mjs + bp.wasm) behind the small part of Rapier's JS API this page
 // uses, so app.js only swaps its import. World, RigidBodyDesc, ColliderDesc, RigidBodyType, bodies with
 // translation / rotation / linvel / angvel / impulses / sleep / damping / body type.
-import BPFactory from "./bp.mjs?v=b291ec8e57";
+import BPFactory from "./bp.mjs?v=95b05076a0";
 
 let M = null;
 const TYPE = { Fixed: 0, Dynamic: 1, KinematicPositionBased: 2 };

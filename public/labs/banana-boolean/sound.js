@@ -29,14 +29,24 @@ if (ctx) {
     src.start();
   }).catch(() => { /* no music file: silence */ });
 }
+// iPhone: Web Audio follows the ring / silent switch unless the page asks for the "playback" session (Safari 17+)
+try { if (navigator.audioSession) navigator.audioSession.type = "playback"; } catch (err) { /* not supported */ }
 let started = false;
+function fadeIn() {
+  if (started || ctx.state !== "running") return;
+  started = true;
+  if (music) musicG.gain.setTargetAtTime(MUSIC_LEVEL, ctx.currentTime, 0.8);
+}
 function init() {
   if (!ctx) return;
-  if (ctx.state === "suspended") ctx.resume();
-  if (!started) { started = true; if (music) musicG.gain.setTargetAtTime(MUSIC_LEVEL, ctx.currentTime, 0.8); }
+  // not "running" = "suspended" (never started) or, on iOS, "interrupted" (a call, another app, the page hidden)
+  if (ctx.state !== "running") ctx.resume().then(fadeIn, () => { /* not a gesture the browser accepts: the next one */ });
+  else fadeIn();
 }
-addEventListener("pointerdown", init, { capture: true });
-addEventListener("keydown", init, { capture: true });
+// A finger going down does not count as a user gesture on phones (only its lift does: pointerup / touchend / click),
+// so the context could never start there. A mouse press does count, which is why desktop worked.
+for (const ev of ["pointerdown", "pointerup", "touchend", "click", "keydown"]) addEventListener(ev, init, { capture: true });
+document.addEventListener("visibilitychange", () => { if (!document.hidden && started) init(); });
 
 // samples: name -> [{ buf, peak }]
 const S = {};

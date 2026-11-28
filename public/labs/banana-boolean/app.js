@@ -4,10 +4,10 @@
 // Frame: banana coordinates in meters, z up (as in the L7 film). Physics: our own kernel (phys.js), one rigid body per piece.
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import PHYS from "./phys.js?v=b291ec8e57";                    // our own physics kernel (phys-kernel -> bp.wasm), Rapier-like API
-import { bananaAnatomy, NS, NA } from "./anatomy.js?v=b291ec8e57";
-import { createFlies } from "./flies.js?v=b291ec8e57";
-import { sfx, toggleSound, soundOn, toggleMusic, musicOn } from "./sound.js?v=b291ec8e57";
+import PHYS from "./phys.js?v=95b05076a0";                    // our own physics kernel (phys-kernel -> bp.wasm), Rapier-like API
+import { bananaAnatomy, NS, NA } from "./anatomy.js?v=95b05076a0";
+import { createFlies } from "./flies.js?v=95b05076a0";
+import { sfx, toggleSound, soundOn, toggleMusic, musicOn } from "./sound.js?v=95b05076a0";
 await PHYS.init();
 
 const $ = (id) => document.getElementById(id);
@@ -913,7 +913,7 @@ function slab(x, y, angDeg) {
   return { V: new Float64Array(V), T: new Int32Array(T), n, c, u, h, L, z0, z1 };
 }
 
-const worker = new Worker("worker.js?v=b291ec8e57");
+const worker = new Worker("worker.js?v=95b05076a0");
 let reqId = 0;
 const pending = new Map();
 worker.onmessage = (e) => { const p = pending.get(e.data.id); pending.delete(e.data.id); p(e.data); };
